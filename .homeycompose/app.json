@@ -1,14 +1,18 @@
 {
   "id": "se.styrahem.sonoff.zigbee",
   "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#0099CC",
   "name": {
-    "en": "Sonoff ZigBee App"
+    "en": "Sonoff Zigbee - StyraHem"
   },
   "description": {
-    "en": "Sonoff ZigBee App"
+    "en": "Sonoff Zigbee Aby StyraHem"
   },
   "category": "lights",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -22,8 +26,7 @@
     }
   },
   "contributors": {
-    "developers": [      
-    ]
+    "developers": []
   },
   "images": {
     "large": "assets/images/large.png",

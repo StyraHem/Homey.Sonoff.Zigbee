@@ -1,5 +1,23 @@
 {
   "1.0.0": {
-    "en": "This file should in short explain what has changed since last update, it will be presented to your users in the App Store."
+    "en": "First release"
+  },
+  "1.0.1": {
+    "en": "Change icon"
+  },
+  "1.0.2": {
+    "en": "Change icon"
+  },
+  "1.0.3": {
+    "en": "Icons"
+  },
+  "1.0.4": {
+    "en": "Manifest"
+  },
+  "1.0.5": {
+    "en": "Add cloud platform"
+  },
+  "1.0.6": {
+    "en": "Remove cloud platform"
   }
 }
