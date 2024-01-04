@@ -1,0 +1,307 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.myzigbeeapp",
+  "sdk": 3,
+  "name": {
+    "en": "My ZigBee App"
+  },
+  "description": {
+    "en": "Title text for the Homey App store."
+  },
+  "category": "lights",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "author": {
+    "name": "My name",
+    "email": "my.name@domain.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "MyPayPalUsername"
+      }
+    }
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Someone Who Helped Me",
+        "email": "someones.mailadress@domain.com"
+      }
+    ]
+  },
+  "images": {
+    "large": "assets/images/large.png",
+    "small": "assets/images/small.png"
+  },
+  "speech": [],
+  "permissions": [],
+  "bugs": {
+    "url": "https://github.com/MyGitHubUsername/com.myzigbeeapp/issues"
+  },
+  "source": "https://github.com/MyGitHubUsername/com.myzigbeeapp",
+  "drivers": [
+    {
+      "class": "light",
+      "icon": "/drivers/a_Light_Device_supporting_Color_and_Ambiance/assets/icon.svg",
+      "images": {
+        "large": "/drivers/a_Light_Device_supporting_Color_and_Ambiance/assets/images/large.png",
+        "small": "/drivers/a_Light_Device_supporting_Color_and_Ambiance/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "The name of this device that support Color and Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Device brand according to interview of the unit"
+        ],
+        "productId": "Device product ID accordint to interview of the unit",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/a_Light_Device_supporting_Color_and_Ambiance/assets/icon.svg",
+          "instruction": {
+            "en": "Short instruction for how to set the device in pair mode."
+          }
+        }
+      },
+      "id": "a_Light_Device_supporting_Color_and_Ambiance",
+      "settings": []
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/a_Light_Device_supporting_Color_only/assets/icon.svg",
+      "images": {
+        "large": "/drivers/a_Light_Device_supporting_Color_only/assets/images/large.png",
+        "small": "/drivers/a_Light_Device_supporting_Color_only/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "The name of this device that support Color only"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Device brand according to interview of the unit"
+        ],
+        "productId": "Device product ID accordint to interview of the unit",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/a_Light_Device_supporting_Color_only/assets/icon.svg",
+          "instruction": {
+            "en": "Short instruction for how to set the device in pair mode."
+          }
+        }
+      },
+      "id": "a_Light_Device_supporting_Color_only",
+      "settings": []
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/a_Light_Device_supporting_White_and_Ambiance/assets/icon.svg",
+      "images": {
+        "large": "/drivers/a_Light_Device_supporting_White_and_Ambiance/assets/images/large.png",
+        "small": "/drivers/a_Light_Device_supporting_White_and_Ambiance/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "The name of this device that support White and Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Device brand according to interview of the unit"
+        ],
+        "productId": "Device product ID accordint to interview of the unit",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/a_Light_Device_supporting_White_and_Ambiance/assets/icon.svg",
+          "instruction": {
+            "en": "Short instruction for how to set the device in pair mode."
+          }
+        }
+      },
+      "id": "a_Light_Device_supporting_White_and_Ambiance",
+      "settings": []
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/a_Light_Device_supporting_White_only/assets/icon.svg",
+      "images": {
+        "large": "/drivers/a_Light_Device_supporting_White_only/assets/images/large.png",
+        "small": "/drivers/a_Light_Device_supporting_White_only/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "The name of this device that support White only"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Device brand according to interview of the unit"
+        ],
+        "productId": "Device product ID accordint to interview of the unit",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/a_Light_Device_supporting_White_only/assets/icon.svg",
+          "instruction": {
+            "en": "Short instruction for how to set the device in pair mode."
+          }
+        }
+      },
+      "id": "a_Light_Device_supporting_White_only",
+      "settings": []
+    }
+  ]
+}

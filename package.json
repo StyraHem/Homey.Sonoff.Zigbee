@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "homey-zigbeedriver": "^1.6.2",
+    "zigbee-clusters": "^1.4.0"
+  }
+}

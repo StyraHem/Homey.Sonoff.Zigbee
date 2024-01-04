@@ -1,0 +1,35 @@
+{
+  "name": {
+    "en": "The name of this device that support White and Ambiance"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 0,
+      "usageOff": 0
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Device brand according to interview of the unit"
+    ],
+    "productId": "Device product ID accordint to interview of the unit",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Short instruction for how to set the device in pair mode."
+      }
+    }
+  }
+}

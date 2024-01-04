@@ -1,0 +1,65 @@
+This is a template for creating Zigbee Light Device apps for Homey using SDK 3 (firmware 5x->)
+
+Whats needed:
+- An Github account (free)
+- The device(s) you want to add (or really good info regarding the Zigbee cluster data for it)
+- A code editor, like Microsoft Visual Studio (free) (you can code directly in Github but I do not recommend it)
+- Homey ;)
+
+Start by creating a repository for the app by surfing to https://github.com/JohanBendz/Zigbee_Light_Device_Template and click the green button labeled "Use this template" (you will have to login unless you are already).
+
+Choose a name for your repository and write a short description.
+You can start with a private repository but I urge everyone to later go public if and when you publish your app to Homey App Store; This way we can continue to share knowledge and support each other.
+
+The template contains dummy files for a complete app, those needs to be replaced or updated.
+
+What you need to do is to edit:
+- the file LICENSE
+    Change to your name and make sure year is correct.
+
+- the file README.txt
+    Change the text to reflect the app you are creating.
+
+- the file app.js
+    Change "My Zigbee App.." to reflect the name of your app.
+
+- the file .homeychangelog.json
+    Edit the test to reflect what you have done.
+    Add a new section for each version update.
+
+- *do NOT edit the file app.json in the top folder  - this file is created by homeycomposer*
+
+- the files in the .homeycompose folder structure
+    Edit app.json
+        Change id, name and description to reflect your app.
+        The text in description will be visible as Title in Homey App Store.
+        Update version as needed.
+        Edit author and contributors as needed.
+
+- the files in the assets folder structure
+   Replace icon and images.
+
+- the files in the drivers folder structure
+    The name of the folders are "templates", make a copy of the mathing one and name the copy so it reflects the device you are adding. eg. RGB_Bulb_Color_Ambiance or Brand_Device.
+    When you have a new folder with the name you decided containing the files from a template folder you need to edit or replace:
+    - device.js
+        Change the text after Class (eg. lightColorAmbiance) to something reflecting your device and make sure you put the same text after modules.export.
+
+    - driver.compose.json
+        Change the name of the device to something that your users will understand.
+        Change the manufacturerName to reflect your device (get this from an interview, see below).
+        Change the ProductId to reflect your device (get this from an interview, see below).
+        Edit the instructions for learnmode if needed to reflect how your device is made ready for pairing.
+   
+    Replace icon and images
+        Images should be high quality product photos of the device with a white or transparens background.
+        Icon should be easy to understand, this is what your users will see in the mobile app / web gui.
+        Never use images or icons that you do not have rights to use, if using free media make sure to give credits in the readme.txt file (top folder).
+        Athom can help create icons for free if needed (https://github.com/athombv/homey-vectors-public).
+
+Interview of devices
+- All devices that is to be added to the app should be interviewed so that you have the correct Zigbee data at hand, this is done using Homey Developer Tools: https://developer.athom.com/tools/zigbee. Copy the result from the popup (click on the copy icon) and paste it somewhere you can read it better.
+
+Good luck and have fun :)
+
+// Johan

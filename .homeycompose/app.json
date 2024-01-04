@@ -1,0 +1,42 @@
+{
+  "id": "com.myzigbeeapp",
+  "sdk": 3,
+  "name": {
+    "en": "My ZigBee App"
+  },
+  "description": {
+    "en": "Title text for the Homey App store."
+  },
+  "category": "lights",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "author": {
+    "name": "My name",
+    "email": "my.name@domain.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "MyPayPalUsername"
+      }
+    }
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Someone Who Helped Me",
+        "email": "someones.mailadress@domain.com"
+      }
+    ]
+  },
+  "images": {
+    "large": "assets/images/large.png",
+    "small": "assets/images/small.png"
+  },
+  "speech": [],
+  "permissions": [],
+  "bugs": {
+    "url": "https://github.com/MyGitHubUsername/com.myzigbeeapp/issues"
+  },
+  "source": "https://github.com/MyGitHubUsername/com.myzigbeeapp"
+}
