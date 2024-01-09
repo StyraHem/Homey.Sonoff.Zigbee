@@ -9,10 +9,10 @@
     "en": "Sonoff Zigbee - StyraHem"
   },
   "description": {
-    "en": "Sonoff Zigbee Aby StyraHem"
+    "en": "Connects your Zigbee devices from Sonoff to your Homey."
   },
   "category": "lights",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",

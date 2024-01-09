@@ -1,7 +1,7 @@
 {
-  "id": "SonoffSNZB02P",
+  "id": "SonoffSNZB02",
   "name": {
-    "en": "Sonoff SNZB-02P"
+    "en": "Sonoff SNZB-02"
   },
   "class": "sensor",
   "platforms": ["local"],
@@ -13,7 +13,7 @@
   ],
   "energy": {
     "batteries": [
-      "CR2450"
+      "CR2477"
     ]
   },
   "images": {
@@ -25,7 +25,7 @@
       "eWeLink"
     ],
     "productId": [
-      "SNZB-02P"
+      "TH01"
     ],
     "endpoints": {
       "1": {

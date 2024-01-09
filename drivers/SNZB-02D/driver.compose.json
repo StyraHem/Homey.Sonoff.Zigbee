@@ -1,7 +1,7 @@
 {
-  "id": "SonoffSNZB02P",
+  "id": "SonoffSNZB02D",
   "name": {
-    "en": "Sonoff SNZB-02P"
+    "en": "Sonoff SNZB-02D"
   },
   "class": "sensor",
   "platforms": ["local"],
@@ -22,10 +22,10 @@
   },
   "zigbee": {
     "manufacturerName": [
-      "eWeLink"
+      "SONOFF"
     ],
     "productId": [
-      "SNZB-02P"
+      "SNZB-02D"
     ],
     "endpoints": {
       "1": {
@@ -46,7 +46,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press button on back side for aprox 10 seconds until the red LED blinks rapidly."
       }
     }
   }
