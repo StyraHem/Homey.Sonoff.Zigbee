@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1"
-	 id="Layer_1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" sodipodi:docname="icon.svg"
+	 id="Layer_1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 667 666"
 	 style="enable-background:new 0 0 667 666;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#1D1D1B;}
-	.st1{fill:#CC0000;}
 </style>
 <sodipodi:namedview  bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" id="namedview315" inkscape:current-layer="Layer_1" inkscape:cx="371.13476" inkscape:cy="374.07984" inkscape:document-rotation="0" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="987" inkscape:window-maximized="1" inkscape:window-width="1680" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="1.0022655" objecttolerance="10" pagecolor="#ffffff" showgrid="false">
 	</sodipodi:namedview>
 <g>
-	<polygon class="st0" points="5.3,44.2 98.4,44.2 98.4,67.7 29.1,67.7 29.1,113.6 98.4,113.6 98.4,205.7 5.3,205.7 5.3,182.6 
-		74.3,182.6 74.3,137 5.3,137 	"/>
-	<path class="st0" d="M342.2,113.6v92.1H435v-92.1H342.2z M411.6,182.6h-46.2V137h46.2V182.6z"/>
-	<path class="st0" d="M117.5,113.6v92.1h92.8v-92.1H117.5z M187.2,182.6h-46.2V137h46.2V182.6z"/>
-	<polygon class="st0" points="229.7,113.6 322.8,113.6 322.8,205.7 299,205.7 299,137 253.1,137 253.1,205.7 229.7,205.7 	"/>
-	<polygon class="st0" points="567.6,113.6 660.5,113.6 660.5,137 590.8,137 590.8,159.8 660.5,159.8 660.5,182.6 590.8,182.6 
-		590.8,205.7 567.6,205.7 	"/>
-	<polygon class="st0" points="454.4,113.6 547.2,113.6 547.2,137 477.9,137 477.9,159.8 547.2,159.8 547.2,182.6 477.9,182.6 
-		477.9,205.7 454.4,205.7 	"/>
-	<polygon class="st0" points="567.6,113.6 660.5,113.6 660.5,137 590.8,137 590.8,159.8 660.5,159.8 660.5,182.6 590.8,182.6 
-		590.8,205.7 567.6,205.7 	"/>
-	<path class="st0" d="M112.7,43.2c2.7-2,5.1-4.4,7.8-6.5c1.4,1.7,7.8,9.5,6.8,20.7c-0.7,9.5-5.8,15.3-7.5,17.3
-		c-2.4-2-5.1-4.1-7.5-6.1c1.4-1.4,4.1-4.8,4.8-9.9C118.5,50.7,113.7,44.2,112.7,43.2z"/>
-	<path class="st0" d="M129.4,29.3c2.4-2.4,4.8-4.8,7.1-7.1c3.4,4.1,10.2,13.3,11.9,27.2c2.7,21.1-8.8,36-11.2,39.1
-		c-2.4-2-5.1-3.7-7.5-5.8c1.7-2,11.9-13.9,10.2-30.9C138.2,39.8,131.8,32,129.4,29.3z"/>
-	<path class="st0" d="M145.7,15.3c2.4-2,5.1-4.1,7.5-6.1c3.7,4.4,17,21.4,17,46.6s-12.6,42.2-16.3,46.6c-2.4-1.7-4.8-3.7-7.1-5.4
-		c3.1-3.4,15.3-18,15.3-40.5C161.3,33.4,148.8,18.7,145.7,15.3z"/>
+	<polygon class="st0" points="5.9,269.8 99,269.8 99,293.2 29.7,293.2 29.7,339.1 99,339.1 99,431.2 5.9,431.2 5.9,408.1 
+		74.9,408.1 74.9,362.5 5.9,362.5 	"/>
+	<path class="st0" d="M342.8,339.1v92.1h92.8v-92.1H342.8z M412.2,408.1H366v-45.6h46.2V408.1z"/>
+	<path class="st0" d="M118.1,339.1v92.1h92.8v-92.1H118.1z M187.8,408.1h-46.2v-45.6h46.2V408.1z"/>
+	<polygon class="st0" points="230.3,339.1 323.4,339.1 323.4,431.2 299.6,431.2 299.6,362.5 253.7,362.5 253.7,431.2 230.3,431.2 	
+		"/>
+	<polygon class="st0" points="568.2,339.1 661.1,339.1 661.1,362.5 591.4,362.5 591.4,385.4 661.1,385.4 661.1,408.1 591.4,408.1 
+		591.4,431.2 568.2,431.2 	"/>
+	<polygon class="st0" points="455,339.1 547.8,339.1 547.8,362.5 478.5,362.5 478.5,385.4 547.8,385.4 547.8,408.1 478.5,408.1 
+		478.5,431.2 455,431.2 	"/>
+	<polygon class="st0" points="568.2,339.1 661.1,339.1 661.1,362.5 591.4,362.5 591.4,385.4 661.1,385.4 661.1,408.1 591.4,408.1 
+		591.4,431.2 568.2,431.2 	"/>
+	<path class="st0" d="M113.3,268.8c2.7-2,5.1-4.4,7.8-6.5c1.4,1.7,7.8,9.5,6.8,20.7c-0.7,9.5-5.8,15.3-7.5,17.3
+		c-2.4-2-5.1-4.1-7.5-6.1c1.4-1.4,4.1-4.8,4.8-9.9C119.1,276.2,114.3,269.8,113.3,268.8z"/>
+	<path class="st0" d="M130,254.9c2.4-2.4,4.8-4.8,7.1-7.1c3.4,4.1,10.2,13.3,11.9,27.2c2.7,21.1-8.8,36-11.2,39.1
+		c-2.4-2-5.1-3.7-7.5-5.8c1.7-2,11.9-13.9,10.2-30.9C138.8,265.4,132.4,257.5,130,254.9z"/>
+	<path class="st0" d="M146.3,240.9c2.4-2,5.1-4.1,7.5-6.1c3.7,4.4,17,21.4,17,46.6c0,25.2-12.6,42.2-16.3,46.6
+		c-2.4-1.7-4.8-3.7-7.1-5.4c3.1-3.4,15.3-18,15.3-40.5C161.9,259,149.4,244.2,146.3,240.9z"/>
 </g>
-<path class="st1" d="M333.3,261.4c-54.3-0.1-106.3,22.2-143.7,61.6c117-14.6,190-9.7,221.5-5.7c62.6,9.7,59.3,56.8,59.3,56.8
-	L270.8,580c38.3,3.7,115,6.1,230-10.5c20.9-32.1,31.9-69.6,31.9-107.8C532.6,350.9,443.4,261.4,333.3,261.4z M337.2,333.2
-	c-40.9-0.3-96.2,2.5-166.1,12.1c-23.4,32.8-36.7,73-36.7,116.3c0,110.3,88.8,199.8,198.9,199.8c60.5,0,114.2-27.2,150.9-69.7
-	c-121.5,15.8-196.9,10.5-229.2,6.5c-62.9-9.4-59.3-56.8-59.3-56.8l199.3-205.5C375.8,334.2,356.5,333.3,337.2,333.2L337.2,333.2z"/>
 </svg>

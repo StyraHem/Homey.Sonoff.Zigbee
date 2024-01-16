@@ -19,5 +19,8 @@
   },
   "1.0.6": {
     "en": "Remove cloud platform"
+  },
+  "1.0.8": {
+    "en": "Change name and images to align with guidelines"
   }
 }

@@ -1,12 +1,16 @@
+Sonoff Zigbee
 
-Sonoff Zigbee by StyraHem
+Homey App to add support for Sonoff Devices.
 
 Support devices:
--Sonoff SNZB-02 
+-Sonoff SNZB-02 (Square)
 -Sonoff SNZB-02D (Display)
 -Sonoff SNZB-02P (Round, Pro)
 
+More devices will be added soon.
+
 This app is under review and not available in Homey Store.
 
-You can test/install it on Homey Pro useing steps found here:
+You can test/install it on Homey Pro using steps found here:
 https://community.homey.app/t/how-to-cli-install-method/198
+

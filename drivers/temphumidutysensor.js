@@ -13,7 +13,6 @@ class TempHumiditySensor extends ZigBeeDevice {
 		this.enableDebug();
 		this.printNode();
 		
-		this.log('Init!!!!!!!!');
 		if (this.isFirstInit()) {
 
 			await this.configureAttributeReporting([

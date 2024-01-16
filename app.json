@@ -3,17 +3,18 @@
   "id": "se.styrahem.sonoff.zigbee",
   "sdk": 3,
   "platforms": [
-    "local"
+    "local",
+    "cloud"
   ],
   "brandColor": "#0099CC",
   "name": {
-    "en": "Sonoff Zigbee - StyraHem"
+    "en": "Sonoff"
   },
   "description": {
-    "en": "Connects your Zigbee devices from Sonoff to your Homey."
+    "en": "Brings Your Home To Life"
   },
   "category": "lights",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -26,6 +27,7 @@
       }
     }
   },
+  "support": "mailto:info@styrahem.se",
   "contributors": {
     "developers": []
   },
@@ -59,7 +61,7 @@
       ],
       "energy": {
         "batteries": [
-          "CR2477"
+          "CR2450"
         ]
       },
       "images": {
@@ -233,7 +235,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02D/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press button on back side for aprox 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -341,7 +343,7 @@
       ],
       "energy": {
         "batteries": [
-          "CR2450"
+          "CR2477"
         ]
       },
       "images": {
