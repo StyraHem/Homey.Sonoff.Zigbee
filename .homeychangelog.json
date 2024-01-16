@@ -25,5 +25,8 @@
   },
   "1.0.9": {
     "en": "Retry"
+  },
+  "1.0.10": {
+    "en": "Add cloud to all drivers"
   }
 }
