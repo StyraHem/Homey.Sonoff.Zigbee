@@ -11,6 +11,6 @@ More devices will be added soon.
 
 This app is under review and not available in Homey Store.
 
-You can test/install it on Homey Pro using steps found here:
-https://community.homey.app/t/how-to-cli-install-method/198
+You can install the latest test version here:
+https://homey.app/sv-se/app/se.styrahem.sonoff.zigbee/Sonoff/test/
 
