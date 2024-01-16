@@ -4,7 +4,7 @@
     "en": "Sonoff SNZB-02P"
   },
   "class": "sensor",
-  "platforms": ["local"],
+  "platforms": ["local", "cloud"],
   "connectivity": ["zigbee"],
   "capabilities": [
     "measure_temperature",

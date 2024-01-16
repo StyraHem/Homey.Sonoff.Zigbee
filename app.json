@@ -49,7 +49,8 @@
       },
       "class": "sensor",
       "platforms": [
-        "local"
+        "local",
+        "cloud"
       ],
       "connectivity": [
         "zigbee"
@@ -190,7 +191,8 @@
       },
       "class": "sensor",
       "platforms": [
-        "local"
+        "local",
+        "cloud"
       ],
       "connectivity": [
         "zigbee"
@@ -331,7 +333,8 @@
       },
       "class": "sensor",
       "platforms": [
-        "local"
+        "local",
+        "cloud"
       ],
       "connectivity": [
         "zigbee"
