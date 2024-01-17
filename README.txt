@@ -9,8 +9,3 @@ Support devices:
 
 More devices will be added soon.
 
-This app is under review and not available in Homey Store.
-
-You can install the latest test version here:
-https://homey.app/sv-se/app/se.styrahem.sonoff.zigbee/Sonoff/test/
-
