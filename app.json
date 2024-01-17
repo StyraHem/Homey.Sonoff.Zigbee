@@ -43,6 +43,61 @@
   "source": "https://github.com/StyraHem/Homey.Sonoff.Zigbee",
   "drivers": [
     {
+      "id": "SNZB-01P",
+      "name": {
+        "en": "Sonoff SNZB-01P"
+      },
+      "class": "button",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "images": {
+        "large": "/drivers/SNZB-01P/assets/images/large.png",
+        "small": "/drivers/SNZB-01P/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "SNZB-01P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6
+            ],
+            "bindings": [
+              0,
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-01P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
       "id": "SNZB-02",
       "name": {
         "en": "Sonoff SNZB-02"
@@ -467,6 +522,58 @@
           ]
         }
       ]
+    },
+    {
+      "id": "SNZB-04",
+      "name": {
+        "en": "Sonoff SNZB-04"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "images": {
+        "large": "/drivers/SNZB-04/assets/images/large.png",
+        "small": "/drivers/SNZB-04/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "DS01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-04/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
     }
   ]
 }
