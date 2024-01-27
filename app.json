@@ -95,7 +95,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the side for approx. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -237,7 +237,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02D/assets/learn.svg",
           "instruction": {
-            "en": "Press button on back side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the back side for approx. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -379,7 +379,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02P/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the side for approx. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -462,6 +462,115 @@
               "id": "2",
               "label": {
                 "en": "Report humidity value with 2 decimals (35.19 %)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZBMINIL2",
+      "name": {
+        "en": "ZBMINIL2"
+      },
+      "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "small": "/drivers/ZBMINIL2/assets/images/small.png",
+        "large": "/drivers/ZBMINIL2/assets/images/large.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINIL2"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6,
+              7
+            ],
+            "bindings": [
+              0,
+              1,
+              6,
+              7
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIL2/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the front for approx. 5 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "previous",
+              "label": {
+                "en": "Previous"
+              }
+            }
+          ]
+        },
+        {
+          "id": "switch_type",
+          "type": "label",
+          "label": {
+            "en": "Switch type"
+          },
+          "value": "toggle",
+          "values": [
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "momentary",
+              "label": {
+                "en": "Momentary"
               }
             }
           ]

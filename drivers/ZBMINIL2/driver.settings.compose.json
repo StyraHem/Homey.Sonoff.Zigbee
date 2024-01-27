@@ -1,0 +1,58 @@
+[
+  {
+    "id": "power_on_behavior",
+    "type": "dropdown",
+    "label": {
+      "en": "Power-on behavior"
+    },
+    "value": "off",
+    "values": [
+      {
+        "id": "off",
+        "label": {
+          "en": "Off"
+        }
+      },
+      {
+        "id": "on",
+        "label": {
+          "en": "On"
+        }
+      },
+      {
+        "id": "toggle",
+        "label": {
+          "en": "Toggle"
+        }
+      },
+      {
+        "id": "previous",
+        "label": {
+          "en": "Previous"
+        }
+      }
+    ]
+  },
+  {
+    "id": "switch_type",
+    "type": "label",
+    "label": {
+      "en": "Switch type"
+    },
+    "value": "toggle",
+    "values": [
+      {
+        "id": "toggle",
+        "label": {
+          "en": "Toggle"
+        }
+      },
+      {
+        "id": "momentary",
+        "label": {
+          "en": "Momentary"
+        }
+      }
+    ]
+  }
+]
