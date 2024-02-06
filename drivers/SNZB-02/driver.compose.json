@@ -4,8 +4,6 @@
     "en": "Sonoff SNZB-02"
   },
   "class": "sensor",
-  "platforms": ["local", "cloud"],
-  "connectivity": ["zigbee"],
   "capabilities": [
     "measure_temperature",
     "measure_humidity",
@@ -15,10 +13,6 @@
     "batteries": [
       "CR2450"
     ]
-  },
-  "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
     "manufacturerName": [
@@ -49,5 +43,6 @@
         "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
       }
     }
-  }
+  },
+  "$extends": ["defaults"]
 }

@@ -41,13 +41,90 @@
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },
   "source": "https://github.com/StyraHem/Homey.Sonoff.Zigbee",
+  "flow": {
+    "triggers": [
+      {
+        "id": "SNZB-01:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
-      "id": "SNZB-02",
-      "name": {
-        "en": "Sonoff SNZB-02"
-      },
-      "class": "sensor",
       "platforms": [
         "local",
         "cloud"
@@ -55,6 +132,120 @@
       "connectivity": [
         "zigbee"
       ],
+      "images": {
+        "large": "/drivers/SNZB-01/assets/images/large.png",
+        "small": "/drivers/SNZB-01/assets/images/small.png"
+      },
+      "id": "SNZB-01",
+      "name": {
+        "en": "Sonoff SNZB-01"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "button",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "WB01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-01/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset button with a pin inside the device for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-01P/assets/images/large.png",
+        "small": "/drivers/SNZB-01P/assets/images/small.png"
+      },
+      "id": "SNZB-01P",
+      "name": {
+        "en": "Sonoff SNZB-01P"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "SNZB-01P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-01P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-02/assets/images/large.png",
+        "small": "/drivers/SNZB-02/assets/images/small.png"
+      },
+      "id": "SNZB-02",
+      "name": {
+        "en": "Sonoff SNZB-02"
+      },
+      "class": "sensor",
       "capabilities": [
         "measure_temperature",
         "measure_humidity",
@@ -64,10 +255,6 @@
         "batteries": [
           "CR2450"
         ]
-      },
-      "images": {
-        "large": "/drivers/SNZB-02/assets/images/large.png",
-        "small": "/drivers/SNZB-02/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": [
@@ -185,11 +372,6 @@
       ]
     },
     {
-      "id": "SNZB-02D",
-      "name": {
-        "en": "Sonoff SNZB-02D"
-      },
-      "class": "sensor",
       "platforms": [
         "local",
         "cloud"
@@ -197,6 +379,15 @@
       "connectivity": [
         "zigbee"
       ],
+      "images": {
+        "large": "/drivers/SNZB-02D/assets/images/large.png",
+        "small": "/drivers/SNZB-02D/assets/images/small.png"
+      },
+      "id": "SNZB-02D",
+      "name": {
+        "en": "Sonoff SNZB-02D"
+      },
+      "class": "sensor",
       "capabilities": [
         "measure_temperature",
         "measure_humidity",
@@ -206,10 +397,6 @@
         "batteries": [
           "CR2450"
         ]
-      },
-      "images": {
-        "large": "/drivers/SNZB-02D/assets/images/large.png",
-        "small": "/drivers/SNZB-02D/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": [
@@ -327,11 +514,6 @@
       ]
     },
     {
-      "id": "SNZB-02P",
-      "name": {
-        "en": "Sonoff SNZB-02P"
-      },
-      "class": "sensor",
       "platforms": [
         "local",
         "cloud"
@@ -339,6 +521,15 @@
       "connectivity": [
         "zigbee"
       ],
+      "images": {
+        "large": "/drivers/SNZB-02P/assets/images/large.png",
+        "small": "/drivers/SNZB-02P/assets/images/small.png"
+      },
+      "id": "SNZB-02P",
+      "name": {
+        "en": "Sonoff SNZB-02P"
+      },
+      "class": "sensor",
       "capabilities": [
         "measure_temperature",
         "measure_humidity",
@@ -348,10 +539,6 @@
         "batteries": [
           "CR2477"
         ]
-      },
-      "images": {
-        "large": "/drivers/SNZB-02P/assets/images/large.png",
-        "small": "/drivers/SNZB-02P/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": [
@@ -467,6 +654,57 @@
           ]
         }
       ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-04/assets/images/large.png",
+        "small": "/drivers/SNZB-04/assets/images/small.png"
+      },
+      "id": "SNZB-04",
+      "name": {
+        "en": "Sonoff SNZB-04"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "DS01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-04/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
     }
   ]
 }

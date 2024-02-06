@@ -1,25 +1,19 @@
 'use strict';
 
-const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { debug, CLUSTER } = require('zigbee-clusters');
+const SonoffBase = require('../sonoffbase');
+const { CLUSTER } = require('zigbee-clusters');
 
-class SonoffSNZB04 extends ZigBeeDevice {
+class SonoffSNZB04 extends SonoffBase {
 
     async onNodeInit({zclNode}) {
 
-        this.enableDebug();
-		this.printNode();
-        
-        zclNode.endpoints[1].clusters[CLUSTER.IAS_ZONE.NAME]
-		.on('attr.zoneStatus', this.onStatus.bind(this));
-	}
+		super.onNodeInit({zclNode});
 
-    onStatus(){
-
-    }
-
-	onDeleted(){
-		this.log("removed")
+		// Listen for ZoneStatusChangeNotification
+		zclNode.endpoints[1].clusters.iasZone.onZoneStatusChangeNotification = data => {
+			this.setCapabilityValue('alarm_contact', data.zoneStatus.alarm1).catch(this.error);			
+			this.checkBattery();
+		};
 	}
 
 }

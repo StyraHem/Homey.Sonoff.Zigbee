@@ -4,8 +4,6 @@
     "en": "Sonoff SNZB-04"
   },
   "class": "sensor",
-  "platforms": ["local", "cloud"],
-  "connectivity": ["zigbee"],
   "capabilities": [
     "alarm_contact",
     "measure_battery"
@@ -14,10 +12,6 @@
     "batteries": [
       "CR2032"
     ]
-  },
-  "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
     "manufacturerName": [
@@ -29,12 +23,10 @@
     "endpoints": {
       "1": {
         "clusters": [
-          0,
           1,
           1280
         ],
         "bindings": [
-          
         ]
       }
     },
@@ -44,5 +36,6 @@
         "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
       }
     }
-  }
+  },
+  "$extends": ["defaults"]
 }
