@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="Layer_1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 667 666"
+	 style="enable-background:new 0 0 667 666;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:9;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#E74028;stroke:#000000;stroke-width:0.2604;}
+	.st2{fill:none;stroke:#000000;}
+	.st3{font-family:'MyriadPro-Regular';}
+	.st4{font-size:55.9996px;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-width:2;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" id="namedview315" inkscape:current-layer="Layer_1" inkscape:cx="105.58667" inkscape:cy="465.79079" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="987" inkscape:window-maximized="1" inkscape:window-width="1680" inkscape:window-x="1672" inkscape:window-y="-8" inkscape:zoom="1.0022655" objecttolerance="10" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<rect x="317.5" y="484.2" width="52" height="24"/>
+<path id="path862" sodipodi:cx="338.64407" sodipodi:cy="350.64407" sodipodi:end="4.7152625" sodipodi:open="true" sodipodi:rx="228.58475" sodipodi:ry="228.58475" sodipodi:start="4.7154259" sodipodi:type="arc" class="st0" d="
+	M343.7,43.7C469.9,44.1,572,146.7,571.6,273s-103,228.3-229.3,227.9S114,397.8,114.4,271.6S217.4,43.3,343.7,43.7"/>
+<path id="path884" sodipodi:cx="338.64407" sodipodi:cy="476.64407" sodipodi:end="4.7152625" sodipodi:open="true" sodipodi:rx="3.4451487" sodipodi:ry="3.4451487" sodipodi:start="4.7154259" sodipodi:type="arc" class="st1" d="
+	M340,61c3.7,0,6.6,3,6.6,6.6c0,3.7-3,6.6-6.6,6.6c-3.7,0-6.6-3-6.6-6.6C333.4,64,336.3,61,340,61"/>
+<polygon points="402.7,579.9 342.8,516.9 282.9,579.9 "/>
+<path class="st2" d="M-108,333.9"/>
+<text transform="matrix(1 0 0 1 267.543 638.1498)" class="st3 st4">10 sec</text>
+<path id="path862_00000167359488176684479180000006387319193688434048_" sodipodi:cx="338.64407" sodipodi:cy="350.64407" sodipodi:end="4.7152625" sodipodi:open="true" sodipodi:rx="228.58475" sodipodi:ry="228.58475" sodipodi:start="4.7154259" sodipodi:type="arc" class="st5" d="
+	M343.4,130.4c78.3,0.2,141.7,63.9,141.5,142.3S421,414.4,342.6,414.2s-141.7-64-141.5-142.3S265,130.1,343.4,130.4"/>
+</svg>

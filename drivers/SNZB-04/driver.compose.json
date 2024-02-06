@@ -1,46 +1,39 @@
 {
-  "id": "SonoffSNZB02D",
+  "id": "SonoffSNZB04",
   "name": {
-    "en": "Sonoff SNZB-02D"
+    "en": "Sonoff SNZB-04"
   },
   "class": "sensor",
   "capabilities": [
-    "measure_temperature",
-    "measure_humidity",
+    "alarm_contact",
     "measure_battery"
   ],
   "energy": {
     "batteries": [
-      "CR2450"
+      "CR2032"
     ]
   },
   "zigbee": {
     "manufacturerName": [
-      "SONOFF"
+      "eWeLink"
     ],
     "productId": [
-      "SNZB-02D"
+      "DS01"
     ],
     "endpoints": {
       "1": {
         "clusters": [
-          0,
           1,
-          1026,
-          1029
+          1280
         ],
         "bindings": [
-          0,
-          1,
-          1026,
-          1029
         ]
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on back side for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
       }
     }
   },
