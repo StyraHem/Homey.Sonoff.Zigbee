@@ -31,5 +31,8 @@
   },
   "1.0.11": {
     "en": "Change app images"
+  },
+  "1.0.12": {
+    "en": "Add more devices, battery reading etc"
   }
 }
