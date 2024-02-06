@@ -34,5 +34,8 @@
   },
   "1.0.12": {
     "en": "Add more devices, battery reading etc"
+  },
+  "1.0.13": {
+    "en": "Fix for SNZB-01"
   }
 }

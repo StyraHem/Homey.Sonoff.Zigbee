@@ -14,7 +14,7 @@
     "en": "Brings Your Home To Life"
   },
   "category": "lights",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -140,9 +140,8 @@
       "name": {
         "en": "Sonoff SNZB-01"
       },
-      "class": "sensor",
+      "class": "button",
       "capabilities": [
-        "button",
         "measure_battery"
       ],
       "energy": {
@@ -172,7 +171,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-01/assets/learn.svg",
           "instruction": {
-            "en": "Press reset button with a pin inside the device for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly."
           }
         }
       }
