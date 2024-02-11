@@ -37,5 +37,8 @@
   },
   "1.0.13": {
     "en": "Fix for SNZB-01"
+  },
+  "1.0.14": {
+    "en": "Add support for SNZB-03 and SNZB-06P"
   }
 }
