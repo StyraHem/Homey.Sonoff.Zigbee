@@ -67,3 +67,5 @@ typings
 
 # Added by Homey CLI
 /.homeybuild/
+
+/.vscode/
