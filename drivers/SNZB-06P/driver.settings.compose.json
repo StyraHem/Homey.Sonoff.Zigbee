@@ -1,0 +1,41 @@
+[
+    {
+        "type": "group",
+        "label": { "en": "Occupied" },
+        "children": [
+        {
+            "id": "occupied_to_unoccupied_delay",
+            "type": "number",
+            "label": {
+            "en": "Delay"
+            },
+            "value": 60,
+            "attr": {
+                "min": 15,
+                "max": 65535,
+                "step": 1
+            }
+        },
+        {
+            "id": "occupied_threshold",
+            "type": "dropdown",
+            "label": {
+            "en": "Sensitivity"
+            },
+            "values": [
+                {
+                "id": "1",
+                "label": { "en": "Low" }
+                },
+                {
+                "id": "2",
+                "label": { "en": "Medium" }
+                },
+                {
+                "id": "3",
+                "label": { "en": "Hight" }
+                }
+            ]
+        }
+    ]}
+]

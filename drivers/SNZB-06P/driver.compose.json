@@ -1,0 +1,37 @@
+{
+  "id": "SonoffSNZB06P",
+  "name": {
+    "en": "Sonoff SNZB-06P"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "SONOFF"
+    ],
+    "productId": [
+      "SNZB-06P"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          1030,
+          1280
+        ],
+        "bindings": [
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
+      }
+    }
+  },
+  "$extends": ["defaults"]
+}

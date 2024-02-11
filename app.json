@@ -663,6 +663,57 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/SNZB-03/assets/images/large.png",
+        "small": "/drivers/SNZB-03/assets/images/small.png"
+      },
+      "id": "SNZB-03",
+      "name": {
+        "en": "Sonoff SNZB-03"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "MS01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/SNZB-04/assets/images/large.png",
         "small": "/drivers/SNZB-04/assets/images/small.png"
       },
@@ -704,6 +755,102 @@
         }
       },
       "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-06P/assets/images/large.png",
+        "small": "/drivers/SNZB-06P/assets/images/small.png"
+      },
+      "id": "SNZB-06P",
+      "name": {
+        "en": "Sonoff SNZB-06P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "SNZB-06P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              1030,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-06P/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Occupied"
+          },
+          "children": [
+            {
+              "id": "occupied_to_unoccupied_delay",
+              "type": "number",
+              "label": {
+                "en": "Delay"
+              },
+              "value": 60,
+              "attr": {
+                "min": 15,
+                "max": 65535,
+                "step": 1
+              }
+            },
+            {
+              "id": "occupied_threshold",
+              "type": "dropdown",
+              "label": {
+                "en": "Sensitivity"
+              },
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Low"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Medium"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Hight"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -53,14 +53,14 @@ class TempHumiditySensor extends SonoffBase {
 		const temperatureOffset = this.getSetting('temperature_offset') || 0;
 		const parsedValue = this.getSetting('temperature_decimals') === '2' ? Math.round((measuredValue / 100) * 100) / 100 : Math.round((measuredValue / 100) * 10) / 10;
 		this.setCapabilityValue('measure_temperature', parsedValue + temperatureOffset).catch(this.error);
-		this.checkBattery();
+		//this.checkBattery();
 	}
 
 	onRelativeHumidityMeasuredAttributeReport(measuredValue) {
 		const humidityOffset = this.getSetting('humidity_offset') || 0;
 		const parsedValue = this.getSetting('humidity_decimals') === '2' ? Math.round((measuredValue / 100) * 100) / 100 : Math.round((measuredValue / 100) * 10) / 10;
 		this.setCapabilityValue('measure_humidity', parsedValue + humidityOffset).catch(this.error);
-		this.checkBattery();
+		//this.checkBattery();
 	}
 
 }
