@@ -1,7 +1,8 @@
 {
   "id": "SonoffSNZB01P",
   "name": {
-    "en": "Sonoff SNZB-01P"
+    "en": "Button SNZB-01P",
+    "sv": "Knapp SNZB-01P"
   },
   "class": "button",
   "capabilities": [

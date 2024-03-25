@@ -1,0 +1,11 @@
+{
+  "conditions": [
+    {
+      "id": "is_bright",
+      "title": {
+        "en": "Illuminance is !{{bright|dim}}",
+        "sv": "Ljusnivån är !{{ljus|mörk}}"
+      }
+    }
+  ]
+}

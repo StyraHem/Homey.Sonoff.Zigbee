@@ -1,11 +1,12 @@
 {
   "id": "SonoffSNZB03",
   "name": {
-    "en": "Sonoff SNZB-03"
+    "en": "Motion Sensor SNZB-03",
+    "sv": "Rörelsesensor SNZB-03"
   },
   "class": "sensor",
   "capabilities": [
-    "alarm_contact",
+    "alarm_motion",
     "measure_battery"
   ],
   "energy": {

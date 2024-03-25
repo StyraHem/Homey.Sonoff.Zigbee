@@ -121,6 +121,22 @@
           }
         ]
       }
+    ],
+    "conditions": [
+      {
+        "id": "is_bright",
+        "title": {
+          "en": "Illuminance is !{{bright|dim}}",
+          "sv": "Ljusnivån är !{{ljus|mörk}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-06P"
+          }
+        ]
+      }
     ]
   },
   "drivers": [
@@ -138,7 +154,8 @@
       },
       "id": "SNZB-01",
       "name": {
-        "en": "Sonoff SNZB-01"
+        "en": "Button SNZB-01",
+        "sv": "Knapp SNZB-01"
       },
       "class": "button",
       "capabilities": [
@@ -190,7 +207,8 @@
       },
       "id": "SNZB-01P",
       "name": {
-        "en": "Sonoff SNZB-01P"
+        "en": "Button SNZB-01P",
+        "sv": "Knapp SNZB-01P"
       },
       "class": "button",
       "capabilities": [
@@ -242,7 +260,8 @@
       },
       "id": "SNZB-02",
       "name": {
-        "en": "Sonoff SNZB-02"
+        "en": "Thermometer SNZB-02",
+        "sv": "Termometer SNZB-02"
       },
       "class": "sensor",
       "capabilities": [
@@ -384,7 +403,8 @@
       },
       "id": "SNZB-02D",
       "name": {
-        "en": "Sonoff SNZB-02D"
+        "en": "Thermometer SNZB-02D",
+        "sv": "Termometer SNZB-02D"
       },
       "class": "sensor",
       "capabilities": [
@@ -526,7 +546,7 @@
       },
       "id": "SNZB-02P",
       "name": {
-        "en": "Sonoff SNZB-02P"
+        "en": "Termometer SNZB-02P"
       },
       "class": "sensor",
       "capabilities": [
@@ -668,11 +688,12 @@
       },
       "id": "SNZB-03",
       "name": {
-        "en": "Sonoff SNZB-03"
+        "en": "Motion Sensor SNZB-03",
+        "sv": "Rörelsesensor SNZB-03"
       },
       "class": "sensor",
       "capabilities": [
-        "alarm_contact",
+        "alarm_motion",
         "measure_battery"
       ],
       "energy": {
@@ -719,7 +740,8 @@
       },
       "id": "SNZB-04",
       "name": {
-        "en": "Sonoff SNZB-04"
+        "en": "Door/window Sensor SNZB-04",
+        "sv": "Dörr-/fönstergivare SNZB-04"
       },
       "class": "sensor",
       "capabilities": [
@@ -770,11 +792,13 @@
       },
       "id": "SNZB-06P",
       "name": {
-        "en": "Sonoff SNZB-06P"
+        "en": "Presence Sensor SNZB-06P",
+        "sv": "Närvarosensor SNZB-06P"
       },
       "class": "sensor",
       "capabilities": [
-        "alarm_contact"
+        "alarm_motion",
+        "sonoff_illuminance"
       ],
       "zigbee": {
         "manufacturerName": [
@@ -789,7 +813,8 @@
               0,
               3,
               1030,
-              1280
+              1280,
+              64529
             ],
             "bindings": []
           }
@@ -852,5 +877,35 @@
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "sonoff_illuminance": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "dim",
+          "title": {
+            "en": "Dim",
+            "sv": "Mörkt"
+          }
+        },
+        {
+          "id": "bright",
+          "title": {
+            "en": "Bright",
+            "sv": "Ljust"
+          }
+        }
+      ],
+      "title": {
+        "en": "Illuminance",
+        "sv": "Ljusstyrka"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "/assets/capabilities/illuminance.svg"
+    }
+  }
 }

@@ -1,11 +1,13 @@
 {
   "id": "SonoffSNZB06P",
   "name": {
-    "en": "Sonoff SNZB-06P"
+    "en": "Presence Sensor SNZB-06P",
+    "sv": "Närvarosensor SNZB-06P"
   },
   "class": "sensor",
   "capabilities": [
-    "alarm_contact"
+    "alarm_motion",
+    "sonoff_illuminance"
   ],
   "zigbee": {
     "manufacturerName": [
@@ -20,7 +22,8 @@
           0,
           3,
           1030,
-          1280
+          1280,
+          64529
         ],
         "bindings": [
         ]

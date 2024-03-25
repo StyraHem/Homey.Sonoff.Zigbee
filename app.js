@@ -7,7 +7,9 @@ const Homey = require("homey");
 //   Inspector.close();
 //   Inspector.open(9331, '0.0.0.0', true);
 // }
-//require('inspector').waitForDebugger();
+if (process.env.DEBUG) {
+  //require('inspector').waitForDebugger();
+}
 
 class SonoffZigbeeApp extends Homey.App {
   onInit() {

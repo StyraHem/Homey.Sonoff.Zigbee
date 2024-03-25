@@ -96,7 +96,7 @@ class SonoffBase extends ZigBeeDevice {
 					this.log("Got attr", attr, value);
 					handler(value);
 				})
-				.catch(() => {			
+				.catch((e) => {			
 					this.error("Error read attr", attr);
 				});
 		} catch (error) {
