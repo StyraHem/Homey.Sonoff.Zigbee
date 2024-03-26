@@ -43,5 +43,8 @@
   },
   "1.1.0": {
     "en": "Add support for SNZB-03, SNZB-06P and change to Athom made icons"
+  },
+  "1.1.1": {
+    "en": "Fix upgrade issue from 1.0.14 version"
   }
 }
