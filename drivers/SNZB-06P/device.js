@@ -20,6 +20,12 @@ class SonoffSNZB06P extends SonoffBase {
 
 		super.onNodeInit({zclNode});
 
+		//Fix upgrade from 1.0.14 
+		if (this.hasCapability('alarm_contact') === true) {
+			await this.removeCapability('alarm_contact');
+			await this.addCapability('alarm_motion');
+		}
+
 		this.configureAttributeReporting([
 			{
 				endpointId: 1,
