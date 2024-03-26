@@ -35,7 +35,7 @@
     "small": "assets/images/small.png"
   },
   "speech": [],
-  "permissions": [],
+  "permissions": ["homey:wireless:433"],
   "bugs": {
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },

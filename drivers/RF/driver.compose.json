@@ -1,0 +1,17 @@
+{
+  "id": "SonoffRF",
+  "connectivity": ["rf433"],
+  "name": {
+    "en": "Button TX",
+    "sv": "Knapp TX"
+  },
+  "class": "button",
+  "capabilities": [
+  ],
+  "energy": {
+  },
+  "rf433": {
+    "satelliteMode": true
+  },
+  "$extends": ["defaults"]
+}

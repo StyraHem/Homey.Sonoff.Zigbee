@@ -36,110 +36,38 @@
     "small": "assets/images/small.png"
   },
   "speech": [],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:433"
+  ],
   "bugs": {
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },
   "source": "https://github.com/StyraHem/Homey.Sonoff.Zigbee",
-  "flow": {
-    "triggers": [
-      {
-        "id": "SNZB-01:single_click",
-        "title": {
-          "en": "Singel click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01:double_click",
-        "title": {
-          "en": "Double click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01:long_click",
-        "title": {
-          "en": "Long click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:single_click",
-        "title": {
-          "en": "Singel click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:double_click",
-        "title": {
-          "en": "Double click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:long_click",
-        "title": {
-          "en": "Long click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      }
-    ],
-    "conditions": [
-      {
-        "id": "is_bright",
-        "title": {
-          "en": "Illuminance is !{{bright|dim}}",
-          "sv": "Ljusnivån är !{{ljus|mörk}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-06P"
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "rf433"
+      ],
+      "images": {
+        "large": "/drivers/RF/assets/images/large.png",
+        "small": "/drivers/RF/assets/images/small.png"
+      },
+      "id": "RF",
+      "name": {
+        "en": "Button TX",
+        "sv": "Knapp TX"
+      },
+      "class": "button",
+      "capabilities": [],
+      "energy": {},
+      "rf433": {
+        "satelliteMode": true
+      }
+    },
     {
       "platforms": [
         "local",
@@ -241,7 +169,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-01P/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
           }
         }
       }
@@ -300,7 +228,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -443,7 +371,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02D/assets/learn.svg",
           "instruction": {
-            "en": "Press button on back side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the back side for aprox. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -585,7 +513,7 @@
         "learnmode": {
           "image": "/drivers/SNZB-02P/assets/learn.svg",
           "instruction": {
-            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
           }
         }
       },
@@ -798,6 +726,7 @@
       "class": "sensor",
       "capabilities": [
         "alarm_motion",
+        "alarm_contact",
         "sonoff_illuminance"
       ],
       "zigbee": {
@@ -876,8 +805,211 @@
           ]
         }
       ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBMINIL2/assets/images/large.png",
+        "small": "/drivers/ZBMINIL2/assets/images/small.png"
+      },
+      "id": "ZBMINIL2",
+      "name": {
+        "en": "Switch ZBMINI-L2",
+        "sv": "Strömbrytare ZBMINI-L2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINIL2"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6,
+              7
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIL2/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "previous",
+              "label": {
+                "en": "Previous"
+              }
+            }
+          ]
+        },
+        {
+          "id": "switch_type",
+          "type": "label",
+          "label": {
+            "en": "Switch type"
+          },
+          "value": "toggle",
+          "values": [
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "momentary",
+              "label": {
+                "en": "Momentary"
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "SNZB-01:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "is_bright",
+        "title": {
+          "en": "Illuminance is !{{bright|dim}}",
+          "sv": "Ljusnivån är !{{ljus|mörk}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-06P"
+          }
+        ]
+      }
+    ]
+  },
   "capabilities": {
     "sonoff_illuminance": {
       "type": "enum",
@@ -906,6 +1038,31 @@
       "uiComponent": "sensor",
       "uiQuickAction": false,
       "icon": "/assets/capabilities/illuminance.svg"
+    }
+  },
+  "signals": {
+    "433": {
+      "sonoff_rf": {
+        "sof": [],
+        "eof": [
+          1000
+        ],
+        "words": [
+          [
+            250,
+            750
+          ],
+          [
+            750,
+            250
+          ]
+        ],
+        "interval": 20000,
+        "sensitivity": 0.5,
+        "repetitions": 5,
+        "minimalLength": 23,
+        "maximalLength": 23
+      }
     }
   }
 }
