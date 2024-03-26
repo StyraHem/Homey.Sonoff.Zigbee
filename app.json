@@ -14,7 +14,7 @@
     "en": "Brings Your Home To Life"
   },
   "category": "lights",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -121,6 +121,22 @@
           }
         ]
       }
+    ],
+    "conditions": [
+      {
+        "id": "is_bright",
+        "title": {
+          "en": "Illuminance is !{{bright|dim}}",
+          "sv": "Ljusnivån är !{{ljus|mörk}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-06P"
+          }
+        ]
+      }
     ]
   },
   "drivers": [
@@ -138,7 +154,8 @@
       },
       "id": "SNZB-01",
       "name": {
-        "en": "Sonoff SNZB-01"
+        "en": "Button SNZB-01",
+        "sv": "Knapp SNZB-01"
       },
       "class": "button",
       "capabilities": [
@@ -190,7 +207,8 @@
       },
       "id": "SNZB-01P",
       "name": {
-        "en": "Sonoff SNZB-01P"
+        "en": "Button SNZB-01P",
+        "sv": "Knapp SNZB-01P"
       },
       "class": "button",
       "capabilities": [
@@ -242,7 +260,8 @@
       },
       "id": "SNZB-02",
       "name": {
-        "en": "Sonoff SNZB-02"
+        "en": "Thermometer SNZB-02",
+        "sv": "Termometer SNZB-02"
       },
       "class": "sensor",
       "capabilities": [
@@ -384,7 +403,8 @@
       },
       "id": "SNZB-02D",
       "name": {
-        "en": "Sonoff SNZB-02D"
+        "en": "Thermometer SNZB-02D",
+        "sv": "Termometer SNZB-02D"
       },
       "class": "sensor",
       "capabilities": [
@@ -526,7 +546,7 @@
       },
       "id": "SNZB-02P",
       "name": {
-        "en": "Sonoff SNZB-02P"
+        "en": "Termometer SNZB-02P"
       },
       "class": "sensor",
       "capabilities": [
@@ -663,12 +683,65 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/SNZB-03/assets/images/large.png",
+        "small": "/drivers/SNZB-03/assets/images/small.png"
+      },
+      "id": "SNZB-03",
+      "name": {
+        "en": "Motion Sensor SNZB-03",
+        "sv": "Rörelsesensor SNZB-03"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "MS01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/SNZB-04/assets/images/large.png",
         "small": "/drivers/SNZB-04/assets/images/small.png"
       },
       "id": "SNZB-04",
       "name": {
-        "en": "Sonoff SNZB-04"
+        "en": "Door/window Sensor SNZB-04",
+        "sv": "Dörr-/fönstergivare SNZB-04"
       },
       "class": "sensor",
       "capabilities": [
@@ -704,6 +777,135 @@
         }
       },
       "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-06P/assets/images/large.png",
+        "small": "/drivers/SNZB-06P/assets/images/small.png"
+      },
+      "id": "SNZB-06P",
+      "name": {
+        "en": "Presence Sensor SNZB-06P",
+        "sv": "Närvarosensor SNZB-06P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "sonoff_illuminance"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "SNZB-06P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              1030,
+              1280,
+              64529
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-06P/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Occupied"
+          },
+          "children": [
+            {
+              "id": "occupied_to_unoccupied_delay",
+              "type": "number",
+              "label": {
+                "en": "Delay"
+              },
+              "value": 60,
+              "attr": {
+                "min": 15,
+                "max": 65535,
+                "step": 1
+              }
+            },
+            {
+              "id": "occupied_threshold",
+              "type": "dropdown",
+              "label": {
+                "en": "Sensitivity"
+              },
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Low"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Medium"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Hight"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "capabilities": {
+    "sonoff_illuminance": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "dim",
+          "title": {
+            "en": "Dim",
+            "sv": "Mörkt"
+          }
+        },
+        {
+          "id": "bright",
+          "title": {
+            "en": "Bright",
+            "sv": "Ljust"
+          }
+        }
+      ],
+      "title": {
+        "en": "Illuminance",
+        "sv": "Ljusstyrka"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "/assets/capabilities/illuminance.svg"
+    }
+  }
 }

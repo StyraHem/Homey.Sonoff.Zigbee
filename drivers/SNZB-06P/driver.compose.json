@@ -1,41 +1,38 @@
 {
-  "id": "SonoffSNZB01P",
+  "id": "SonoffSNZB06P",
   "name": {
-    "en": "Button SNZB-01P",
-    "sv": "Knapp SNZB-01P"
+    "en": "Presence Sensor SNZB-06P",
+    "sv": "Närvarosensor SNZB-06P"
   },
-  "class": "button",
+  "class": "sensor",
   "capabilities": [
-    "measure_battery"
+    "alarm_motion",
+    "sonoff_illuminance"
   ],
-  "energy": {
-    "batteries": [
-      "CR2477"
-    ]
-  },
   "zigbee": {
     "manufacturerName": [
-      "eWeLink"
+      "SONOFF"
     ],
     "productId": [
-      "SNZB-01P"
+      "SNZB-06P"
     ],
     "endpoints": {
       "1": {
         "clusters": [
           0,
-          1,
-          6
+          3,
+          1030,
+          1280,
+          64529
         ],
         "bindings": [
-          6
         ]
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
       }
     }
   },

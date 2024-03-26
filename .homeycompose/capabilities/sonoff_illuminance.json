@@ -1,0 +1,28 @@
+{
+    "type": "enum",
+    "values": [
+      {
+        "id": "dim",
+        "title": {
+          "en": "Dim",
+          "sv": "Mörkt"
+        }
+      },
+      {
+        "id": "bright",
+        "title": {
+          "en": "Bright",
+          "sv": "Ljust"
+        }
+      }
+    ],
+    "title": { 
+        "en": "Illuminance",
+        "sv": "Ljusstyrka"
+     },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "uiQuickAction": false,
+    "icon": "/assets/capabilities/illuminance.svg"
+  }

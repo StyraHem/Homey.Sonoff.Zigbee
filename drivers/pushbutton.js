@@ -15,15 +15,12 @@ class PushButtonBoundCluster extends BoundCluster {
     }
     toggle() {
         this._single_click.trigger(this.node, {}, {}).catch(this.node.error);
-        this.node.checkBattery();
     }
     setOn() {        
         this._double_click.trigger(this.node, {}, {}).catch(this.node.error);
-        this.node.checkBattery();
     }
     setOff() {        
         this._long_click.trigger(this.node, {}, {}).catch(this.node.error);
-        this.node.checkBattery();
     }
 }
 
