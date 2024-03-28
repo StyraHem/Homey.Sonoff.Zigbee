@@ -52,5 +52,8 @@
   },
   "1.2.0": {
     "en": "Add support for ZBMINI-L/L2 and RF/TX devices"
+  },
+  "1.2.1": {
+    "en": "Fix a small bug in RF receiving"
   }
 }
