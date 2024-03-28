@@ -10,7 +10,9 @@ module.exports = class MyRFDriver extends RFDriver {
   async onRFInit() {
     this._rfTrigger = this.homey.flow.getTriggerCard('sonoff_rf');
     this._rfTrigger.registerRunListener(async (args, state) => {
-      return args.code.toUpperCase() === state.code.toUpperCase();
+      const match = args.code === '' ||
+          args.code.toUpperCase() === state.code.toUpperCase();
+      return  match;        
     });
     this.enableRX(this.receive.bind(this))
   }
