@@ -1,0 +1,21 @@
+{       
+    "title": { 
+        "en": "Receive RF" 
+    },
+    "tokens": [       
+        {
+        "name": "code",
+        "type": "string",
+        "title": { "en": "Code" },
+        "example": { "en": "123ABC" }
+        }
+    ],
+    "args": [
+        {
+            "name": "code",
+            "title": { "en": "Code" },
+            "type": "text",
+            "required": false
+        }
+    ]
+}

@@ -2,6 +2,7 @@
   "sof": [
   ],
   "eof": [
+    1000
   ],
   "words": [
     [
@@ -15,7 +16,7 @@
   ],
   "interval": 20000,
   "sensitivity": 0.5,
-  "repetitions": 10,
-  "minimalLength": 24,
-  "maximalLength": 24
+  "repetitions": 1,
+  "minimalLength": 23,
+  "maximalLength": 23
 }

@@ -43,6 +43,145 @@
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },
   "source": "https://github.com/StyraHem/Homey.Sonoff.Zigbee",
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Receive RF"
+        },
+        "tokens": [
+          {
+            "name": "code",
+            "type": "string",
+            "title": {
+              "en": "Code"
+            },
+            "example": {
+              "en": "123ABC"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "code",
+            "title": {
+              "en": "Code"
+            },
+            "type": "text",
+            "required": false
+          }
+        ],
+        "id": "sonoff_rf"
+      },
+      {
+        "id": "on_receive",
+        "title": {
+          "en": "Receive RF"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RF"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:single_click",
+        "title": {
+          "en": "Singel click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:double_click",
+        "title": {
+          "en": "Double click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P:long_click",
+        "title": {
+          "en": "Long click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "is_bright",
+        "title": {
+          "en": "Illuminance is !{{bright|dim}}",
+          "sv": "Ljusnivån är !{{ljus|mörk}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-06P"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "platforms": [
@@ -58,15 +197,58 @@
       },
       "id": "RF",
       "name": {
-        "en": "Button TX",
-        "sv": "Knapp TX"
+        "en": "RF-button",
+        "sv": "RF-knapp"
       },
       "class": "button",
-      "capabilities": [],
+      "capabilities": [
+        "button"
+      ],
       "energy": {},
       "rf433": {
         "satelliteMode": true
-      }
+      },
+      "pair": [
+        {
+          "id": "rf_receiver_learn",
+          "navigation": {
+            "next": "rf_receiver_add"
+          },
+          "options": {
+            "title": {
+              "en": "Press the button..."
+            },
+            "instruction": {
+              "en": "Press the button on your device once."
+            },
+            "copyFromRemote": {
+              "en": "Copy from Remote"
+            }
+          }
+        },
+        {
+          "id": "rf_transmitter_learn",
+          "options": {
+            "instruction": {
+              "en": "Press any button on your remote."
+            }
+          },
+          "navigation": {
+            "prev": "rf_receiver_learn"
+          }
+        },
+        {
+          "id": "rf_receiver_add",
+          "navigation": {
+            "prev": "rf_receiver_learn"
+          },
+          "options": {
+            "instruction": {
+              "en": "Did the device turn off and on?"
+            }
+          }
+        }
+      ]
     },
     {
       "platforms": [
@@ -82,8 +264,8 @@
       },
       "id": "SNZB-01",
       "name": {
-        "en": "Button SNZB-01",
-        "sv": "Knapp SNZB-01"
+        "en": "SNZB-01 Button",
+        "sv": "SNZB-01 Knapp"
       },
       "class": "button",
       "capabilities": [
@@ -135,8 +317,8 @@
       },
       "id": "SNZB-01P",
       "name": {
-        "en": "Button SNZB-01P",
-        "sv": "Knapp SNZB-01P"
+        "en": "SNZB-01P Button",
+        "sv": "SNZB-01P Knapp"
       },
       "class": "button",
       "capabilities": [
@@ -188,8 +370,8 @@
       },
       "id": "SNZB-02",
       "name": {
-        "en": "Thermometer SNZB-02",
-        "sv": "Termometer SNZB-02"
+        "en": "SNZB-02 Thermometer",
+        "sv": "SNZB-02 Termometer"
       },
       "class": "sensor",
       "capabilities": [
@@ -331,8 +513,8 @@
       },
       "id": "SNZB-02D",
       "name": {
-        "en": "Thermometer SNZB-02D",
-        "sv": "Termometer SNZB-02D"
+        "en": "SNZB-02D Thermometer",
+        "sv": "SNZB-02D Termometer"
       },
       "class": "sensor",
       "capabilities": [
@@ -474,7 +656,7 @@
       },
       "id": "SNZB-02P",
       "name": {
-        "en": "Termometer SNZB-02P"
+        "en": "SNZB-02P Termometer"
       },
       "class": "sensor",
       "capabilities": [
@@ -616,8 +798,8 @@
       },
       "id": "SNZB-03",
       "name": {
-        "en": "Motion Sensor SNZB-03",
-        "sv": "Rörelsesensor SNZB-03"
+        "en": "SNZB-03 Motion Sensor",
+        "sv": "SNZB-03 Rörelsesensor"
       },
       "class": "sensor",
       "capabilities": [
@@ -668,8 +850,8 @@
       },
       "id": "SNZB-04",
       "name": {
-        "en": "Door/window Sensor SNZB-04",
-        "sv": "Dörr-/fönstergivare SNZB-04"
+        "en": "SNZB-04 Door/window Sensor",
+        "sv": "SNZB-04 Dörr-/fönstergivare"
       },
       "class": "sensor",
       "capabilities": [
@@ -720,8 +902,8 @@
       },
       "id": "SNZB-06P",
       "name": {
-        "en": "Presence Sensor SNZB-06P",
-        "sv": "Närvarosensor SNZB-06P"
+        "en": "SNZB-06P Presence Sensor",
+        "sv": "SNZB-06P Närvarosensor"
       },
       "class": "sensor",
       "capabilities": [
@@ -815,13 +997,90 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/ZBMINIL/assets/images/large.png",
+        "small": "/drivers/ZBMINIL/assets/images/small.png"
+      },
+      "id": "ZBMINIL",
+      "name": {
+        "en": "ZBMINI-L Switch",
+        "sv": "ZBMINI-L Strömbrytare"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINI-L"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6,
+              7
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIL/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/ZBMINIL2/assets/images/large.png",
         "small": "/drivers/ZBMINIL2/assets/images/small.png"
       },
       "id": "ZBMINIL2",
       "name": {
-        "en": "Switch ZBMINI-L2",
-        "sv": "Strömbrytare ZBMINI-L2"
+        "en": "ZBMINI-L2 Switch",
+        "sv": "ZBMINI-L2 Strömbrytare"
       },
       "class": "light",
       "capabilities": [
@@ -874,37 +1133,9 @@
               }
             },
             {
-              "id": "toggle",
+              "id": "last_state",
               "label": {
-                "en": "Toggle"
-              }
-            },
-            {
-              "id": "previous",
-              "label": {
-                "en": "Previous"
-              }
-            }
-          ]
-        },
-        {
-          "id": "switch_type",
-          "type": "label",
-          "label": {
-            "en": "Switch type"
-          },
-          "value": "toggle",
-          "values": [
-            {
-              "id": "toggle",
-              "label": {
-                "en": "Toggle"
-              }
-            },
-            {
-              "id": "momentary",
-              "label": {
-                "en": "Momentary"
+                "en": "Last state"
               }
             }
           ]
@@ -912,104 +1143,6 @@
       ]
     }
   ],
-  "flow": {
-    "triggers": [
-      {
-        "id": "SNZB-01:single_click",
-        "title": {
-          "en": "Singel click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01:double_click",
-        "title": {
-          "en": "Double click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01:long_click",
-        "title": {
-          "en": "Long click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:single_click",
-        "title": {
-          "en": "Singel click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:double_click",
-        "title": {
-          "en": "Double click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      },
-      {
-        "id": "SNZB-01P:long_click",
-        "title": {
-          "en": "Long click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-01P"
-          }
-        ]
-      }
-    ],
-    "conditions": [
-      {
-        "id": "is_bright",
-        "title": {
-          "en": "Illuminance is !{{bright|dim}}",
-          "sv": "Ljusnivån är !{{ljus|mörk}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=SNZB-06P"
-          }
-        ]
-      }
-    ]
-  },
   "capabilities": {
     "sonoff_illuminance": {
       "type": "enum",
@@ -1044,6 +1177,25 @@
     "433": {
       "sonoff_rf": {
         "sof": [],
+        "eof": [],
+        "words": [
+          [
+            250,
+            750
+          ],
+          [
+            750,
+            250
+          ]
+        ],
+        "interval": 20000,
+        "sensitivity": 0.5,
+        "repetitions": 10,
+        "minimalLength": 24,
+        "maximalLength": 24
+      },
+      "sonoff_rf2": {
+        "sof": [],
         "eof": [
           1000
         ],
@@ -1059,7 +1211,7 @@
         ],
         "interval": 20000,
         "sensitivity": 0.5,
-        "repetitions": 5,
+        "repetitions": 1,
         "minimalLength": 23,
         "maximalLength": 23
       }

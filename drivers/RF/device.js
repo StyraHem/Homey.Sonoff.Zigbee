@@ -2,21 +2,29 @@ const { RFDevice } = require('homey-rfdriver');
 
 module.exports = class MyRFDevice extends RFDevice {
 
-  static RX_ENABLED = false; // Set to true for transmitter devices
-
-  static CAPABILITIES = {
-
-    // When the onoff capability is changed by the user,
-    // you can assemble a command here.
-    // 'data' is your device's data object
-    onoff: ({ value, data }) => ({
-      address: data.address,
-      state: value === true,
-    }),
-  };
+  static RX_ENABLED = true; // Set to true for transmitter devices
 
   async onRFInit() {
+    this._receiveTrigger = this.homey.flow.getDeviceTriggerCard("on_receive");
+    this.registerCapabilityListener('button', async () => {
+      const data = await this.getData();      
+      this.driver.tx({code:data.code}, {device:this});
+    });
+
     this.log("Init")
+  }
+
+  async onCommandFirst(command, { ...flags } = {}) {
+    this._receiveTrigger.trigger(this)
+      .then(this.log("Receive trigged"))
+      .catch(this.error);
+  }
+
+  async onCommandMatch(command) {
+    const signal = await this.driver.getRFSignal();
+    const currentDeviceData = await this.getData();
+    const commandDeviceData = signal.constructor.commandToDeviceData(command);
+    return currentDeviceData.code==commandDeviceData.code;
   }
 
 }

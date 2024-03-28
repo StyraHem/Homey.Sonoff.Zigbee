@@ -1,0 +1,61 @@
+<style type="text/css">
+  #rf-receiver-learn-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    box-sizing: border-box;
+  }
+
+  #rf-receiver-learn-image {
+    display: block;
+    width: 80vw;
+    height: 80vw;
+    margin: 2em auto;
+    background: url(image.svg) no-repeat center center;
+    background-size: contain;
+  }
+
+  #rf-receiver-learn-instruction {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  #rf-receiver-learn-copy {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+  }
+</style>
+
+<div id="rf-receiver-learn-wrap">
+  <div>rf_receiver_learn</div>
+  <div id="rf-receiver-learn-image"></div>
+  <p id="rf-receiver-learn-instruction"></p>
+
+  <p id="rf-receiver-learn-copy"></p>
+
+</div>
+
+<script type="text/javascript">
+  (function () {
+    const $instruction = document.getElementById('rf-receiver-learn-instruction');
+    const $copyButton = document.getElementById('rf-receiver-learn-copy');
+
+    Homey.getOptions((err, options) => {
+      if (err) return Homey.error(err);
+      if (options && options.title) Homey.setTitle(Homey.__(options.title));
+      if (options && options.instruction) $instruction.innerHTML = Homey.__(options.instruction);
+      if (options && options.copyFromRemote) {
+        $copyButton.innerHTML = Homey.__(options.copyFromRemote);
+        $copyButton.style.display = 'block';
+        $copyButton.addEventListener('click', () => {
+          Homey.showView('rf_transmitter_learn');
+        });
+      }
+    });
+  })();
+</script>

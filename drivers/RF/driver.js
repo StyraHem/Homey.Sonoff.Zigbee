@@ -8,10 +8,17 @@ module.exports = class MyRFDriver extends RFDriver {
   static SIGNAL = RfSignal;
 
   async onRFInit() {
+    this._rfTrigger = this.homey.flow.getTriggerCard('sonoff_rf');
+    this._rfTrigger.registerRunListener(async (args, state) => {
+      return args.code.toUpperCase() === state.code.toUpperCase();
+    });
     this.enableRX(this.receive.bind(this))
   }
 
   async receive (command, { isFirst }) {
+    if (isFirst) {
+      this._rfTrigger.trigger({code:command.hex},{code:command.hex}).then(this.log("Sent global trigger")).catch(this.error);
+    }
     this.log("RF receive " + command.bits + " " + command.hex);
   }
 }

@@ -1,22 +1,22 @@
 {
-    "triggers": [
-      {
-        "id": "{{driverId}}:single_click",
-        "title": { 
-            "en": "Singel click" 
-        }
-      },
-      {
-        "id": "{{driverId}}:double_click",
-        "title": { 
-            "en": "Double click" 
-        }
-      },
-      {
-        "id": "{{driverId}}:long_click",
-        "title": { 
-            "en": "Long click" 
-        }
+  "triggers": [
+    {
+      "id": "{{driverId}}:single_click",
+      "title": { 
+          "en": "Singel click" 
       }
-    ]
-  }
+    },
+    {
+      "id": "{{driverId}}:double_click",
+      "title": { 
+          "en": "Double click" 
+      }
+    },
+    {
+      "id": "{{driverId}}:long_click",
+      "title": { 
+          "en": "Long click" 
+      }
+    }
+  ]
+}

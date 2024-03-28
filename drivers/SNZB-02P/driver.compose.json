@@ -1,8 +1,8 @@
 {
   "id": "SonoffSNZB02P",
   "name": {
-    "en": "Thermometer SNZB-02P",
-    "en": "Termometer SNZB-02P"
+    "en": "SNZB-02P Thermometer",
+    "en": "SNZB-02P Termometer"
   },
   "class": "sensor",
   "capabilities": [

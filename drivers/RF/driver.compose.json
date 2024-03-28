@@ -2,16 +2,58 @@
   "id": "SonoffRF",
   "connectivity": ["rf433"],
   "name": {
-    "en": "Button TX",
-    "sv": "Knapp TX"
+    "en": "RF-button",
+    "sv": "RF-knapp"
   },
   "class": "button",
   "capabilities": [
+    "button"
   ],
   "energy": {
   },
   "rf433": {
     "satelliteMode": true
   },
-  "$extends": ["defaults"]
+  "$extends": ["defaults"],
+  "pair": [
+    {
+      "id": "rf_receiver_learn",
+      "navigation": {
+        "next": "rf_receiver_add"
+      },
+      "options": {
+        "title": {
+          "en": "Press the button..."
+        },
+        "instruction": {
+          "en": "Press the button on your device once."
+        },
+        "copyFromRemote": {
+          "en": "Copy from Remote"
+        }
+      }
+    },
+    {
+      "id": "rf_transmitter_learn",
+      "options": {
+        "instruction": {
+          "en": "Press any button on your remote."
+        }
+      },
+      "navigation": {
+        "prev": "rf_receiver_learn"
+      }
+    },
+    {
+      "id": "rf_receiver_add",
+      "navigation": {
+        "prev": "rf_receiver_learn"
+      },
+      "options": {
+        "instruction": {
+          "en": "Did the device turn off and on?"
+        }
+      }
+    }
+  ]
 }

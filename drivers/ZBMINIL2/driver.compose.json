@@ -1,8 +1,8 @@
 {
   "id": "SonoffZBMINIL2",
   "name": {
-    "en": "Switch ZBMINI-L2",
-    "sv": "Strömbrytare ZBMINI-L2"
+    "en": "ZBMINI-L2 Switch",
+    "sv": "ZBMINI-L2 Strömbrytare"
   },
   "class": "light",
   "capabilities": [

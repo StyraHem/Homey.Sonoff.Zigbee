@@ -10,7 +10,7 @@ const { Cluster, CLUSTER } = require('zigbee-clusters');
 Cluster.addCluster(SonoffOnOffCluster);
 //Cluster.addCluster(SonoffOnOffSwitchCluster);
 
-class SonoffZBMINIL2 extends ZigBeeDevice {
+class SonoffZBMINIL extends ZigBeeDevice {
 
  /**
    * onInit is called when the device is initialized.
@@ -68,4 +68,4 @@ class SonoffZBMINIL2 extends ZigBeeDevice {
 
 }
 
-module.exports = SonoffZBMINIL2;
+module.exports = SonoffZBMINIL;

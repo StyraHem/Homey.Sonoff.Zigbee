@@ -1,8 +1,8 @@
 {
   "id": "SonoffSNZB04",
   "name": {
-    "en": "Door/window Sensor SNZB-04",
-    "sv": "Dörr-/fönstergivare SNZB-04"
+    "en": "SNZB-04 Door/window Sensor",
+    "sv": "SNZB-04 Dörr-/fönstergivare"
   },
   "class": "sensor",
   "capabilities": [

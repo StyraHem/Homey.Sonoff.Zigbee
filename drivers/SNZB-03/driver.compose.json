@@ -1,8 +1,8 @@
 {
   "id": "SonoffSNZB03",
   "name": {
-    "en": "Motion Sensor SNZB-03",
-    "sv": "Rörelsesensor SNZB-03"
+    "en": "SNZB-03 Motion Sensor",
+    "sv": "SNZB-03 Rörelsesensor"
   },
   "class": "sensor",
   "capabilities": [
