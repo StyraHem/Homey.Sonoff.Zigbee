@@ -13,7 +13,7 @@
     "en": "Brings Your Home To Life"
   },
   "category": "lights",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -35,7 +35,9 @@
     "small": "assets/images/small.png"
   },
   "speech": [],
-  "permissions": ["homey:wireless:433"],
+  "permissions": [
+    "homey:wireless:433"
+  ],
   "bugs": {
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },
