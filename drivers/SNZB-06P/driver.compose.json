@@ -2,7 +2,17 @@
   "id": "SonoffSNZB06P",
   "name": {
     "en": "Presence Sensor SNZB-06P",
-    "sv": "Närvarosensor SNZB-06P"
+    "sv": "Närvarosensor SNZB-06P",
+    "nl": "Aanwezigheidssensor SNZB-06P",
+    "da": "Tilstedeværelsessensor SNZB-06P",
+    "de": "Präsenzsensor SNZB-06P",
+    "es": "Sensor de Presencia SNZB-06P",
+    "fr": "Capteur de Présence SNZB-06P",
+    "it": "Sensore di Presenza SNZB-06P",
+    "no": "Nærværsensor SNZB-06P",
+    "pl": "Czujnik Obecności SNZB-06P",
+    "ru": "Датчик присутствия SNZB-06P",
+    "ko": "존재 센서 SNZB-06P"
   },
   "class": "sensor",
   "capabilities": [
@@ -25,16 +35,28 @@
           1280,
           64529
         ],
-        "bindings": [
-        ]
+        "bindings": []
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
+        "en": "Press reset on top for aprox 10 seconds until the red LED blinks.",
+        "nl": "Houd de resetknop bovenop ongeveer 10 seconden ingedrukt totdat de rode LED knippert.",
+        "da": "Tryk på reset øverst i ca. 10 sekunder, indtil den røde LED blinker.",
+        "de": "Drücken Sie oben auf die Reset-Taste und halten Sie sie etwa 10 Sekunden lang gedrückt, bis die rote LED blinkt.",
+        "es": "Presiona el botón de reinicio en la parte superior durante aproximadamente 10 segundos hasta que parpadee el LED rojo.",
+        "fr": "Appuyez sur le bouton de réinitialisation en haut pendant environ 10 secondes jusqu'à ce que le voyant rouge clignote.",
+        "it": "Premi il pulsante di reset in alto per circa 10 secondi fino a quando il LED rosso lampeggia.",
+        "no": "Trykk på reset-knappen øverst i ca. 10 sekunder til den røde LED-en blinker.",
+        "sv": "Tryck på återställningsknappen ovanpå i cirka 10 sekunder tills den röda LED-lampan blinkar.",
+        "pl": "Naciśnij przycisk reset na górze, przytrzymaj przez około 10 sekund, aż czerwona dioda LED zacznie migać.",
+        "ru": "Нажмите и удерживайте кнопку сброса сверху примерно 10 секунд, пока не начнет мигать красный светодиод.",
+        "ko": "빨간색 LED가 깜박일 때까지 상단의 리셋 버튼을 약 10초 동안 누르십시오."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

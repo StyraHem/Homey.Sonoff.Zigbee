@@ -3,10 +3,32 @@
     "id": "temperature_offset",
     "type": "number",
     "label": {
-      "en": "Temperature offset (°C)"
+      "en": "Temperature offset (°C)",
+      "da": "Temperaturforskydning (°C)",
+      "de": "Temperaturkorrektur (°C)",
+      "es": "Compensación de temperatura (°C)",
+      "fr": "Compensation de température (°C)",
+      "it": "Offset della temperatura (°C)",
+      "no": "Temperaturforskyvning (°C)",
+      "sv": "Temperaturkompensation (°C)",
+      "pl": "Przesunięcie temperatury (°C)",
+      "ru": "Коррекция температуры (°C)",
+      "ko": "온도 보정 (°C)",
+      "nl": "Temperatuur compensatie (°C)"
     },
     "hint": {
-      "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+      "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+      "da": "Indstil en værdi for at kompensere for en temperaturforskydning.\nRækkevidde: -10 - 10, trin 0.1, \nstandard: 0 [°C]",
+      "de": "Stellen Sie einen Wert ein, um eine Temperaturdifferenz auszugleichen.\nBereich: -10 - 10, Schrittgröße 0,1, \nStandard: 0 [°C]",
+      "es": "Establezca un valor para compensar una desviación de temperatura.\nRango: -10 - 10, tamaño del paso 0,1, \npredeterminado: 0 [°C]",
+      "fr": "Définissez une valeur pour compenser un décalage de température.\nPlage : -10 - 10, taille du pas 0,1, \npar défaut : 0 [°C]",
+      "it": "Imposta un valore per compensare una deviazione di temperatura.\nIntervallo: -10 - 10, passo 0,1, \npredefinito: 0 [°C]",
+      "no": "Sett en verdi for å kompensere for temperaturforskyvning.\nRekkevidde: -10 - 10, trinnstørrelse 0.1, \nstandard: 0 [°C]",
+      "sv": "Ställ in ett värde för att kompensera för en temperaturförskjutning.\nOmråde: -10 - 10, stegstorlek 0,1, \nstandard: 0 [°C]",
+      "pl": "Ustaw wartość kompensacji przesunięcia temperatury.\nZakres: -10 - 10, rozmiar kroku 0,1, \nwartość domyślna: 0 [°C]",
+      "ru": "Установите значение для компенсации температурного смещения.\nДиапазон: -10 - 10, шаг 0,1, \nпо умолчанию: 0 [°C]",
+      "ko": "온도 보정 값을 설정합니다.\n범위: -10 - 10, 단위 0.1, \n기본값: 0 [°C]",
+      "nl": "Stel een waarde in om een temperatuur compensatie te maken.\nBereik: -10 - 10, stapgrote 0.1, \nstandaard: 0 [°C]"
     },
     "value": 0,
     "attr": {
@@ -19,20 +41,50 @@
     "id": "temperature_decimals",
     "type": "radio",
     "label": {
-      "en": "Temperature reporting decimals"
+      "en": "Temperature reporting decimals",
+      "da": "Temperaturrapportering decimaler",
+      "de": "Temperaturbericht Dezimalstellen",
+      "es": "Decimales del informe de temperatura",
+      "fr": "Décimales du rapport de température",
+      "it": "Decimali di segnalazione della temperatura",
+      "no": "Temperaturrapporter desimaler",
+      "sv": "Temperaturrapportering decimaler",
+      "pl": "Raportowanie temperatury z miejscami dziesiętnymi",
+      "ru": "Десятичные знаки в отчете о температуре",
+      "ko": "온도 보고 소수점 자릿수"
     },
     "value": "1",
     "values": [
       {
         "id": "1",
         "label": {
-          "en": "Report temperature value with 1 decimal (21.4 °C)"
+          "en": "Report temperature value with 1 decimal (21.4 °C)",
+          "da": "Rapporter temperaturen med 1 decimal (21,4 °C)",
+          "de": "Temperaturwert mit 1 Dezimalstelle (21,4 °C) berichten",
+          "es": "Informe del valor de temperatura con 1 decimal (21.4 °C)",
+          "fr": "Signaler la valeur de la température avec 1 décimale (21,4 °C)",
+          "it": "Riporta il valore della temperatura con 1 decimale (21,4 °C)",
+          "no": "Rapport temperaturverdi med 1 desimal (21,4 °C)",
+          "sv": "Rapportera temperaturvärde med 1 decimal (21,4 °C)",
+          "pl": "Raportowanie wartości temperatury z dokładnością do 1 miejsca po przecinku (21,4°C)",
+          "ru": "Сообщить значение температуры с точностью до 1 десятичного знака (21,4 °C)",
+          "ko": "온도 값을 소수점 첫번째 자리까지 보고합니다 (21.4 °C)"
         }
       },
       {
         "id": "2",
         "label": {
-          "en": "Report temperature value with 2 decimals (21.37 °C)"
+          "en": "Report temperature value with 2 decimals (21.37 °C)",
+          "da": "Rapporter temperaturen med 2 decimaler (21,37 °C)",
+          "de": "Temperaturwert mit 2 Dezimalstellen (21,37 °C) berichten",
+          "es": "Informe del valor de temperatura con 2 decimales (21.37 °C)",
+          "fr": "Signaler la valeur de la température avec 2 décimales (21,37 °C)",
+          "it": "Riporta il valore della temperatura con 2 decimali (21,37 °C)",
+          "no": "Rapport temperaturverdi med 2 desimaler (21,37 °C)",
+          "sv": "Rapportera temperaturvärde med 2 decimaler (21,37 °C)",
+          "pl": "Raportowanie wartości temperatury z dokładnością do 2 miejsc po przecinku (21,37°C)",
+          "ru": "Сообщить значение температуры с точностью до 2 десятичных знаков (21,37 °C)",
+          "ko": "온도 값을 소수점 두번째 자리까지 보고합니다 (21.37 °C)"
         }
       }
     ]
@@ -42,11 +94,31 @@
     "type": "number",
     "label": {
       "en": "Humidity offset (%)",
-      "nl": "Luchtvochtigheids compensatie (%)"
+      "nl": "Luchtvochtigheids compensatie (%)",
+      "da": "Forskydning af luftfugtighed (%)",
+      "de": "Feuchtigkeitsausgleich (%)",
+      "es": "Compensación de humedad (%)",
+      "fr": "Compensation d'humidité (%)",
+      "it": "Compensazione umidità (%)",
+      "no": "Fuktighetskompensasjon (%)",
+      "sv": "Fuktkompensation (%)",
+      "pl": "Offset wilgotności (%)",
+      "ru": "Коррекция влажности (%)",
+      "ko": "습도 보정 (%)"
     },
     "hint": {
       "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
-      "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+      "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]",
+      "da": "Indstil en korrektion for at kompensere for en forskydning af luftfugtighed.\nRækkevidde: -10 - 10, trin 1, \nstandard: 0 [%]",
+      "de": "Stellen Sie eine Korrektur ein, um eine Luftfeuchtigkeitsabweichung auszugleichen.\nBereich: -10 - 10, Schrittgröße 1, \nStandard: 0 [%]",
+      "es": "Configura una corrección para compensar una desviación de humedad.\nRango: -10 - 10, tamaño del paso 1, \npredeterminado: 0 [%]",
+      "fr": "Définissez une correction pour compenser un décalage d'humidité.\nPlage : -10 - 10, taille du pas 1, \npar défaut : 0 [%]",
+      "it": "Imposta una correzione per compensare una deriva dell'umidità.\nIntervallo: -10 - 10, passo 1, \npredefinito: 0 [%]",
+      "no": "Sett en korreksjon for å kompensere for en forskyvning i luftfuktighet.\nRekkevidde: -10 - 10, trinnstørrelse 1, \nstandard: 0 [%]",
+      "sv": "Ställ in en korrigering för att kompensera för en fuktförskjutning.\nOmråde: -10 - 10, stegstorlek 1, \nstandard: 0 [%]",
+      "pl": "Ustaw korektę, aby zrekompensować przesunięcie wilgotności.\nZakres: -10 - 10, rozmiar kroku 1, \nwartość domyślna: 0 [%]",
+      "ru": "Установите поправку для компенсации смещения влажности.\nДиапазон: -10 - 10, шаг 1, \nпо умолчанию: 0 [%]",
+      "ko": "습도 오차를 보정하기 위한 값을 설정하세요.\n범위: -10 - 10, 단위: 1, \n기본값: 0 [%]"
     },
     "value": 0,
     "attr": {
@@ -55,31 +127,70 @@
       "step": 1
     },
     "units": {
-       "en": "%",
-       "nl": "%"
+      "en": "%",
+      "nl": "%",
+      "da": "%",
+      "de": "%",
+      "es": "%",
+      "fr": "%",
+      "it": "%",
+      "no": "%",
+      "sv": "%",
+      "pl": "%",
+      "ru": "%",
+      "ko": "%"
     }
   },
   {
     "id": "humidity_decimals",
     "type": "radio",
     "label": {
-      "en": "Humidity reporting"
+      "en": "Humidity reporting",
+      "da": "Fugtrapportering",
+      "de": "Feuchtigkeitsmeldung",
+      "es": "Informe de humedad",
+      "fr": "Rapport d'humidité",
+      "it": "Segnalazione di umidità",
+      "no": "Fuktighetsrapportering",
+      "sv": "Fuktighetsrapportering",
+      "pl": "Raportowanie wilgotności",
+      "ru": "Отчет о влажности",
+      "ko": "습도 보고"
     },
     "value": "1",
     "values": [
       {
         "id": "1",
         "label": {
-          "en": "Report humidity value with 1 decimal (35.2 %)"
+          "en": "Report humidity value with 1 decimal (35.2 %)",
+          "da": "Rapporter luftfugtighedsværdi med 1 decimal (35,2 %)",
+          "de": "Feuchtigkeitswert mit 1 Dezimalstelle (35,2 %) berichten",
+          "es": "Informe del valor de humedad con 1 decimal (35.2 %)",
+          "fr": "Signaler la valeur de l'humidité avec 1 décimale (35,2 %)",
+          "it": "Riporta il valore dell'umidità con 1 decimale (35,2 %)",
+          "no": "Rapporter fuktverdi med 1 desimal (35,2 %)",
+          "sv": "Rapportera fuktvärde med 1 decimal (35,2 %)",
+          "pl": "Raportowanie wartości wilgotności z dokładnością do 1 miejsca po przecinku (35,2%)",
+          "ru": "Сообщить значение влажности с точностью до 1 десятичного знака (35,2 %)",
+          "ko": "습도 값을 소수점 첫번째 자리까지 보고합니다 (35.2 %)"
         }
       },
       {
         "id": "2",
         "label": {
-          "en": "Report humidity value with 2 decimals (35.19 %)"
+          "en": "Report humidity value with 2 decimals (35.19 %)",
+          "da": "Rapporter luftfugtighedsværdi med 2 decimaler (35,19 %)",
+          "de": "Feuchtigkeitswert mit 2 Dezimalstellen (35,19 %) berichten",
+          "es": "Informe del valor de humedad con 2 decimales (35.19 %)",
+          "fr": "Signaler la valeur de l'humidité avec 2 décimales (35,19 %)",
+          "it": "Riporta il valore dell'umidità con 2 decimali (35,19 %)",
+          "no": "Rapporter fuktverdi med 2 desimaler (35,19 %)",
+          "sv": "Rapportera fuktvärde med 2 decimaler (35,19 %)",
+          "pl": "Raportowanie wartości wilgotności z dokładnością do 2 miejsc po przecinku (35,19%)",
+          "ru": "Сообщить значение влажности с точностью до 2 десятичных знаков (35,19 %)",
+          "ko": "습도 값을 소수점 두번째 자리까지 보고합니다 (35.19 %)"
         }
       }
     ]
   }
-
 ]
