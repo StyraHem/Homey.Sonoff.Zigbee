@@ -2,7 +2,17 @@
   "id": "SonoffSNZB01P",
   "name": {
     "en": "Button SNZB-01P",
-    "sv": "Knapp SNZB-01P"
+    "sv": "Knapp SNZB-01P",
+    "nl": "Knop SNZB-01P",
+    "da": "Knap SNZB-01P",
+    "de": "Taste SNZB-01P",
+    "es": "Botón SNZB-01P",
+    "fr": "Bouton SNZB-01P",
+    "it": "Pulsante SNZB-01P",
+    "no": "Knapp SNZB-01P",
+    "pl": "Przycisk SNZB-01P",
+    "ru": "Кнопка SNZB-01P",
+    "ko": "버튼 SNZB-01P"
   },
   "class": "button",
   "capabilities": [
@@ -35,9 +45,22 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+        "nl": "Druk op de knop aan de zijkant voor ongeveer 10 seconden totdat de rode LED snel begint te knipperen.",
+        "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Drücken Sie die Taste an der Seite ungefähr 10 Sekunden lang, bis die rote LED schnell blinkt.",
+        "es": "Presione el botón en el costado durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Appuyez sur le bouton sur le côté pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+        "it": "Premi il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Trykk på knappen på siden i ca. 10 sekunder til den røde LED-en blinker raskt.",
+        "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Нажмите кнопку на боковой стороне на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+        "ko": "빨간색 LED가 빠르게 깜박일 때까지 옆면 버튼을 약 10초 동안 누르세요.",
+        "sv": "Tryck på knappen på sidan i ungefär 10 sekunder tills den röda LED-lampan blinkar snabbt."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

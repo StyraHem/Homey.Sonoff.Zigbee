@@ -2,7 +2,17 @@
   "id": "SonoffSNZB02",
   "name": {
     "en": "Thermometer SNZB-02",
-    "sv": "Termometer SNZB-02"
+    "sv": "Termometer SNZB-02",
+    "nl": "Thermometer SNZB-02",
+    "da": "Termometer SNZB-02",
+    "de": "Thermometer SNZB-02",
+    "es": "Termómetro SNZB-02",
+    "fr": "Thermomètre SNZB-02",
+    "it": "Termometro SNZB-02",
+    "no": "Termometer SNZB-02",
+    "pl": "Termometr SNZB-02",
+    "ru": "Термометр SNZB-02",
+    "ko": "온도계 SNZB-02"
   },
   "class": "sensor",
   "capabilities": [
@@ -41,9 +51,22 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+        "nl": "Druk ongeveer 10 seconden op de knop aan de zijkant tot de rode LED snel knippert.",
+        "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Drücken Sie etwa 10 Sekunden lang die Taste an der Seite, bis die rote LED schnell blinkt.",
+        "es": "Presione el botón lateral durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Appuyez sur le bouton latéral pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+        "it": "Premere il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Trykk på knappen på siden i ca. 10 sekunder til den røde LED blinker raskt.",
+        "sv": "Tryck på knappen på sidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+        "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Нажмите на боковую кнопку примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+        "ko": "빨간색 LED가 빠르게 깜박일 때까지 측면 버튼을 약 10초 동안 누르세요."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

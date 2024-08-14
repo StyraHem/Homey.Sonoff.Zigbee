@@ -1,22 +1,55 @@
 {
-    "triggers": [
-      {
-        "id": "{{driverId}}:single_click",
-        "title": { 
-            "en": "Singel click" 
-        }
-      },
-      {
-        "id": "{{driverId}}:double_click",
-        "title": { 
-            "en": "Double click" 
-        }
-      },
-      {
-        "id": "{{driverId}}:long_click",
-        "title": { 
-            "en": "Long click" 
-        }
+  "triggers": [
+    {
+      "id": "{{driverId}}:single_click",
+      "title": {
+        "en": "Singel click",
+        "da": "Enkelt klik",
+        "de": "Einzelklick",
+        "es": "Clic único",
+        "fr": "Clic unique",
+        "it": "Clic singolo",
+        "no": "Enkel klikk",
+        "sv": "Enstaka klick",
+        "pl": "Pojedyncze kliknięcie",
+        "ru": "Одиночный клик",
+        "ko": "단일 클릭",
+        "nl": "Enkele klik"
       }
-    ]
-  }
+    },
+    {
+      "id": "{{driverId}}:double_click",
+      "title": {
+        "en": "Double click",
+        "da": "Dobbelt klik",
+        "de": "Doppelklick",
+        "es": "Doble clic",
+        "fr": "Double clic",
+        "it": "Doppio clic",
+        "no": "Dobbeltklikk",
+        "sv": "Dubbelklick",
+        "pl": "Podwójne kliknięcie",
+        "ru": "Двойной клик",
+        "ko": "더블 클릭",
+        "nl": "Dubbele klik"
+      }
+    },
+    {
+      "id": "{{driverId}}:long_click",
+      "title": {
+        "en": "Long click",
+        "da": "Langt klik",
+        "de": "Langer Klick",
+        "es": "Clic prolongado",
+        "fr": "Clic long",
+        "it": "Clic lungo",
+        "no": "Langt klikk",
+        "sv": "Långt klick",
+        "pl": "Długie kliknięcie",
+        "ru": "Долгий клик",
+        "ko": "긴 클릭",
+        "nl": "Lange klik"
+      }
+    }
+  ]
+}

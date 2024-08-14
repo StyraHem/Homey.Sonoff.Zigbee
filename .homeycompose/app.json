@@ -7,10 +7,32 @@
   ],
   "brandColor": "#0099CC",
   "name": {
-    "en": "Sonoff"
+    "en": "Sonoff",
+    "nl": "Sonoff",
+    "da": "Sonoff",
+    "de": "Sonoff",
+    "es": "Sonoff",
+    "fr": "Sonoff",
+    "it": "Sonoff",
+    "no": "Sonoff",
+    "sv": "Sonoff",
+    "pl": "Sonoff",
+    "ru": "Sonoff",
+    "ko": "Sonoff"
   },
   "description": {
-    "en": "Brings Your Home To Life"
+    "en": "Brings Your Home To Life",
+    "nl": "Brengt je huis tot leven",
+    "da": "Bringer dit hjem til live",
+    "de": "Bringt Ihr Zuhause zum Leben",
+    "es": "Da vida a tu hogar",
+    "fr": "Donne vie à votre maison",
+    "it": "Dà vita alla tua casa",
+    "no": "Bringer hjemmet ditt til livs",
+    "sv": "Ger liv till ditt hem",
+    "pl": "Ożywia twój dom",
+    "ru": "Оживляет ваш дом",
+    "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
   "version": "1.1.2",
