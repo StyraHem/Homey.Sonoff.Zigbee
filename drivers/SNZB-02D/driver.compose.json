@@ -1,8 +1,18 @@
 {
   "id": "SonoffSNZB02D",
   "name": {
-    "en": "SNZB-02D Thermometer",
-    "sv": "SNZB-02D Termometer"
+    "en": "Thermometer SNZB-02D",
+    "sv": "Termometer SNZB-02D",
+    "nl": "Thermometer SNZB-02D",
+    "da": "Termometer SNZB-02D",
+    "de": "Thermometer SNZB-02D",
+    "es": "Termómetro SNZB-02D",
+    "fr": "Thermomètre SNZB-02D",
+    "it": "Termometro SNZB-02D",
+    "no": "Termometer SNZB-02D",
+    "pl": "Termometr SNZB-02D",
+    "ru": "Термометр SNZB-02D",
+    "ko": "온도계 SNZB-02D"
   },
   "class": "sensor",
   "capabilities": [
@@ -41,9 +51,22 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press the button on the back side for aprox. 10 seconds until the red LED blinks rapidly."
+        "en": "Press button on back side for approx 10 seconds until the red LED blinks rapidly.",
+        "nl": "Druk ongeveer 10 seconden op de knop aan de achterkant totdat de rode LED snel knippert.",
+        "da": "Tryk på knappen på bagsiden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Drücken Sie etwa 10 Sekunden lang die Taste auf der Rückseite, bis die rote LED schnell blinkt.",
+        "es": "Presiona el botón en la parte posterior durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Appuyez sur le bouton à l'arrière pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+        "it": "Premi il pulsante sul retro per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Trykk på knappen på baksiden i ca. 10 sekunder til den røde LED-en blinker raskt.",
+        "sv": "Tryck på knappen på baksidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+        "pl": "Naciśnij przycisk z tyłu przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Нажмите кнопку на задней стороне устройства примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+        "ko": "빨간 LED가 빠르게 깜박일 때까지 후면의 버튼을 약 10초 동안 누릅니다."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

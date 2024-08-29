@@ -8,10 +8,32 @@
   ],
   "brandColor": "#0099CC",
   "name": {
-    "en": "Sonoff"
+    "en": "Sonoff",
+    "nl": "Sonoff",
+    "da": "Sonoff",
+    "de": "Sonoff",
+    "es": "Sonoff",
+    "fr": "Sonoff",
+    "it": "Sonoff",
+    "no": "Sonoff",
+    "sv": "Sonoff",
+    "pl": "Sonoff",
+    "ru": "Sonoff",
+    "ko": "Sonoff"
   },
   "description": {
-    "en": "Brings Your Home To Life"
+    "en": "Brings Your Home To Life",
+    "nl": "Brengt je huis tot leven",
+    "da": "Bringer dit hjem til live",
+    "de": "Bringt Ihr Zuhause zum Leben",
+    "es": "Da vida a tu hogar",
+    "fr": "Donne vie à votre maison",
+    "it": "Dà vita alla tua casa",
+    "no": "Bringer hjemmet ditt til livs",
+    "sv": "Ger liv till ditt hem",
+    "pl": "Ożywia twój dom",
+    "ru": "Оживляет ваш дом",
+    "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
   "version": "1.2.1",
@@ -92,7 +114,18 @@
       {
         "id": "SNZB-01:single_click",
         "title": {
-          "en": "Singel click"
+          "en": "Singel click",
+          "nl": "Enkele klik",
+          "da": "Enkelt klik",
+          "de": "Einzelklick",
+          "es": "Clic simple",
+          "fr": "Clic simple",
+          "it": "Singolo clic",
+          "no": "Enkelt klikk",
+          "sv": "Enkelt klick",
+          "pl": "Pojedyncze kliknięcie",
+          "ru": "Одиночный щелчок",
+          "ko": "단일 클릭"
         },
         "args": [
           {
@@ -105,7 +138,18 @@
       {
         "id": "SNZB-01:double_click",
         "title": {
-          "en": "Double click"
+          "en": "Double click",
+          "nl": "Dubbele klik",
+          "da": "Dobbelt klik",
+          "de": "Doppelklick",
+          "es": "Doble clic",
+          "fr": "Double-clic",
+          "it": "Doppio clic",
+          "no": "Dobbelt klikk",
+          "sv": "Dubbelt klick",
+          "pl": "Podwójne kliknięcie",
+          "ru": "Двойной щелчок",
+          "ko": "더블 클릭"
         },
         "args": [
           {
@@ -118,7 +162,18 @@
       {
         "id": "SNZB-01:long_click",
         "title": {
-          "en": "Long click"
+          "en": "Long click",
+          "nl": "Lange klik",
+          "da": "Langt klik",
+          "de": "Langer Klick",
+          "es": "Clic largo",
+          "fr": "Clic long",
+          "it": "Clic lungo",
+          "no": "Langt klikk",
+          "sv": "Långt klick",
+          "pl": "Długie kliknięcie",
+          "ru": "Длительный щелчок",
+          "ko": "롱 클릭"
         },
         "args": [
           {
@@ -131,7 +186,18 @@
       {
         "id": "SNZB-01P:single_click",
         "title": {
-          "en": "Singel click"
+          "en": "Singel click",
+          "da": "Enkelt klik",
+          "de": "Einzelklick",
+          "es": "Clic único",
+          "fr": "Clic unique",
+          "it": "Clic singolo",
+          "no": "Enkel klikk",
+          "sv": "Enstaka klick",
+          "pl": "Pojedyncze kliknięcie",
+          "ru": "Одиночный клик",
+          "ko": "단일 클릭",
+          "nl": "Enkele klik"
         },
         "args": [
           {
@@ -144,7 +210,18 @@
       {
         "id": "SNZB-01P:double_click",
         "title": {
-          "en": "Double click"
+          "en": "Double click",
+          "da": "Dobbelt klik",
+          "de": "Doppelklick",
+          "es": "Doble clic",
+          "fr": "Double clic",
+          "it": "Doppio clic",
+          "no": "Dobbeltklikk",
+          "sv": "Dubbelklick",
+          "pl": "Podwójne kliknięcie",
+          "ru": "Двойной клик",
+          "ko": "더블 클릭",
+          "nl": "Dubbele klik"
         },
         "args": [
           {
@@ -157,7 +234,18 @@
       {
         "id": "SNZB-01P:long_click",
         "title": {
-          "en": "Long click"
+          "en": "Long click",
+          "da": "Langt klik",
+          "de": "Langer Klick",
+          "es": "Clic prolongado",
+          "fr": "Clic long",
+          "it": "Clic lungo",
+          "no": "Langt klikk",
+          "sv": "Långt klick",
+          "pl": "Długie kliknięcie",
+          "ru": "Долгий клик",
+          "ko": "긴 클릭",
+          "nl": "Lange klik"
         },
         "args": [
           {
@@ -173,7 +261,17 @@
         "id": "is_bright",
         "title": {
           "en": "Illuminance is !{{bright|dim}}",
-          "sv": "Ljusnivån är !{{ljus|mörk}}"
+          "sv": "Ljusnivån är !{{ljus|mörk}}",
+          "nl": "De verlichting is !{{fel|dim}}",
+          "da": "Belysningen er !{{lys|dæmpet}}",
+          "de": "Die Beleuchtung ist !{{hell|dunkel}}",
+          "es": "La iluminación es !{{brillante|tenue}}",
+          "fr": "L'éclairage est !{{lumineux|faible}}",
+          "it": "L'illuminazione è !{{luminosa|scarsa}}",
+          "no": "Belysningen er !{{lys|dempet}}",
+          "pl": "Oświetlenie jest !{{jasne|przyciemnione}}",
+          "ru": "Освещенность !{{яркая|тусклая}}",
+          "ko": "조명이 !{{밝음|어두움}} 입니다."
         },
         "args": [
           {
@@ -266,9 +364,18 @@
         "small": "/drivers/SNZB-01/assets/images/small.png"
       },
       "id": "SNZB-01",
-      "name": {
-        "en": "SNZB-01 Button",
-        "sv": "SNZB-01 Knapp"
+        "en": "Button SNZB-01",
+        "sv": "Knapp SNZB-01",
+        "nl": "Knop SNZB-01",
+        "da": "Knap SNZB-01",
+        "de": "Taste SNZB-01",
+        "es": "Botón SNZB-01",
+        "fr": "Bouton SNZB-01",
+        "it": "Pulsante SNZB-01",
+        "no": "Knapp SNZB-01",
+        "pl": "Przycisk SNZB-01",
+        "ru": "Кнопка SNZB-01",
+        "ko": "버튼 SNZB-01"
       },
       "class": "button",
       "capabilities": [
@@ -301,7 +408,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-01/assets/learn.svg",
           "instruction": {
-            "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Verwijder de deksel aan de onderkant en druk ongeveer 10 seconden op de resetknop met een pen totdat de rode LED snel knippert.",
+            "da": "Fjern dækslet på undersiden og tryk på nulstillingsknappen med en nål i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Entfernen Sie die Abdeckung an der Unterseite und drücken Sie ca. 10 Sekunden lang mit einer Nadel die Reset-Taste, bis die rote LED schnell blinkt.",
+            "es": "Retire la tapa en la parte inferior y presione el botón de reinicio con un alfiler durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Retirez le couvercle en dessous et appuyez sur le bouton de réinitialisation avec une épingle pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Rimuovere il coperchio nella parte inferiore e premere il pulsante di ripristino con uno spillo per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Fjern dekselet på undersiden og trykk på tilbakestillingsknappen med en nål i ca. 10 sekunder til den røde LED-en blinker raskt.",
+            "pl": "Zdejmij pokrywę na spodzie i naciśnij przycisk resetowania szpilką przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Снимите крышку на нижней стороне устройства и нажмите кнопку сброса с помощью булавки примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "하단의 커버를 제거하고 핀으로 리셋 버튼을 약 10초 동안 눌러 빨간색 LED가 빠르게 깜박일 때까지 기다리세요.",
+            "sv": "Ta bort locket på undersidan och tryck på återställningsknappen med en nål i cirka 10 sekunder tills den röda LED-lampan blinkar snabbt."
           }
         }
       }
@@ -320,8 +438,18 @@
       },
       "id": "SNZB-01P",
       "name": {
-        "en": "SNZB-01P Button",
-        "sv": "SNZB-01P Knapp"
+        "en": "Button SNZB-01P",
+        "sv": "Knapp SNZB-01P",
+        "nl": "Knop SNZB-01P",
+        "da": "Knap SNZB-01P",
+        "de": "Taste SNZB-01P",
+        "es": "Botón SNZB-01P",
+        "fr": "Bouton SNZB-01P",
+        "it": "Pulsante SNZB-01P",
+        "no": "Knapp SNZB-01P",
+        "pl": "Przycisk SNZB-01P",
+        "ru": "Кнопка SNZB-01P",
+        "ko": "버튼 SNZB-01P"
       },
       "class": "button",
       "capabilities": [
@@ -354,7 +482,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-01P/assets/learn.svg",
           "instruction": {
-            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
+            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk op de knop aan de zijkant voor ongeveer 10 seconden totdat de rode LED snel begint te knipperen.",
+            "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie die Taste an der Seite ungefähr 10 Sekunden lang, bis die rote LED schnell blinkt.",
+            "es": "Presione el botón en el costado durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur le bouton sur le côté pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Premi il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Trykk på knappen på siden i ca. 10 sekunder til den røde LED-en blinker raskt.",
+            "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите кнопку на боковой стороне на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "빨간색 LED가 빠르게 깜박일 때까지 옆면 버튼을 약 10초 동안 누르세요.",
+            "sv": "Tryck på knappen på sidan i ungefär 10 sekunder tills den röda LED-lampan blinkar snabbt."
           }
         }
       }
@@ -373,8 +512,18 @@
       },
       "id": "SNZB-02",
       "name": {
-        "en": "SNZB-02 Thermometer",
-        "sv": "SNZB-02 Termometer"
+        "en": "Thermometer SNZB-02",
+        "sv": "Termometer SNZB-02",
+        "nl": "Thermometer SNZB-02",
+        "da": "Termometer SNZB-02",
+        "de": "Thermometer SNZB-02",
+        "es": "Termómetro SNZB-02",
+        "fr": "Thermomètre SNZB-02",
+        "it": "Termometro SNZB-02",
+        "no": "Termometer SNZB-02",
+        "pl": "Termometr SNZB-02",
+        "ru": "Термометр SNZB-02",
+        "ko": "온도계 SNZB-02"
       },
       "class": "sensor",
       "capabilities": [
@@ -413,7 +562,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-02/assets/learn.svg",
           "instruction": {
-            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
+            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk ongeveer 10 seconden op de knop aan de zijkant tot de rode LED snel knippert.",
+            "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie etwa 10 Sekunden lang die Taste an der Seite, bis die rote LED schnell blinkt.",
+            "es": "Presione el botón lateral durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur le bouton latéral pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Premere il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Trykk på knappen på siden i ca. 10 sekunder til den røde LED blinker raskt.",
+            "sv": "Tryck på knappen på sidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+            "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите на боковую кнопку примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "빨간색 LED가 빠르게 깜박일 때까지 측면 버튼을 약 10초 동안 누르세요."
           }
         }
       },
@@ -422,10 +582,32 @@
           "id": "temperature_offset",
           "type": "number",
           "label": {
-            "en": "Temperature offset (°C)"
+            "en": "Temperature offset (°C)",
+            "nl": "Temperatuuraanpassing (°C)",
+            "da": "Temperaturjustering (°C)",
+            "de": "Temperaturkorrektur (°C)",
+            "es": "Compensación de temperatura (°C)",
+            "fr": "Correction de température (°C)",
+            "it": "Correzione della temperatura (°C)",
+            "no": "Temperaturjustering (°C)",
+            "sv": "Temperaturjustering (°C)",
+            "pl": "Korekta temperatury (°C)",
+            "ru": "Коррекция температуры (°C)",
+            "ko": "온도 오프셋 (°C)"
           },
           "hint": {
-            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "nl": "Stel een waarde in om een temperatuuraanpassing te compenseren.\nBereik: -10 - 10, stapgrootte 0.1, \nstandaard: 0 [°C]",
+            "da": "Indstil en værdi for at kompensere for en temperaturjustering.\nRækkevidde: -10 - 10, trin 0.1, \ndefault: 0 [°C]",
+            "de": "Stellen Sie einen Wert ein, um eine Temperaturkorrektur zu kompensieren.\nBereich: -10 - 10, Schrittweite 0.1, \nStandard: 0 [°C]",
+            "es": "Establezca un valor para compensar una desviación de temperatura.\nRango: -10 - 10, tamaño del paso 0.1, \npor defecto: 0 [°C]",
+            "fr": "Définissez une valeur pour compenser un décalage de température.\nPlage: -10 - 10, pas de 0.1, \npar défaut: 0 [°C]",
+            "it": "Imposta un valore per compensare un offset di temperatura.\nIntervallo: -10 - 10, dimensione del passo 0,1, \npredefinito: 0 [°C]",
+            "no": "Sett en verdi for å kompensere for en temperaturforskyvning.\nOmråde: -10 - 10, trinnstørrelse 0,1, \nstandard: 0 [°C]",
+            "sv": "Ställ in ett värde för att kompensera en temperaturförskjutning.\nIntervall: -10 - 10, steglängd 0,1, \nstandard: 0 [°C]",
+            "pl": "Ustaw wartość kompensującą offset temperatury.\nZakres: -10 - 10, rozmiar kroku 0.1, \ndomyślnie: 0 [°C]",
+            "ru": "Установите значение для компенсации смещения температуры.\nДиапазон: -10 - 10, шаг 0.1, \nпо умолчанию: 0 [°C]",
+            "ko": "온도 오프셋을 보정하기 위해 값을 설정합니다.\n범위: -10 - 10, 단계 크기 0.1, \n기본값: 0 [°C]"
           },
           "value": 0,
           "attr": {
@@ -438,20 +620,53 @@
           "id": "temperature_decimals",
           "type": "radio",
           "label": {
-            "en": "Temperature reporting decimals"
+            "en": "Temperature reporting decimals",
+            "nl": "Temperatuurrapportage met decimalen",
+            "da": "Temperaturrapportering med decimaler",
+            "de": "Temperaturberichterstattung mit Dezimalstellen",
+            "es": "Informes de temperatura con decimales",
+            "fr": "Rapport de température avec décimales",
+            "it": "Report di temperatura con decimali",
+            "no": "Temperaturrapportering med desimaler",
+            "sv": "Temperaturrapportering med decimaler",
+            "pl": "Raportowanie temperatury z miejscami dziesiętnymi",
+            "ru": "Отчетность о температуре с десятичными знаками",
+            "ko": "온도 보고 소수"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report temperature value with 1 decimal (21.4 °C)"
+                "en": "Report temperature value with 1 decimal (21.4 °C)",
+                "nl": "Rapporteer temperatuurwaarde met 1 decimaal (21,4 °C)",
+                "da": "Rapporter temperaturværdi med 1 decimal (21,4 °C)",
+                "de": "Temperaturwert mit 1 Dezimalstelle melden (21,4 °C)",
+                "es": "Informe el valor de temperatura con 1 decimal (21,4 °C)",
+                "fr": "Reporter la valeur de température avec 1 décimale (21,4 °C)",
+                "it": "Riporta il valore della temperatura con 1 decimale (21,4 °C)",
+                "no": "Rapporter temperaturverdi med 1 desimal (21,4 °C)",
+                "sv": "Rapportera temperaturvärdet med 1 decimal (21,4 °C)",
+                "pl": "Zgłoś wartość temperatury z 1 miejscem po przecinku (21,4 °C)",
+                "ru": "Сообщите значение температуры с точностью до 1 десятичной точки (21,4 °C)",
+                "ko": "소수 1자리로 온도 값을 보고 (21.4 °C)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report temperature value with 2 decimals (21.37 °C)"
+                "en": "Report temperature value with 2 decimals (21.37 °C)",
+                "nl": "Rapporteer temperatuurwaarde met 2 decimalen (21,37 °C)",
+                "da": "Rapporter temperaturværdi med 2 decimaler (21,37 °C)",
+                "de": "Temperaturwert mit 2 Dezimalstellen melden (21,37 °C)",
+                "es": "Informe el valor de temperatura con 2 decimales (21,37 °C)",
+                "fr": "Reporter la valeur de température avec 2 décimales (21,37 °C)",
+                "it": "Riporta il valore della temperatura con 2 decimali (21,37 °C)",
+                "no": "Rapporter temperaturverdi med 2 desimaler (21,37 °C)",
+                "sv": "Rapportera temperaturvärdet med 2 decimaler (21,37 °C)",
+                "pl": "Zgłoś wartość temperatury z 2 miejscami po przecinku (21,37 °C)",
+                "ru": "Сообщите значение температуры с точностью до 2 десятичных точек (21,37 °C)",
+                "ko": "소수 2자리로 온도 값을 보고 (21.37 °C)"
               }
             }
           ]
@@ -461,11 +676,31 @@
           "type": "number",
           "label": {
             "en": "Humidity offset (%)",
-            "nl": "Luchtvochtigheids compensatie (%)"
+            "nl": "Luchtvochtigheids compensatie (%)",
+            "da": "Fugtighedsjustering (%)",
+            "de": "Feuchtigkeitskorrektur (%)",
+            "es": "Compensación de humedad (%)",
+            "fr": "Correction d'humidité (%)",
+            "it": "Correzione dell'umidità (%)",
+            "no": "Fuktighetsjustering (%)",
+            "sv": "Fuktighetsjustering (%)",
+            "pl": "Korekta wilgotności (%)",
+            "ru": "Коррекция влажности (%)",
+            "ko": "습도 오프셋 (%)"
           },
           "hint": {
             "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
-            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]",
+            "da": "Indstil en korrektion til at kompensere for en fugtighedsjustering.\nRækkevidde: -10 - 10, trin 1, \nstandard: 0 [%]",
+            "de": "Stellen Sie eine Korrektur ein, um eine Feuchtigkeitskorrektur zu kompensieren.\nBereich: -10 - 10, Schrittweite 1, \nStandard: 0 [%]",
+            "es": "Establezca una corrección para compensar una desviación de humedad.\nRango: -10 - 10, tamaño del paso 1, \npor defecto: 0 [%]",
+            "fr": "Définissez une correction pour compenser un décalage d'humidité.\nPlage: -10 - 10, pas de 1, \npar défaut: 0 [%]",
+            "it": "Imposta una correzione per compensare un offset di umidità.\nIntervallo: -10 - 10, dimensione del passo 1, \npredefinito: 0 [%]",
+            "no": "Sett en korreksjon for å kompensere for en fuktighetsforskyvning.\nOmråde: -10 - 10, trinnstørrelse 1, \nstandard: 0 [%]",
+            "sv": "Ange en korrigering för att kompensera för en fuktighetsförskjutning.\nIntervall: -10 - 10, steglängd 1, \nstandard: 0 [%]",
+            "pl": "Ustaw wartość kompensującą przesunięcie wilgotności.\nZakres: -10 - 10, rozmiar kroku 1, \ndomyślnie: 0 [%]",
+            "ru": "Установите поправку для компенсации смещения влажности.\nДиапазон: -10 - 10, шаг 1, \nпо умолчанию: 0 [%]",
+            "ko": "습도 오프셋을 보정하기 위해 값을 설정합니다.\n범위: -10 - 10, 단계 크기 1, \n기본값: 0 [%]"
           },
           "value": 0,
           "attr": {
@@ -482,20 +717,53 @@
           "id": "humidity_decimals",
           "type": "radio",
           "label": {
-            "en": "Humidity reporting"
+            "en": "Humidity reporting",
+            "nl": "Luchtvochtigheidsrapportage",
+            "da": "Fugtighedsrapportering",
+            "de": "Feuchtigkeitsberichterstattung",
+            "es": "Informe de humedad",
+            "fr": "Rapport d'humidité",
+            "it": "Segnalazione di umidità",
+            "no": "Fuktighetsrapportering",
+            "sv": "Fuktighetsrapportering",
+            "pl": "Raportowanie wilgotności",
+            "ru": "Отчет о влажности",
+            "ko": "습도 보고"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report humidity value with 1 decimal (35.2 %)"
+                "en": "Report humidity value with 1 decimal (35.2 %)",
+                "nl": "Rapporteer luchtvochtigheidswaarde met 1 decimaal (35,2 %)",
+                "da": "Rapporter fugtighedsværdi med 1 decimal (35,2 %)",
+                "de": "Melden Sie den Feuchtigkeitswert mit einer Dezimalstelle (35,2 %)",
+                "es": "Informe el valor de humedad con 1 decimal (35,2 %)",
+                "fr": "Reporter la valeur de l'humidité avec 1 décimale (35,2 %)",
+                "it": "Riporta il valore dell'umidità con 1 decimale (35,2 %)",
+                "no": "Rapporter fuktighetsverdi med 1 desimal (35,2 %)",
+                "sv": "Rapportera fuktighetsvärdet med 1 decimal (35,2 %)",
+                "pl": "Zgłoś wartość wilgotności z 1 miejscem po przecinku (35,2 %)",
+                "ru": "Сообщите значение влажности с точностью до 1 десятичной точки (35,2 %)",
+                "ko": "습도 값을 소수 1자리로 보고 (35.2 %)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report humidity value with 2 decimals (35.19 %)"
+                "en": "Report humidity value with 2 decimals (35.19 %)",
+                "nl": "Rapporteer luchtvochtigheidswaarde met 2 decimalen (35,19 %)",
+                "da": "Rapporter fugtighedsværdi med 2 decimaler (35,19 %)",
+                "de": "Melden Sie den Feuchtigkeitswert mit zwei Dezimalstellen (35,19 %)",
+                "es": "Informe el valor de humedad con 2 decimales (35,19 %)",
+                "fr": "Reporter la valeur de l'humidité avec 2 décimales (35,19 %)",
+                "it": "Riporta il valore dell'umidità con 2 decimali (35,19 %)",
+                "no": "Rapporter fuktighetsverdi med 2 desimaler (35,19 %)",
+                "sv": "Rapportera fuktighetsvärdet med 2 decimaler (35,19 %)",
+                "pl": "Zgłoś wartość wilgotności z 2 miejscami po przecinku (35,19 %)",
+                "ru": "Сообщите значение влажности с точностью до 2 десятичных точек (35,19 %)",
+                "ko": "습도 값을 소수 2자리로 보고 (35.19 %)"
               }
             }
           ]
@@ -516,8 +784,18 @@
       },
       "id": "SNZB-02D",
       "name": {
-        "en": "SNZB-02D Thermometer",
-        "sv": "SNZB-02D Termometer"
+        "en": "Thermometer SNZB-02D",
+        "sv": "Termometer SNZB-02D",
+        "nl": "Thermometer SNZB-02D",
+        "da": "Termometer SNZB-02D",
+        "de": "Thermometer SNZB-02D",
+        "es": "Termómetro SNZB-02D",
+        "fr": "Thermomètre SNZB-02D",
+        "it": "Termometro SNZB-02D",
+        "no": "Termometer SNZB-02D",
+        "pl": "Termometr SNZB-02D",
+        "ru": "Термометр SNZB-02D",
+        "ko": "온도계 SNZB-02D"
       },
       "class": "sensor",
       "capabilities": [
@@ -556,7 +834,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-02D/assets/learn.svg",
           "instruction": {
-            "en": "Press the button on the back side for aprox. 10 seconds until the red LED blinks rapidly."
+            "en": "Press button on back side for approx 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk ongeveer 10 seconden op de knop aan de achterkant totdat de rode LED snel knippert.",
+            "da": "Tryk på knappen på bagsiden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie etwa 10 Sekunden lang die Taste auf der Rückseite, bis die rote LED schnell blinkt.",
+            "es": "Presiona el botón en la parte posterior durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur le bouton à l'arrière pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Premi il pulsante sul retro per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Trykk på knappen på baksiden i ca. 10 sekunder til den røde LED-en blinker raskt.",
+            "sv": "Tryck på knappen på baksidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+            "pl": "Naciśnij przycisk z tyłu przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите кнопку на задней стороне устройства примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "빨간 LED가 빠르게 깜박일 때까지 후면의 버튼을 약 10초 동안 누릅니다."
           }
         }
       },
@@ -565,10 +854,32 @@
           "id": "temperature_offset",
           "type": "number",
           "label": {
-            "en": "Temperature offset (°C)"
+            "en": "Temperature offset (°C)",
+            "nl": "Temperatuurcorrectie (°C)",
+            "da": "Temperaturforskydning (°C)",
+            "de": "Temperaturkorrektur (°C)",
+            "es": "Compensación de temperatura (°C)",
+            "fr": "Décalage de température (°C)",
+            "it": "Offset di temperatura (°C)",
+            "no": "Temperaturforskyvning (°C)",
+            "sv": "Temperaturförskjutning (°C)",
+            "pl": "Offset temperatury (°C)",
+            "ru": "Смещение температуры (°C)",
+            "ko": "온도 편차 (°C)"
           },
           "hint": {
-            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "nl": "Stel een waarde in om een temperatuurafwijking te compenseren.\nBereik: -10 - 10, stapgrootte 0.1,\nstandaard: 0 [°C]",
+            "da": "Indstil en værdi for at kompensere for en temperaturforskydning.\nOmråde: -10 - 10, trinstørrelse 0,1,\nstandard: 0 [°C]",
+            "de": "Legen Sie einen Wert fest, um eine Temperaturabweichung zu kompensieren.\nBereich: -10 - 10, Schrittweite 0,1,\nStandard: 0 [°C]",
+            "es": "Establezca un valor para compensar una desviación de temperatura.\nRango: -10 - 10, tamaño del paso 0,1,\npredeterminado: 0 [°C]",
+            "fr": "Définir une valeur pour compenser un décalage de température.\nPlage : -10 - 10, taille du pas 0,1,\ndéfaut : 0 [°C]",
+            "it": "Impostare un valore per compensare un offset di temperatura.\nGamma: -10 - 10, dimensione del passo 0,1,\npredefinito: 0 [°C]",
+            "no": "Sett en verdi for å kompensere for en temperaturforskyvning.\nOmråde: -10 - 10, trinnstørrelse 0,1,\nstandard: 0 [°C]",
+            "sv": "Ställ in ett värde för att kompensera för en temperaturskiftning.\nOmråde: -10 - 10, stegstorlek 0,1,\nstandard: 0 [°C]",
+            "pl": "Ustaw wartość, aby skompensować odstępstwo temperatury.\nZakres: -10 - 10, krok 0,1,\ndomyślnie: 0 [°C]",
+            "ru": "Установите значение для компенсации смещения температуры.\nДиапазон: -10 - 10, шаг 0,1,\nпо умолчанию: 0 [°C]",
+            "ko": "온도 편차를 보상하기 위해 값을 설정하십시오.\n범위: -10 - 10, 단계 크기 0.1,\n기본값: 0 [°C]"
           },
           "value": 0,
           "attr": {
@@ -581,20 +892,53 @@
           "id": "temperature_decimals",
           "type": "radio",
           "label": {
-            "en": "Temperature reporting decimals"
+            "en": "Temperature reporting decimals",
+            "nl": "Decimalen in temperatuurrapportage",
+            "da": "Decimaler i temperaturrapportering",
+            "de": "Dezimalstellen in Temperaturberichten",
+            "es": "Decimales en el reporte de temperatura",
+            "fr": "Décimales dans le rapport de température",
+            "it": "Decimali nel reporting della temperatura",
+            "no": "Desimaler i temperaturrapportering",
+            "sv": "Decimaler i temperaturrapporteringen",
+            "pl": "Miejsca dziesiętne w raportowaniu temperatury",
+            "ru": "Десятичные знаки в отчёте о температуре",
+            "ko": "온도 보고서의 소수점 자리"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report temperature value with 1 decimal (21.4 °C)"
+                "en": "Report temperature value with 1 decimal (21.4 °C)",
+                "nl": "Rapporteer temperatuurwaarde met 1 decimaal (21,4 °C)",
+                "da": "Rapporter temperaturværdi med 1 decimal (21,4 °C)",
+                "de": "Temperaturwert mit 1 Dezimalstelle berichten (21,4 °C)",
+                "es": "Informe el valor de temperatura con 1 decimal (21,4 °C)",
+                "fr": "Rapporter la valeur de température avec 1 décimale (21,4 °C)",
+                "it": "Riporta il valore della temperatura con 1 decimale (21,4 °C)",
+                "no": "Rapporter temperaturverdi med 1 desimal (21,4 °C)",
+                "sv": "Rapportera temperaturvärde med 1 decimal (21,4 °C)",
+                "pl": "Zgłoś wartość temperatury z 1 miejscem dziesiętnym (21,4 °C)",
+                "ru": "Сообщите значение температуры с 1 десятичным знаком (21,4 °C)",
+                "ko": "온도 값을 소수점 한 자리로 보고하십시오 (21.4 °C)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report temperature value with 2 decimals (21.37 °C)"
+                "en": "Report temperature value with 2 decimals (21.37 °C)",
+                "nl": "Rapporteer temperatuurwaarde met 2 decimalen (21,37 °C)",
+                "da": "Rapporter temperaturværdi med 2 decimaler (21,37 °C)",
+                "de": "Temperaturwert mit 2 Dezimalstellen berichten (21,37 °C)",
+                "es": "Informe el valor de temperatura con 2 decimales (21,37 °C)",
+                "fr": "Rapporter la valeur de température avec 2 décimales (21,37 °C)",
+                "it": "Riporta il valore della temperatura con 2 decimali (21,37 °C)",
+                "no": "Rapporter temperaturverdi med 2 desimaler (21,37 °C)",
+                "sv": "Rapportera temperaturvärde med 2 decimaler (21,37 °C)",
+                "pl": "Zgłoś wartość temperatury z 2 miejscami dziesiętnymi (21,37 °C)",
+                "ru": "Сообщите значение температуры с 2 десятичными знаками (21,37 °C)",
+                "ko": "온도 값을 소수점 두 자리로 보고하십시오 (21.37 °C)"
               }
             }
           ]
@@ -604,11 +948,31 @@
           "type": "number",
           "label": {
             "en": "Humidity offset (%)",
-            "nl": "Luchtvochtigheids compensatie (%)"
+            "nl": "Luchtvochtigheids compensatie (%)",
+            "da": "Fugtighedsforskydning (%)",
+            "de": "Feuchtigkeitskorrektur (%)",
+            "es": "Compensación de humedad (%)",
+            "fr": "Décalage d'humidité (%)",
+            "it": "Offset di umidità (%)",
+            "no": "Fuktighetsforskyvning (%)",
+            "sv": "Fuktighetsförskjutning (%)",
+            "pl": "Offset wilgotności (%)",
+            "ru": "Смещение влажности (%)",
+            "ko": "습도 편차 (%)"
           },
           "hint": {
             "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
-            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]",
+            "da": "Indstil en korrektion for at kompensere for en fugtighedsforskydning.\nOmråde: -10 - 10, trinstørrelse 1,\nstandard: 0 [%]",
+            "de": "Legen Sie eine Korrektur fest, um eine Feuchtigkeitsabweichung zu kompensieren.\nBereich: -10 - 10, Schrittweite 1,\nStandard: 0 [%]",
+            "es": "Establezca una corrección para compensar una desviación de humedad.\nRango: -10 - 10, tamaño del paso 1,\npredeterminado: 0 [%]",
+            "fr": "Définir une correction pour compenser un décalage d'humidité.\nPlage : -10 - 10, taille du pas 1,\ndéfaut : 0 [%]",
+            "it": "Impostare una correzione per compensare un offset di umidità.\nGamma: -10 - 10, dimensione del passo 1,\npredefinito: 0 [%]",
+            "no": "Sett en korreksjon for å kompensere for en fuktighetsforskyvning.\nOmråde: -10 - 10, trinnstørrelse 1,\nstandard: 0 [%]",
+            "sv": "Ställ in en korrektion för att kompensera för en fuktförskjutning.\nOmråde: -10 - 10, stegstorlek 1,\nstandard: 0 [%]",
+            "pl": "Ustaw korektę, aby skompensować odstępstwo wilgotności.\nZakres: -10 - 10, krok 1,\ndomyślnie: 0 [%]",
+            "ru": "Установите коррекцию для компенсации смещения влажности.\nДиапазон: -10 - 10, шаг 1,\nпо умолчанию: 0 [%]",
+            "ko": "습도 편차를 보상하기 위해 보정을 설정하십시오.\n범위: -10 - 10, 단계 크기 1,\n기본값: 0 [%]"
           },
           "value": 0,
           "attr": {
@@ -618,27 +982,70 @@
           },
           "units": {
             "en": "%",
-            "nl": "%"
+            "nl": "%",
+            "da": "%",
+            "de": "%",
+            "es": "%",
+            "fr": "%",
+            "it": "%",
+            "no": "%",
+            "sv": "%",
+            "pl": "%",
+            "ru": "%",
+            "ko": "%"
           }
         },
         {
           "id": "humidity_decimals",
           "type": "radio",
           "label": {
-            "en": "Humidity reporting"
+            "en": "Humidity reporting",
+            "nl": "Rapportage luchtvochtigheid",
+            "da": "Fugtighedsrapportering",
+            "de": "Feuchtigkeitsbericht",
+            "es": "Informe de humedad",
+            "fr": "Rapport d'humidité",
+            "it": "Reporting dell'umidità",
+            "no": "Fuktighetsrapportering",
+            "sv": "Rapportering av luftfuktighet",
+            "pl": "Raportowanie wilgotności",
+            "ru": "Отчет о влажности",
+            "ko": "습도 보고서"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report humidity value with 1 decimal (35.2 %)"
+                "en": "Report humidity value with 1 decimal (35.2 %)",
+                "nl": "Rapporteer luchtvochtigheidswaarde met 1 decimaal (35,2 %)",
+                "da": "Rapporter fugtighedsværdi med 1 decimal (35,2 %)",
+                "de": "Berichten Sie den Feuchtigkeitswert mit 1 Dezimalstelle (35,2 %)",
+                "es": "Informe el valor de humedad con 1 decimal (35,2 %)",
+                "fr": "Rapporter la valeur d'humidité avec 1 décimale (35,2 %)",
+                "it": "Riporta il valore di umidità con 1 decimale (35,2 %)",
+                "no": "Rapporter fuktighetsverdien med 1 desimal (35,2 %)",
+                "sv": "Rapportera fuktvärde med 1 decimal (35,2 %)",
+                "pl": "Zgłoś wartość wilgotności z 1 miejscem dziesiętnym (35,2 %)",
+                "ru": "Сообщите значение влажности с 1 десятичным знаком (35,2 %)",
+                "ko": "습도 값을 소수점 한 자리로 보고하십시오 (35.2 %)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report humidity value with 2 decimals (35.19 %)"
+                "en": "Report humidity value with 2 decimals (35.19 %)",
+                "nl": "Rapporteer luchtvochtigheidswaarde met 2 decimalen (35,19 %)",
+                "da": "Rapporter fugtighedsværdi med 2 decimaler (35,19 %)",
+                "de": "Berichten Sie den Feuchtigkeitswert mit 2 Dezimalstellen (35,19 %)",
+                "es": "Informe el valor de humedad con 2 decimales (35,19 %)",
+                "fr": "Rapporter la valeur d'humidité avec 2 décimales (35,19 %)",
+                "it": "Riporta il valore di umidità con 2 decimali (35,19 %)",
+                "no": "Rapporter fuktighetsverdien med 2 desimaler (35,19 %)",
+                "sv": "Rapportera fuktvärde med 2 decimaler (35,19 %)",
+                "pl": "Zgłoś wartość wilgotności z 2 miejscami dziesiętnymi (35,19 %)",
+                "ru": "Сообщите значение влажности с 2 десятичными знаками (35,19 %)",
+                "ko": "습도 값을 소수점 두 자리로 보고하십시오 (35.19 %)"
               }
             }
           ]
@@ -659,7 +1066,18 @@
       },
       "id": "SNZB-02P",
       "name": {
-        "en": "SNZB-02P Termometer"
+        "en": "Termometer SNZB-02P",
+        "nl": "Thermometer SNZB-02P",
+        "da": "Termometer SNZB-02P",
+        "de": "Thermometer SNZB-02P",
+        "es": "Termómetro SNZB-02P",
+        "fr": "Thermomètre SNZB-02P",
+        "it": "Termometro SNZB-02P",
+        "no": "Termometer SNZB-02P",
+        "sv": "Termometer SNZB-02P",
+        "pl": "Termometr SNZB-02P",
+        "ru": "Термометр SNZB-02P",
+        "ko": "온도계 SNZB-02P"
       },
       "class": "sensor",
       "capabilities": [
@@ -698,7 +1116,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-02P/assets/learn.svg",
           "instruction": {
-            "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
+            "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk ongeveer 10 seconden op de knop aan de zijkant totdat de rode LED snel knippert.",
+            "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie die Taste an der Seite etwa 10 Sekunden lang, bis die rote LED schnell blinkt.",
+            "es": "Presione el botón en el costado durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur le bouton sur le côté pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Premere il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Trykk på knappen på siden i omtrent 10 sekunder til den røde LED-lampen blinker raskt.",
+            "sv": "Tryck på knappen på sidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+            "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите кнопку сбоку примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "측면의 버튼을 약 10초 동안 눌러 빨간 LED가 빠르게 깜박일 때까지 기다리세요."
           }
         }
       },
@@ -707,10 +1136,32 @@
           "id": "temperature_offset",
           "type": "number",
           "label": {
-            "en": "Temperature offset (°C)"
+            "en": "Temperature offset (°C)",
+            "da": "Temperaturforskydning (°C)",
+            "de": "Temperaturkorrektur (°C)",
+            "es": "Compensación de temperatura (°C)",
+            "fr": "Compensation de température (°C)",
+            "it": "Offset della temperatura (°C)",
+            "no": "Temperaturforskyvning (°C)",
+            "sv": "Temperaturkompensation (°C)",
+            "pl": "Przesunięcie temperatury (°C)",
+            "ru": "Коррекция температуры (°C)",
+            "ko": "온도 보정 (°C)",
+            "nl": "Temperatuur compensatie (°C)"
           },
           "hint": {
-            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "da": "Indstil en værdi for at kompensere for en temperaturforskydning.\nRækkevidde: -10 - 10, trin 0.1, \nstandard: 0 [°C]",
+            "de": "Stellen Sie einen Wert ein, um eine Temperaturdifferenz auszugleichen.\nBereich: -10 - 10, Schrittgröße 0,1, \nStandard: 0 [°C]",
+            "es": "Establezca un valor para compensar una desviación de temperatura.\nRango: -10 - 10, tamaño del paso 0,1, \npredeterminado: 0 [°C]",
+            "fr": "Définissez une valeur pour compenser un décalage de température.\nPlage : -10 - 10, taille du pas 0,1, \npar défaut : 0 [°C]",
+            "it": "Imposta un valore per compensare una deviazione di temperatura.\nIntervallo: -10 - 10, passo 0,1, \npredefinito: 0 [°C]",
+            "no": "Sett en verdi for å kompensere for temperaturforskyvning.\nRekkevidde: -10 - 10, trinnstørrelse 0.1, \nstandard: 0 [°C]",
+            "sv": "Ställ in ett värde för att kompensera för en temperaturförskjutning.\nOmråde: -10 - 10, stegstorlek 0,1, \nstandard: 0 [°C]",
+            "pl": "Ustaw wartość kompensacji przesunięcia temperatury.\nZakres: -10 - 10, rozmiar kroku 0,1, \nwartość domyślna: 0 [°C]",
+            "ru": "Установите значение для компенсации температурного смещения.\nДиапазон: -10 - 10, шаг 0,1, \nпо умолчанию: 0 [°C]",
+            "ko": "온도 보정 값을 설정합니다.\n범위: -10 - 10, 단위 0.1, \n기본값: 0 [°C]",
+            "nl": "Stel een waarde in om een temperatuur compensatie te maken.\nBereik: -10 - 10, stapgrote 0.1, \nstandaard: 0 [°C]"
           },
           "value": 0,
           "attr": {
@@ -723,20 +1174,50 @@
           "id": "temperature_decimals",
           "type": "radio",
           "label": {
-            "en": "Temperature reporting decimals"
+            "en": "Temperature reporting decimals",
+            "da": "Temperaturrapportering decimaler",
+            "de": "Temperaturbericht Dezimalstellen",
+            "es": "Decimales del informe de temperatura",
+            "fr": "Décimales du rapport de température",
+            "it": "Decimali di segnalazione della temperatura",
+            "no": "Temperaturrapporter desimaler",
+            "sv": "Temperaturrapportering decimaler",
+            "pl": "Raportowanie temperatury z miejscami dziesiętnymi",
+            "ru": "Десятичные знаки в отчете о температуре",
+            "ko": "온도 보고 소수점 자릿수"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report temperature value with 1 decimal (21.4 °C)"
+                "en": "Report temperature value with 1 decimal (21.4 °C)",
+                "da": "Rapporter temperaturen med 1 decimal (21,4 °C)",
+                "de": "Temperaturwert mit 1 Dezimalstelle (21,4 °C) berichten",
+                "es": "Informe del valor de temperatura con 1 decimal (21.4 °C)",
+                "fr": "Signaler la valeur de la température avec 1 décimale (21,4 °C)",
+                "it": "Riporta il valore della temperatura con 1 decimale (21,4 °C)",
+                "no": "Rapport temperaturverdi med 1 desimal (21,4 °C)",
+                "sv": "Rapportera temperaturvärde med 1 decimal (21,4 °C)",
+                "pl": "Raportowanie wartości temperatury z dokładnością do 1 miejsca po przecinku (21,4°C)",
+                "ru": "Сообщить значение температуры с точностью до 1 десятичного знака (21,4 °C)",
+                "ko": "온도 값을 소수점 첫번째 자리까지 보고합니다 (21.4 °C)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report temperature value with 2 decimals (21.37 °C)"
+                "en": "Report temperature value with 2 decimals (21.37 °C)",
+                "da": "Rapporter temperaturen med 2 decimaler (21,37 °C)",
+                "de": "Temperaturwert mit 2 Dezimalstellen (21,37 °C) berichten",
+                "es": "Informe del valor de temperatura con 2 decimales (21.37 °C)",
+                "fr": "Signaler la valeur de la température avec 2 décimales (21,37 °C)",
+                "it": "Riporta il valore della temperatura con 2 decimali (21,37 °C)",
+                "no": "Rapport temperaturverdi med 2 desimaler (21,37 °C)",
+                "sv": "Rapportera temperaturvärde med 2 decimaler (21,37 °C)",
+                "pl": "Raportowanie wartości temperatury z dokładnością do 2 miejsc po przecinku (21,37°C)",
+                "ru": "Сообщить значение температуры с точностью до 2 десятичных знаков (21,37 °C)",
+                "ko": "온도 값을 소수점 두번째 자리까지 보고합니다 (21.37 °C)"
               }
             }
           ]
@@ -746,11 +1227,31 @@
           "type": "number",
           "label": {
             "en": "Humidity offset (%)",
-            "nl": "Luchtvochtigheids compensatie (%)"
+            "nl": "Luchtvochtigheids compensatie (%)",
+            "da": "Forskydning af luftfugtighed (%)",
+            "de": "Feuchtigkeitsausgleich (%)",
+            "es": "Compensación de humedad (%)",
+            "fr": "Compensation d'humidité (%)",
+            "it": "Compensazione umidità (%)",
+            "no": "Fuktighetskompensasjon (%)",
+            "sv": "Fuktkompensation (%)",
+            "pl": "Offset wilgotności (%)",
+            "ru": "Коррекция влажности (%)",
+            "ko": "습도 보정 (%)"
           },
           "hint": {
             "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
-            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]",
+            "da": "Indstil en korrektion for at kompensere for en forskydning af luftfugtighed.\nRækkevidde: -10 - 10, trin 1, \nstandard: 0 [%]",
+            "de": "Stellen Sie eine Korrektur ein, um eine Luftfeuchtigkeitsabweichung auszugleichen.\nBereich: -10 - 10, Schrittgröße 1, \nStandard: 0 [%]",
+            "es": "Configura una corrección para compensar una desviación de humedad.\nRango: -10 - 10, tamaño del paso 1, \npredeterminado: 0 [%]",
+            "fr": "Définissez une correction pour compenser un décalage d'humidité.\nPlage : -10 - 10, taille du pas 1, \npar défaut : 0 [%]",
+            "it": "Imposta una correzione per compensare una deriva dell'umidità.\nIntervallo: -10 - 10, passo 1, \npredefinito: 0 [%]",
+            "no": "Sett en korreksjon for å kompensere for en forskyvning i luftfuktighet.\nRekkevidde: -10 - 10, trinnstørrelse 1, \nstandard: 0 [%]",
+            "sv": "Ställ in en korrigering för att kompensera för en fuktförskjutning.\nOmråde: -10 - 10, stegstorlek 1, \nstandard: 0 [%]",
+            "pl": "Ustaw korektę, aby zrekompensować przesunięcie wilgotności.\nZakres: -10 - 10, rozmiar kroku 1, \nwartość domyślna: 0 [%]",
+            "ru": "Установите поправку для компенсации смещения влажности.\nДиапазон: -10 - 10, шаг 1, \nпо умолчанию: 0 [%]",
+            "ko": "습도 오차를 보정하기 위한 값을 설정하세요.\n범위: -10 - 10, 단위: 1, \n기본값: 0 [%]"
           },
           "value": 0,
           "attr": {
@@ -760,27 +1261,67 @@
           },
           "units": {
             "en": "%",
-            "nl": "%"
+            "nl": "%",
+            "da": "%",
+            "de": "%",
+            "es": "%",
+            "fr": "%",
+            "it": "%",
+            "no": "%",
+            "sv": "%",
+            "pl": "%",
+            "ru": "%",
+            "ko": "%"
           }
         },
         {
           "id": "humidity_decimals",
           "type": "radio",
           "label": {
-            "en": "Humidity reporting"
+            "en": "Humidity reporting",
+            "da": "Fugtrapportering",
+            "de": "Feuchtigkeitsmeldung",
+            "es": "Informe de humedad",
+            "fr": "Rapport d'humidité",
+            "it": "Segnalazione di umidità",
+            "no": "Fuktighetsrapportering",
+            "sv": "Fuktighetsrapportering",
+            "pl": "Raportowanie wilgotności",
+            "ru": "Отчет о влажности",
+            "ko": "습도 보고"
           },
           "value": "1",
           "values": [
             {
               "id": "1",
               "label": {
-                "en": "Report humidity value with 1 decimal (35.2 %)"
+                "en": "Report humidity value with 1 decimal (35.2 %)",
+                "da": "Rapporter luftfugtighedsværdi med 1 decimal (35,2 %)",
+                "de": "Feuchtigkeitswert mit 1 Dezimalstelle (35,2 %) berichten",
+                "es": "Informe del valor de humedad con 1 decimal (35.2 %)",
+                "fr": "Signaler la valeur de l'humidité avec 1 décimale (35,2 %)",
+                "it": "Riporta il valore dell'umidità con 1 decimale (35,2 %)",
+                "no": "Rapporter fuktverdi med 1 desimal (35,2 %)",
+                "sv": "Rapportera fuktvärde med 1 decimal (35,2 %)",
+                "pl": "Raportowanie wartości wilgotności z dokładnością do 1 miejsca po przecinku (35,2%)",
+                "ru": "Сообщить значение влажности с точностью до 1 десятичного знака (35,2 %)",
+                "ko": "습도 값을 소수점 첫번째 자리까지 보고합니다 (35.2 %)"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Report humidity value with 2 decimals (35.19 %)"
+                "en": "Report humidity value with 2 decimals (35.19 %)",
+                "da": "Rapporter luftfugtighedsværdi med 2 decimaler (35,19 %)",
+                "de": "Feuchtigkeitswert mit 2 Dezimalstellen (35,19 %) berichten",
+                "es": "Informe del valor de humedad con 2 decimales (35.19 %)",
+                "fr": "Signaler la valeur de l'humidité avec 2 décimales (35,19 %)",
+                "it": "Riporta il valore dell'umidità con 2 decimali (35,19 %)",
+                "no": "Rapporter fuktverdi med 2 desimaler (35,19 %)",
+                "sv": "Rapportera fuktvärde med 2 decimaler (35,19 %)",
+                "pl": "Raportowanie wartości wilgotności z dokładnością do 2 miejsc po przecinku (35,19%)",
+                "ru": "Сообщить значение влажности с точностью до 2 десятичных знаков (35,19 %)",
+                "ko": "습도 값을 소수점 두번째 자리까지 보고합니다 (35.19 %)"
               }
             }
           ]
@@ -801,8 +1342,18 @@
       },
       "id": "SNZB-03",
       "name": {
-        "en": "SNZB-03 Motion Sensor",
-        "sv": "SNZB-03 Rörelsesensor"
+        "en": "Motion Sensor SNZB-03",
+        "sv": "Rörelsesensor SNZB-03",
+        "nl": "Bewegingssensor SNZB-03",
+        "da": "Bevægelsessensor SNZB-03",
+        "de": "Bewegungssensor SNZB-03",
+        "es": "Sensor de movimiento SNZB-03",
+        "fr": "Capteur de mouvement SNZB-03",
+        "it": "Sensore di movimento SNZB-03",
+        "no": "Bevegelsessensor SNZB-03",
+        "pl": "Czujnik ruchu SNZB-03",
+        "ru": "Датчик движения SNZB-03",
+        "ko": "모션 센서 SNZB-03"
       },
       "class": "sensor",
       "capabilities": [
@@ -833,7 +1384,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-03/assets/learn.svg",
           "instruction": {
-            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk op reset aan de onderkant met een speld voor ongeveer 10 seconden totdat de rode LED snel knippert.",
+            "da": "Tryk på reset i bunden med en nål i cirka 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie unten auf die Reset-Taste mit einer Nadel für ca. 10 Sekunden, bis die rote LED schnell blinkt.",
+            "es": "Presione el reinicio en la parte inferior con un alfiler durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur le bouton de réinitialisation en bas avec une épingle pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+            "it": "Premere il pulsante di reset in basso con uno spillo per circa 10 secondi finché il LED rosso non lampeggia rapidamente.",
+            "no": "Trykk på reset-knappen nederst med en nål i omtrent 10 sekunder til den røde LED-en blinker raskt.",
+            "pl": "Naciśnij reset na dole za pomocą szpilki przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите на кнопку сброса внизу с помощью булавки примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+            "ko": "리셋 버튼을 핀으로 약 10초 동안 눌러 빨간 LED가 빠르게 깜박일 때까지 기다리세요.",
+            "sv": "Tryck på återställningsknappen på botten med en nål i cirka 10 sekunder tills den röda lysdioden blinkar snabbt."
           }
         }
       },
@@ -853,8 +1415,18 @@
       },
       "id": "SNZB-04",
       "name": {
-        "en": "SNZB-04 Door/window Sensor",
-        "sv": "SNZB-04 Dörr-/fönstergivare"
+        "en": "Door/window Sensor SNZB-04",
+        "sv": "Dörr-/fönstergivare SNZB-04",
+        "nl": "Deur-/raam sensor SNZB-04",
+        "da": "Dør-/vindues sensor SNZB-04",
+        "de": "Tür-/Fenstersensor SNZB-04",
+        "es": "Sensor de puerta/ventana SNZB-04",
+        "fr": "Capteur de porte/fenêtre SNZB-04",
+        "it": "Sensore porta/finestra SNZB-04",
+        "no": "Dør-/vindussensor SNZB-04",
+        "pl": "Czujnik drzwi/okien SNZB-04",
+        "ru": "Датчик двери/окна SNZB-04",
+        "ko": "문/창문 센서 SNZB-04"
       },
       "class": "sensor",
       "capabilities": [
@@ -885,7 +1457,17 @@
         "learnmode": {
           "image": "/drivers/SNZB-04/assets/learn.svg",
           "instruction": {
-            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+            "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+            "nl": "Druk op reset aan de onderkant met een speld voor ongeveer 10 seconden totdat de rode LED snel knippert.",
+            "da": "Tryk reset på bunden med en stift i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+            "de": "Drücken Sie unten auf die Reset-Taste mit einer Nadel für ca. 10 Sekunden, bis die rote LED schnell blinkt.",
+            "es": "Presiona restablecer en la parte inferior con un alfiler durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+            "fr": "Appuyez sur reset en bas avec une épingle pendant environ 10 secondes jusqu'à ce que le LED rouge clignote rapidement.",
+            "it": "Premi reset sul fondo con uno spillo per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+            "no": "Trykk på reset på bunnen med en nål i ca. 10 sekunder til den røde LED-en blinker raskt.",
+            "pl": "Naciśnij reset na spodzie szpilką przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+            "ru": "Нажмите кнопку сброса внизу с помощью булавки на около 10 секунд, пока красный светодиод не начнёт часто мигать.",
+            "ko": "핀을 사용하여 하단의 리셋 버튼을 약 10초 동안 눌러 빨간 LED가 빠르게 깜박일 때까지 기다리세요."
           }
         }
       },
@@ -905,8 +1487,18 @@
       },
       "id": "SNZB-06P",
       "name": {
-        "en": "SNZB-06P Presence Sensor",
-        "sv": "SNZB-06P Närvarosensor"
+        "en": "Presence Sensor SNZB-06P",
+        "sv": "Närvarosensor SNZB-06P",
+        "nl": "Aanwezigheidssensor SNZB-06P",
+        "da": "Tilstedeværelsessensor SNZB-06P",
+        "de": "Präsenzsensor SNZB-06P",
+        "es": "Sensor de Presencia SNZB-06P",
+        "fr": "Capteur de Présence SNZB-06P",
+        "it": "Sensore di Presenza SNZB-06P",
+        "no": "Nærværsensor SNZB-06P",
+        "pl": "Czujnik Obecności SNZB-06P",
+        "ru": "Датчик присутствия SNZB-06P",
+        "ko": "존재 센서 SNZB-06P"
       },
       "class": "sensor",
       "capabilities": [
@@ -936,7 +1528,18 @@
         "learnmode": {
           "image": "/drivers/SNZB-06P/assets/learn.svg",
           "instruction": {
-            "en": "Press reset on top for aprox 10 seconds until the red LED blinks."
+            "en": "Press reset on top for aprox 10 seconds until the red LED blinks.",
+            "nl": "Houd de resetknop bovenop ongeveer 10 seconden ingedrukt totdat de rode LED knippert.",
+            "da": "Tryk på reset øverst i ca. 10 sekunder, indtil den røde LED blinker.",
+            "de": "Drücken Sie oben auf die Reset-Taste und halten Sie sie etwa 10 Sekunden lang gedrückt, bis die rote LED blinkt.",
+            "es": "Presiona el botón de reinicio en la parte superior durante aproximadamente 10 segundos hasta que parpadee el LED rojo.",
+            "fr": "Appuyez sur le bouton de réinitialisation en haut pendant environ 10 secondes jusqu'à ce que le voyant rouge clignote.",
+            "it": "Premi il pulsante di reset in alto per circa 10 secondi fino a quando il LED rosso lampeggia.",
+            "no": "Trykk på reset-knappen øverst i ca. 10 sekunder til den røde LED-en blinker.",
+            "sv": "Tryck på återställningsknappen ovanpå i cirka 10 sekunder tills den röda LED-lampan blinkar.",
+            "pl": "Naciśnij przycisk reset na górze, przytrzymaj przez około 10 sekund, aż czerwona dioda LED zacznie migać.",
+            "ru": "Нажмите и удерживайте кнопку сброса сверху примерно 10 секунд, пока не начнет мигать красный светодиод.",
+            "ko": "빨간색 LED가 깜박일 때까지 상단의 리셋 버튼을 약 10초 동안 누르십시오."
           }
         }
       },
@@ -944,14 +1547,36 @@
         {
           "type": "group",
           "label": {
-            "en": "Occupied"
+            "en": "Occupied",
+            "nl": "Bezette",
+            "da": "Optaget",
+            "de": "Besetzt",
+            "es": "Ocupado",
+            "fr": "Occupé",
+            "it": "Occupato",
+            "no": "Opptatt",
+            "sv": "Upptagen",
+            "pl": "Zajęty",
+            "ru": "Занятый",
+            "ko": "점유"
           },
           "children": [
             {
               "id": "occupied_to_unoccupied_delay",
               "type": "number",
               "label": {
-                "en": "Delay"
+                "en": "Delay",
+                "nl": "Vertraging",
+                "da": "Forsinkelse",
+                "de": "Verzögerung",
+                "es": "Retraso",
+                "fr": "Délai",
+                "it": "Ritardo",
+                "no": "Forsinkelse",
+                "sv": "Fördröjning",
+                "pl": "Opóźnienie",
+                "ru": "Задержка",
+                "ko": "지연"
               },
               "value": 60,
               "attr": {
@@ -964,25 +1589,69 @@
               "id": "occupied_threshold",
               "type": "dropdown",
               "label": {
-                "en": "Sensitivity"
+                "en": "Sensitivity",
+                "nl": "Gevoeligheid",
+                "da": "Følsomhed",
+                "de": "Empfindlichkeit",
+                "es": "Sensibilidad",
+                "fr": "Sensibilité",
+                "it": "Sensibilità",
+                "no": "Følsomhet",
+                "sv": "Känslighet",
+                "pl": "Czułość",
+                "ru": "Чувствительность",
+                "ko": "민감도"
               },
               "values": [
                 {
                   "id": "1",
                   "label": {
-                    "en": "Low"
+                    "en": "Low",
+                    "nl": "Laag",
+                    "da": "Lav",
+                    "de": "Niedrig",
+                    "es": "Bajo",
+                    "fr": "Bas",
+                    "it": "Basso",
+                    "no": "Lav",
+                    "sv": "Låg",
+                    "pl": "Niski",
+                    "ru": "Низкий",
+                    "ko": "낮은"
                   }
                 },
                 {
                   "id": "2",
                   "label": {
-                    "en": "Medium"
+                    "en": "Medium",
+                    "nl": "Middel",
+                    "da": "Mellem",
+                    "de": "Mittel",
+                    "es": "Medio",
+                    "fr": "Moyen",
+                    "it": "Medio",
+                    "no": "Medium",
+                    "sv": "Medium",
+                    "pl": "Średni",
+                    "ru": "Средний",
+                    "ko": "중간"
                   }
                 },
                 {
                   "id": "3",
                   "label": {
-                    "en": "Hight"
+                    "en": "Hight",
+                    "nl": "Hoog",
+                    "da": "Høj",
+                    "de": "Hoch",
+                    "es": "Alto",
+                    "fr": "Haut",
+                    "it": "Alto",
+                    "no": "Høy",
+                    "sv": "Hög",
+                    "pl": "Wysoki",
+                    "ru": "Высокий",
+                    "ko": "높은"
                   }
                 }
               ]
@@ -1154,20 +1823,50 @@
           "id": "dim",
           "title": {
             "en": "Dim",
-            "sv": "Mörkt"
+            "sv": "Mörkt",
+            "nl": "Gedimd",
+            "da": "Dæmpet",
+            "de": "Gedimmt",
+            "es": "Tenuemente",
+            "fr": "Atténué",
+            "it": "Fioco",
+            "no": "Dempe",
+            "pl": "Przyciemniony",
+            "ru": "Тусклый",
+            "ko": "어둑한"
           }
         },
         {
           "id": "bright",
           "title": {
             "en": "Bright",
-            "sv": "Ljust"
+            "sv": "Ljust",
+            "nl": "Helder",
+            "da": "Lys",
+            "de": "Hell",
+            "es": "Brillante",
+            "fr": "Brillant",
+            "it": "Luminoso",
+            "no": "Lys",
+            "pl": "Jasny",
+            "ru": "Яркий",
+            "ko": "밝은"
           }
         }
       ],
       "title": {
         "en": "Illuminance",
-        "sv": "Ljusstyrka"
+        "sv": "Ljusstyrka",
+        "nl": "Verlichting",
+        "da": "Belysning",
+        "de": "Beleuchtung",
+        "es": "Iluminancia",
+        "fr": "Éclairement",
+        "it": "Illuminazione",
+        "no": "Belysning",
+        "pl": "Jasność",
+        "ru": "Освещенность",
+        "ko": "조도"
       },
       "getable": true,
       "setable": false,

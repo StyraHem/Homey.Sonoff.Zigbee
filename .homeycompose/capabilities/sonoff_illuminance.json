@@ -1,28 +1,58 @@
 {
-    "type": "enum",
-    "values": [
-      {
-        "id": "dim",
-        "title": {
-          "en": "Dim",
-          "sv": "Mörkt"
-        }
-      },
-      {
-        "id": "bright",
-        "title": {
-          "en": "Bright",
-          "sv": "Ljust"
-        }
+  "type": "enum",
+  "values": [
+    {
+      "id": "dim",
+      "title": {
+        "en": "Dim",
+        "sv": "Mörkt",
+        "nl": "Gedimd",
+        "da": "Dæmpet",
+        "de": "Gedimmt",
+        "es": "Tenuemente",
+        "fr": "Atténué",
+        "it": "Fioco",
+        "no": "Dempe",
+        "pl": "Przyciemniony",
+        "ru": "Тусклый",
+        "ko": "어둑한"
       }
-    ],
-    "title": { 
-        "en": "Illuminance",
-        "sv": "Ljusstyrka"
-     },
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor",
-    "uiQuickAction": false,
-    "icon": "/assets/capabilities/illuminance.svg"
-  }
+    },
+    {
+      "id": "bright",
+      "title": {
+        "en": "Bright",
+        "sv": "Ljust",
+        "nl": "Helder",
+        "da": "Lys",
+        "de": "Hell",
+        "es": "Brillante",
+        "fr": "Brillant",
+        "it": "Luminoso",
+        "no": "Lys",
+        "pl": "Jasny",
+        "ru": "Яркий",
+        "ko": "밝은"
+      }
+    }
+  ],
+  "title": {
+    "en": "Illuminance",
+    "sv": "Ljusstyrka",
+    "nl": "Verlichting",
+    "da": "Belysning",
+    "de": "Beleuchtung",
+    "es": "Iluminancia",
+    "fr": "Éclairement",
+    "it": "Illuminazione",
+    "no": "Belysning",
+    "pl": "Jasność",
+    "ru": "Освещенность",
+    "ko": "조도"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "uiQuickAction": false,
+  "icon": "/assets/capabilities/illuminance.svg"
+}

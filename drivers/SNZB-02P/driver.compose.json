@@ -1,8 +1,18 @@
 {
   "id": "SonoffSNZB02P",
   "name": {
-    "en": "SNZB-02P Thermometer",
-    "en": "SNZB-02P Termometer"
+    "en": "Termometer SNZB-02P",
+    "nl": "Thermometer SNZB-02P",
+    "da": "Termometer SNZB-02P",
+    "de": "Thermometer SNZB-02P",
+    "es": "Termómetro SNZB-02P",
+    "fr": "Thermomètre SNZB-02P",
+    "it": "Termometro SNZB-02P",
+    "no": "Termometer SNZB-02P",
+    "sv": "Termometer SNZB-02P",
+    "pl": "Termometr SNZB-02P",
+    "ru": "Термометр SNZB-02P",
+    "ko": "온도계 SNZB-02P"
   },
   "class": "sensor",
   "capabilities": [
@@ -41,9 +51,22 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press the button on the side for aprox. 10 seconds until the red LED blinks rapidly."
+        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+        "nl": "Druk ongeveer 10 seconden op de knop aan de zijkant totdat de rode LED snel knippert.",
+        "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Drücken Sie die Taste an der Seite etwa 10 Sekunden lang, bis die rote LED schnell blinkt.",
+        "es": "Presione el botón en el costado durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Appuyez sur le bouton sur le côté pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+        "it": "Premere il pulsante sul lato per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Trykk på knappen på siden i omtrent 10 sekunder til den røde LED-lampen blinker raskt.",
+        "sv": "Tryck på knappen på sidan i cirka 10 sekunder tills den röda lysdioden blinkar snabbt.",
+        "pl": "Naciśnij przycisk z boku przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Нажмите кнопку сбоку примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+        "ko": "측면의 버튼을 약 10초 동안 눌러 빨간 LED가 빠르게 깜박일 때까지 기다리세요."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }
