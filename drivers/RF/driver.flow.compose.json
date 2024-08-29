@@ -1,0 +1,10 @@
+{
+  "triggers": [
+    {
+      "id": "on_receive",
+      "title": { 
+          "en": "Receive RF" 
+      }
+    }
+  ]
+}

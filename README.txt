@@ -11,6 +11,9 @@ Support devices:
 -Sonoff SNZB-03 (Motion detector)
 -Sonoff SNZB-04  (Door/window contact)
 -Sonoff SNZB-06P  (Presence detector)
+-Sonoff ZBMINI-L
+-Sonoff ZBMINI-L2
+-Sonoff RF/TX devices (send and receive)
 
 More devices will be added soon.
 

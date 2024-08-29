@@ -35,7 +35,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -57,7 +57,9 @@
     "small": "assets/images/small.png"
   },
   "speech": [],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:433"
+  ],
   "bugs": {
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },

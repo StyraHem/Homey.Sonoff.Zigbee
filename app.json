@@ -36,7 +36,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -58,13 +58,59 @@
     "small": "assets/images/small.png"
   },
   "speech": [],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:433"
+  ],
   "bugs": {
     "url": "https://github.com/StyraHem/Homey.Sonoff.Zigbee/issues"
   },
   "source": "https://github.com/StyraHem/Homey.Sonoff.Zigbee",
   "flow": {
     "triggers": [
+      {
+        "title": {
+          "en": "Receive RF"
+        },
+        "titleFormatted": {
+          "en": "Receive RF [[code]]"
+        },
+        "tokens": [
+          {
+            "name": "code",
+            "type": "string",
+            "title": {
+              "en": "Code"
+            },
+            "example": {
+              "en": "123ABC"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "code",
+            "title": {
+              "en": "Code"
+            },
+            "type": "text",
+            "required": false
+          }
+        ],
+        "id": "sonoff_rf"
+      },
+      {
+        "id": "on_receive",
+        "title": {
+          "en": "Receive RF"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RF"
+          }
+        ]
+      },
       {
         "id": "SNZB-01:single_click",
         "title": {
@@ -244,6 +290,73 @@
         "cloud"
       ],
       "connectivity": [
+        "rf433"
+      ],
+      "images": {
+        "large": "/drivers/RF/assets/images/large.png",
+        "small": "/drivers/RF/assets/images/small.png"
+      },
+      "id": "RF",
+      "name": {
+        "en": "RF-button",
+        "sv": "RF-knapp"
+      },
+      "class": "button",
+      "capabilities": [
+        "button"
+      ],
+      "energy": {},
+      "rf433": {
+        "satelliteMode": true
+      },
+      "pair": [
+        {
+          "id": "rf_receiver_learn",
+          "navigation": {
+            "next": "rf_receiver_add"
+          },
+          "options": {
+            "title": {
+              "en": "Press the button..."
+            },
+            "instruction": {
+              "en": "Press the button on your device once."
+            },
+            "copyFromRemote": {
+              "en": "Copy from Remote"
+            }
+          }
+        },
+        {
+          "id": "rf_transmitter_learn",
+          "options": {
+            "instruction": {
+              "en": "Press any button on your remote."
+            }
+          },
+          "navigation": {
+            "prev": "rf_receiver_learn"
+          }
+        },
+        {
+          "id": "rf_receiver_add",
+          "navigation": {
+            "prev": "rf_receiver_learn"
+          },
+          "options": {
+            "instruction": {
+              "en": "Did the device turn off and on?"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
         "zigbee"
       ],
       "images": {
@@ -251,7 +364,6 @@
         "small": "/drivers/SNZB-01/assets/images/small.png"
       },
       "id": "SNZB-01",
-      "name": {
         "en": "Button SNZB-01",
         "sv": "Knapp SNZB-01",
         "nl": "Knop SNZB-01",
@@ -1391,6 +1503,7 @@
       "class": "sensor",
       "capabilities": [
         "alarm_motion",
+        "alarm_contact",
         "sonoff_illuminance"
       ],
       "zigbee": {
@@ -1546,6 +1659,160 @@
           ]
         }
       ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBMINIL/assets/images/large.png",
+        "small": "/drivers/ZBMINIL/assets/images/small.png"
+      },
+      "id": "ZBMINIL",
+      "name": {
+        "en": "ZBMINI-L Switch",
+        "sv": "ZBMINI-L Strömbrytare"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINI-L"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6,
+              7
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIL/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBMINIL2/assets/images/large.png",
+        "small": "/drivers/ZBMINIL2/assets/images/small.png"
+      },
+      "id": "ZBMINIL2",
+      "name": {
+        "en": "ZBMINI-L2 Switch",
+        "sv": "ZBMINI-L2 Strömbrytare"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINIL2"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6,
+              7
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIL2/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "capabilities": {
@@ -1606,6 +1873,29 @@
       "uiComponent": "sensor",
       "uiQuickAction": false,
       "icon": "/assets/capabilities/illuminance.svg"
+    }
+  },
+  "signals": {
+    "433": {
+      "sonoff_rf": {
+        "sof": [],
+        "eof": [],
+        "words": [
+          [
+            250,
+            750
+          ],
+          [
+            750,
+            250
+          ]
+        ],
+        "interval": 20000,
+        "sensitivity": 0.5,
+        "repetitions": 10,
+        "minimalLength": 24,
+        "maximalLength": 24
+      }
     }
   }
 }

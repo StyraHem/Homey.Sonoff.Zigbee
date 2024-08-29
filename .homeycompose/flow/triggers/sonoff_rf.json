@@ -1,0 +1,24 @@
+{       
+    "title": { 
+        "en": "Receive RF" 
+    },
+    "titleFormatted": {
+        "en": "Receive RF [[code]]"
+    },
+    "tokens": [       
+        {
+        "name": "code",
+        "type": "string",
+        "title": { "en": "Code" },
+        "example": { "en": "123ABC" }
+        }
+    ],
+    "args": [
+        {
+            "name": "code",
+            "title": { "en": "Code" },
+            "type": "text",
+            "required": false
+        }
+    ]
+}

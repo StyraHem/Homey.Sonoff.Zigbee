@@ -17,6 +17,7 @@
   "class": "sensor",
   "capabilities": [
     "alarm_motion",
+    "alarm_contact",
     "sonoff_illuminance"
   ],
   "zigbee": {

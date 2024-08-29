@@ -1,0 +1,30 @@
+[
+  {
+    "id": "power_on_behavior",
+    "type": "dropdown",
+    "label": {
+      "en": "Power-on behavior"
+    },
+    "value": "off",
+    "values": [
+      {
+        "id": "off",
+        "label": {
+          "en": "Off"
+        }
+      },
+      {
+        "id": "on",
+        "label": {
+          "en": "On"
+        }
+      },
+      {
+        "id": "last_state",
+        "label": {
+          "en": "Last state"
+        }
+      }
+    ]
+  }
+]

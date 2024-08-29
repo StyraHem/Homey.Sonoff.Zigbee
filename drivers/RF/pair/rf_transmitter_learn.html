@@ -1,0 +1,52 @@
+<style type="text/css">
+  #rf-transmitter-learn-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    box-sizing: border-box;
+  }
+
+  #rf-transmitter-learn-image {
+    display: block;
+    width: 80vw;
+    height: 80vw;
+    margin: 2em auto;
+    background: url(image.svg) no-repeat center center;
+    background-size: contain;
+  }
+
+  #rf-transmitter-learn-instruction {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+  }
+</style>
+
+<div id="rf-transmitter-learn-wrap">
+  <div>rf_transmitter_learn</div>
+
+  <div id="rf-transmitter-learn-image"></div>
+  <p id="rf-transmitter-learn-instruction"></p>
+
+</div>
+
+<script type="text/javascript">
+  (function () {
+    const $instruction = document.getElementById('rf-transmitter-learn-instruction');
+
+    Homey.getOptions((err, options) => {
+      if (err) return Homey.error(err);
+      if (options && options.title) Homey.setTitle(Homey.__(options.title));
+      if (options && options.instruction) $instruction.innerHTML = Homey.__(options.instruction);
+    });
+
+    Homey.on('createDevice', (device) => {
+      Homey.createDevice(device, err => {
+        if (err) return Homey.error(err);
+        return Homey.done();
+      });
+    });
+  })();
+</script>
