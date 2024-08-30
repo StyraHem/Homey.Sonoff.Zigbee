@@ -29,6 +29,7 @@ class SonoffBase extends ZigBeeDevice {
 				this.checkAttributes();
 			};
 		}
+
 		//if (this.isFirstInit()) {
 
 			// await this.configureAttributeReporting([

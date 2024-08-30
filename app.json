@@ -364,6 +364,7 @@
         "small": "/drivers/SNZB-01/assets/images/small.png"
       },
       "id": "SNZB-01",
+      "name": {
         "en": "Button SNZB-01",
         "sv": "Knapp SNZB-01",
         "nl": "Knop SNZB-01",
@@ -1659,6 +1660,63 @@
           ]
         }
       ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/TRVZB/assets/images/large.png",
+        "small": "/drivers/TRVZB/assets/images/small.png"
+      },
+      "id": "TRVZB",
+      "name": {
+        "en": "Termostat TRVZB"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "onoff",
+        "measure_temperature",
+        "target_temperature",
+        "measure_battery"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "TRVZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              1026,
+              513,
+              6,
+              10
+            ],
+            "bindings": [
+              1,
+              1026,
+              513,
+              6,
+              10
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/TRVZB/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+          }
+        }
+      }
     },
     {
       "platforms": [
