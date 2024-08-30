@@ -1,8 +1,18 @@
 {
   "id": "SonoffSNZB04",
   "name": {
-    "en": "SNZB-04 Door/window Sensor",
-    "sv": "SNZB-04 Dörr-/fönstergivare"
+    "en": "Door/window Sensor SNZB-04",
+    "sv": "Dörr-/fönstergivare SNZB-04",
+    "nl": "Deur-/raam sensor SNZB-04",
+    "da": "Dør-/vindues sensor SNZB-04",
+    "de": "Tür-/Fenstersensor SNZB-04",
+    "es": "Sensor de puerta/ventana SNZB-04",
+    "fr": "Capteur de porte/fenêtre SNZB-04",
+    "it": "Sensore porta/finestra SNZB-04",
+    "no": "Dør-/vindussensor SNZB-04",
+    "pl": "Czujnik drzwi/okien SNZB-04",
+    "ru": "Датчик двери/окна SNZB-04",
+    "ko": "문/창문 센서 SNZB-04"
   },
   "class": "sensor",
   "capabilities": [
@@ -27,16 +37,27 @@
           1,
           1280
         ],
-        "bindings": [
-        ]
+        "bindings": []
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+        "nl": "Druk op reset aan de onderkant met een speld voor ongeveer 10 seconden totdat de rode LED snel knippert.",
+        "da": "Tryk reset på bunden med en stift i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Drücken Sie unten auf die Reset-Taste mit einer Nadel für ca. 10 Sekunden, bis die rote LED schnell blinkt.",
+        "es": "Presiona restablecer en la parte inferior con un alfiler durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Appuyez sur reset en bas avec une épingle pendant environ 10 secondes jusqu'à ce que le LED rouge clignote rapidement.",
+        "it": "Premi reset sul fondo con uno spillo per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Trykk på reset på bunnen med en nål i ca. 10 sekunder til den røde LED-en blinker raskt.",
+        "pl": "Naciśnij reset na spodzie szpilką przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Нажмите кнопку сброса внизу с помощью булавки на около 10 секунд, пока красный светодиод не начнёт часто мигать.",
+        "ko": "핀을 사용하여 하단의 리셋 버튼을 약 10초 동안 눌러 빨간 LED가 빠르게 깜박일 때까지 기다리세요."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

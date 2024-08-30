@@ -1,8 +1,18 @@
 {
   "id": "SonoffSNZB01",
   "name": {
-    "en": "SNZB-01 Button",
-    "sv": "SNZB-01 Knapp"
+    "en": "Button SNZB-01",
+    "sv": "Knapp SNZB-01",
+    "nl": "Knop SNZB-01",
+    "da": "Knap SNZB-01",
+    "de": "Taste SNZB-01",
+    "es": "Botón SNZB-01",
+    "fr": "Bouton SNZB-01",
+    "it": "Pulsante SNZB-01",
+    "no": "Knapp SNZB-01",
+    "pl": "Przycisk SNZB-01",
+    "ru": "Кнопка SNZB-01",
+    "ko": "버튼 SNZB-01"
   },
   "class": "button",
   "capabilities": [
@@ -35,9 +45,22 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly."
+        "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+        "nl": "Verwijder de deksel aan de onderkant en druk ongeveer 10 seconden op de resetknop met een pen totdat de rode LED snel knippert.",
+        "da": "Fjern dækslet på undersiden og tryk på nulstillingsknappen med en nål i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
+        "de": "Entfernen Sie die Abdeckung an der Unterseite und drücken Sie ca. 10 Sekunden lang mit einer Nadel die Reset-Taste, bis die rote LED schnell blinkt.",
+        "es": "Retire la tapa en la parte inferior y presione el botón de reinicio con un alfiler durante aproximadamente 10 segundos hasta que el LED rojo parpadee rápidamente.",
+        "fr": "Retirez le couvercle en dessous et appuyez sur le bouton de réinitialisation avec une épingle pendant environ 10 secondes jusqu'à ce que la LED rouge clignote rapidement.",
+        "it": "Rimuovere il coperchio nella parte inferiore e premere il pulsante di ripristino con uno spillo per circa 10 secondi fino a quando il LED rosso lampeggia rapidamente.",
+        "no": "Fjern dekselet på undersiden og trykk på tilbakestillingsknappen med en nål i ca. 10 sekunder til den røde LED-en blinker raskt.",
+        "pl": "Zdejmij pokrywę na spodzie i naciśnij przycisk resetowania szpilką przez około 10 sekund, aż czerwona dioda LED zacznie szybko migać.",
+        "ru": "Снимите крышку на нижней стороне устройства и нажмите кнопку сброса с помощью булавки примерно на 10 секунд, пока красный светодиод не начнет быстро мигать.",
+        "ko": "하단의 커버를 제거하고 핀으로 리셋 버튼을 약 10초 동안 눌러 빨간색 LED가 빠르게 깜박일 때까지 기다리세요.",
+        "sv": "Ta bort locket på undersidan och tryck på återställningsknappen med en nål i cirka 10 sekunder tills den röda LED-lampan blinkar snabbt."
       }
     }
   },
-  "$extends": ["defaults"]
+  "$extends": [
+    "defaults"
+  ]
 }

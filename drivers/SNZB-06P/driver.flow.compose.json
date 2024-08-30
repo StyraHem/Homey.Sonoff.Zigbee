@@ -4,7 +4,17 @@
       "id": "is_bright",
       "title": {
         "en": "Illuminance is !{{bright|dim}}",
-        "sv": "Ljusnivån är !{{ljus|mörk}}"
+        "sv": "Ljusnivån är !{{ljus|mörk}}",
+        "nl": "De verlichting is !{{fel|dim}}",
+        "da": "Belysningen er !{{lys|dæmpet}}",
+        "de": "Die Beleuchtung ist !{{hell|dunkel}}",
+        "es": "La iluminación es !{{brillante|tenue}}",
+        "fr": "L'éclairage est !{{lumineux|faible}}",
+        "it": "L'illuminazione è !{{luminosa|scarsa}}",
+        "no": "Belysningen er !{{lys|dempet}}",
+        "pl": "Oświetlenie jest !{{jasne|przyciemnione}}",
+        "ru": "Освещенность !{{яркая|тусклая}}",
+        "ko": "조명이 !{{밝음|어두움}} 입니다."
       }
     }
   ]
