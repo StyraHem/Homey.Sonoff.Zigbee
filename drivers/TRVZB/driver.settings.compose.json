@@ -1,0 +1,17 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Settings"
+    },
+    "children": [
+      {
+        "id": "child_lock",
+        "type": "checkbox",
+        "label": {
+          "en": "Child lock"
+        }    
+      }
+    ]
+  }
+]
