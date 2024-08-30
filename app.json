@@ -219,10 +219,10 @@
           },
           "options": {
             "title": {
-              "en": "Press the button..."
+              "en": "Create a RF button"
             },
             "instruction": {
-              "en": "Press the button on your device once."
+              "en": "Set your device in lerning mode and then click next button below."
             },
             "copyFromRemote": {
               "en": "Copy from Remote"
@@ -811,7 +811,7 @@
       ],
       "energy": {
         "batteries": [
-          "CR2032"
+          "CR2450"
         ]
       },
       "zigbee": {
