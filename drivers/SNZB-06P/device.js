@@ -3,9 +3,9 @@
 const Homey = require('homey');
 const SonoffBase = require('../sonoffbase');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
-const SonoffIlluminationCluster = require("../../lib/SonoffIlluminationCluster");
+const SonoffCluster = require("../../lib/SonoffCluster");
 
-Cluster.addCluster(SonoffIlluminationCluster);
+Cluster.addCluster(SonoffCluster);
 
 const Attributes = [
 	'occupancy',
@@ -29,7 +29,7 @@ class SonoffSNZB06P extends SonoffBase {
 		this.configureAttributeReporting([
 			{
 				endpointId: 1,
-				cluster: SonoffIlluminationCluster.NAME,
+				cluster: SonoffCluster,
 				attributeName: 'illuminance'
 			},
 			{
@@ -53,7 +53,7 @@ class SonoffSNZB06P extends SonoffBase {
 					this.setCapabilityValue('alarm_motion', value.occupied).catch(this.error);	
 			});
 
-		zclNode.endpoints[1].clusters[SonoffIlluminationCluster.NAME]
+		zclNode.endpoints[1].clusters[SonoffCluster.NAME]
 			.on('attr.illuminance', (value) => {
 				this.setCapabilityValue('sonoff_illuminance', value ? 'bright' : 'dim').catch(this.error);	
 				this.setCapabilityValue('alarm_motion', true).catch(this.error);	
@@ -71,7 +71,7 @@ class SonoffSNZB06P extends SonoffBase {
 	}
 
 	async checkAttributes() {
-		// this.readAttribute(SonoffIlluminationCluster, ['illuminance'], (data) => {
+		// this.readAttribute(SonoffCluster, ['illuminance'], (data) => {
 		// 	//this.setCapabilityValue('light_presence', data.illuminance).catch(this.error);
 		// });
 		this.readAttribute(CLUSTER.OCCUPANCY_SENSING, Attributes, (data) => {
