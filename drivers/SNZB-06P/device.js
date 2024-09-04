@@ -29,7 +29,7 @@ class SonoffSNZB06P extends SonoffBase {
 		this.configureAttributeReporting([
 			{
 				endpointId: 1,
-				cluster: SonoffCluster,
+				cluster: SonoffIlluminationCluster,
 				attributeName: 'illuminance'
 			},
 			{
@@ -71,7 +71,7 @@ class SonoffSNZB06P extends SonoffBase {
 	}
 
 	async checkAttributes() {
-		// this.readAttribute(SonoffCluster, ['illuminance'], (data) => {
+		// this.readAttribute(SonoffIlluminationCluster, ['illuminance'], (data) => {
 		// 	//this.setCapabilityValue('light_presence', data.illuminance).catch(this.error);
 		// });
 		this.readAttribute(CLUSTER.OCCUPANCY_SENSING, Attributes, (data) => {

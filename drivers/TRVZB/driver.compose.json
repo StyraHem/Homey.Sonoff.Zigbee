@@ -5,7 +5,6 @@
   },
   "class": "sensor",
   "capabilities": [
-    "onoff",
     "measure_temperature",
     "target_temperature",
     "measure_battery"
@@ -25,7 +24,8 @@
           1026,
           513,
           6,
-          10
+          10,
+          64529
         ],
         "bindings": [
           1,

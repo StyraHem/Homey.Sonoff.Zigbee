@@ -2,16 +2,16 @@
 
 const Homey = require('homey');
 const SonoffBase = require('../sonoffbase');
+//const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, ZCLDataTypes, CLUSTER, BoundCluster, ThermostatCluster } = require('zigbee-clusters');
 const SonoffCluster = require("../../lib/SonoffCluster");
 
 Cluster.addCluster(SonoffCluster);
 
 const Attributes = [
-	'occupancy',
-	'ultrasonicOccupiedToUnoccupiedDelay',
-	'ultrasonicUnoccupiedToOccupiedDelay',
-	'ultrasonicUnoccupiedToOccupiedThreshold'
+	'child_lock',
+	'open_window',
+	'frost_protection_temperature'
 ];
 
 class TimeBoundCluster extends BoundCluster {
@@ -40,8 +40,8 @@ Cluster.addCluster(TRVThermostatCluster);
 class SonoffTRVZB extends SonoffBase {
 
 	async onNodeInit({ zclNode }) {
-		// Call the parent class's onNodeInit method
-		super.onNodeInit({ zclNode });
+
+		super.onNodeInit({ zclNode }, {noAttribCheck:true});
 
 		if (this.isFirstInit()) {
 
@@ -64,9 +64,21 @@ class SonoffTRVZB extends SonoffBase {
 				},
 				{
 					endpointId: 1,
-					cluster: SonoffCluster,
-					attributeName: 'illuminance'
+					cluster: CLUSTER.THERMOSTAT,
+					attributeName: 'localTemperatureCalibration',
+					minInterval: 0,
+					maxInterval: 3600,
+					minChange: 10
 				},
+				...Attributes.map( (value) => {
+					return {
+						endpointId: 1,
+						cluster: SonoffCluster,
+						attributeName: value,
+						minInterval: 0,
+						maxInterval: 3600
+					}
+				})
 			]).then(() => {
                 this.log('registered attr report listener');
             })
@@ -75,9 +87,9 @@ class SonoffTRVZB extends SonoffBase {
             });
 		}
 
-		if (this.hasCapability('onoff')) {
-            this.registerCapability('onoff', CLUSTER.ON_OFF);
-        }
+		//if (this.hasCapability('onoff')) {
+        //    this.registerCapability('onoff', CLUSTER.ON_OFF);
+        //}
 
 		zclNode.endpoints[1].bind(CLUSTER.TIME.NAME, new TimeBoundCluster(this));
 
@@ -99,26 +111,60 @@ class SonoffTRVZB extends SonoffBase {
 				occupiedHeatingSetpoint: value * 100
 			});
 		});
+		
+		zclNode.endpoints[1].clusters[CLUSTER.THERMOSTAT.NAME]
+			.on('attr.localTemperatureCalibration', (value) => {
+				this.setSettings(o);
+		});
+
+		Attributes.forEach( (attr) => {
+			zclNode.endpoints[1].clusters[SonoffCluster.NAME]
+            .on('attr.' + attr, (value) => {
+				var o = {}
+				o[attr]=value;
+				this.setSettings(o);
+			});
+		});
+
+		this.checkAttributes();
 
 		// Additional initialization code can be added here
 		this.log('Sonoff TRVZB device initialized');
 	}
 
+	async setSettings(settings) {
+		Object.entries(settings).forEach(([key, value]) => {
+			if (key=="localTemperatureCalibration") {
+				settings[key] = value / 100;
+			} else if (key.includes("temperature")) {  //Accept t/Temperature
+				settings[key] = value / 100;
+			}
+		});	
+		await super.setSettings(settings);
+	}
+	
 	async onSettings({ oldSettings, newSettings, changedKeys }) {
-		this.writeAttributes(CLUSTER.OCCUPANCY_SENSING, {
-			ultrasonicOccupiedToUnoccupiedDelay: newSettings.occupied_to_unoccupied_delay,
-			ultrasonicUnoccupiedToOccupiedThreshold: newSettings.occupied_threshold
-		});
-		this.checkAttributes();
+		const changedAttributes = Attributes.reduce((acc, key) => {
+			if (newSettings.hasOwnProperty(key)) {
+				acc[key] = newSettings[key];
+				if (key.includes("temperature"))  
+					acc[key] = acc[key] * 100;
+			}
+			return acc;
+		}, {});
+
+		await this.writeAttributes(SonoffCluster, changedAttributes);
+
+		await this.writeAttributes(CLUSTER.THERMOSTAT, {localTemperatureCalibration: newSettings.localTemperatureCalibration * 10});
+		//this.checkAttributes();
 	}
 
 	async checkAttributes() {
-		this.readAttribute(CLUSTER.OCCUPANCY_SENSING, Attributes, (data) => {
-			this.setCapabilityValue('alarm_motion', data.occupancy.occupied).catch(this.error);
-			this.setSettings({
-				occupied_to_unoccupied_delay: data.ultrasonicOccupiedToUnoccupiedDelay,
-				occupied_threshold: data.ultrasonicUnoccupiedToOccupiedThreshold.toString()
-			});
+		this.readAttribute(SonoffCluster, Attributes, (data) => {
+			this.setSettings(data);
+		});
+		this.readAttribute(CLUSTER.THERMOSTAT, ['localTemperatureCalibration'], (data) => {
+			this.setSettings(data);
 		});
 	}
 

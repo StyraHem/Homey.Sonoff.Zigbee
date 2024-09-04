@@ -12,42 +12,26 @@ class SonoffBase extends ZigBeeDevice {
 
 	lastAskBattery = null;
 
-	async onNodeInit({zclNode}) {
+	async onNodeInit({zclNode}, options) {
 		this.log("NodeInit SonoffBase");
+		options = options || {};
 
 		if (process.env.DEBUG === "1") {
 			this.enableDebug();
 		}
 		this.printNode();
-		
 
-		if ("powerConfiguration" in zclNode.endpoints[1].clusters) {
-			var nodeHandleFrame = this.node.handleFrame;
-			this.node.handleFrame = (...args) => {
-				nodeHandleFrame.apply(this, args);
-				this.checkBattery();
-				this.checkAttributes();
-			};
+		if (options.noAttribCheck!=true) {
+			if ("powerConfiguration" in zclNode.endpoints[1].clusters) {
+				var nodeHandleFrame = this.node.handleFrame;
+				this.node.handleFrame = (...args) => {
+					nodeHandleFrame.apply(this, args);
+					this.checkBattery();
+					this.checkAttributes();
+				};
+			}
 		}
 
-		//if (this.isFirstInit()) {
-
-			// await this.configureAttributeReporting([
-			// 	{
-			// 		endpointId: 1,
-			// 		cluster: CLUSTER.POWER_CONFIGURATION,
-			// 		attributeName: 'batteryPercentageRemaining',
-			// 		minInterval: 1500, //??
-			// 		maxInterval: 0,
-			// 		minChange: 1
-			// 	},
-
-			//this.checkBattery();
-		//}
-
-		// // measure_battery 
-		// zclNode.endpoints[1].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
-		// .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
 	}
 
 	async checkAttributes() {
@@ -129,10 +113,6 @@ class SonoffBase extends ZigBeeDevice {
 			this.error('Error (2) read', attribs, error);
 		}
 	}
-	// onBatteryPercentageRemainingAttributeReport(batteryPercentageRemaining) {
-	// 	this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryPercentageRemaining/2);
-	// 	this.setCapabilityValue('measure_battery', batteryPercentageRemaining/2).catch(this.error);
-	// }
 
 	onDeleted(){
 		this.log("sonoff device removed")
