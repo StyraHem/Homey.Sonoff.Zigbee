@@ -1483,6 +1483,67 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/SNZB-04P/assets/images/large.png",
+        "small": "/drivers/SNZB-04P/assets/images/small.png"
+      },
+      "id": "SNZB-04P",
+      "name": {
+        "en": "Door/window Sensor SNZB-04P",
+        "sv": "Dörr-/fönstergivare SNZB-04P",
+        "nl": "Deur-/raam sensor SNZB-04P",
+        "da": "Dør-/vindues sensor SNZB-04P",
+        "de": "Tür-/Fenstersensor SNZB-04P",
+        "es": "Sensor de puerta/ventana SNZB-04P",
+        "fr": "Capteur de porte/fenêtre SNZB-04P",
+        "it": "Sensore porta/finestra SNZB-04P",
+        "no": "Dør-/vindussensor SNZB-04P",
+        "pl": "Czujnik drzwi/okien SNZB-04P",
+        "ru": "Датчик двери/окна SNZB-04P",
+        "ko": "문/창문 센서 SNZB-04P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "SNZB-04P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-04P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button for aprox 10 seconds until the red LED blinks rapidly."
+          }
+        }
+      }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/SNZB-06P/assets/images/large.png",
         "small": "/drivers/SNZB-06P/assets/images/small.png"
       },
