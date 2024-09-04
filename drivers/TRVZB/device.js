@@ -43,7 +43,6 @@ class SonoffTRVZB extends SonoffBase {
 		// Call the parent class's onNodeInit method
 		super.onNodeInit({ zclNode });
 
-		this.Clus
 		if (this.isFirstInit()) {
 
 			await this.configureAttributeReporting([
