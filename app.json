@@ -1679,7 +1679,6 @@
       },
       "class": "sensor",
       "capabilities": [
-        "onoff",
         "measure_temperature",
         "target_temperature",
         "measure_battery"
@@ -1699,7 +1698,8 @@
               1026,
               513,
               6,
-              10
+              10,
+              64529
             ],
             "bindings": [
               1,
@@ -1725,10 +1725,43 @@
           },
           "children": [
             {
+              "id": "localTemperatureCalibration",
+              "type": "number",
+              "label": {
+                "en": "Local Temperature Calibration"
+              },
+              "hint": {
+                "en": "Adjust the local temperature calibration."
+              },
+              "min": -7,
+              "max": 7,
+              "step": 0.1,
+              "default": 0
+            },
+            {
               "id": "child_lock",
               "type": "checkbox",
               "label": {
                 "en": "Child lock"
+              }
+            },
+            {
+              "id": "open_window",
+              "type": "checkbox",
+              "label": {
+                "en": "Open window detection"
+              }
+            },
+            {
+              "id": "frost_protection_temperature",
+              "type": "number",
+              "label": {
+                "en": "Frost protection temperature"
+              },
+              "attr": {
+                "min": 4,
+                "max": 35,
+                "step": 0.1
               }
             }
           ]
