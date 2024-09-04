@@ -1,7 +1,7 @@
 'use strict';
 
 const SonoffBase = require('../sonoffbase');
-const { CLUSTER } = require('zigbee-clusters');
+const { Cluster, CLUSTER } = require('zigbee-clusters');
 const SonoffCluster = require("../../lib/SonoffCluster");
 
 Cluster.addCluster(SonoffCluster);
