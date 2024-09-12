@@ -35,7 +35,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.2.1",
+  "version": "1.3.6",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -44,7 +44,7 @@
   "contributing": {
     "donate": {
       "paypal": {
-        "username": "hakan@tarra.se"
+        "username": "shellyforhass"
       }
     }
   },

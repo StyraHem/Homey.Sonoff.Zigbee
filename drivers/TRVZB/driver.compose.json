@@ -9,6 +9,11 @@
     "target_temperature",
     "measure_battery"
   ],
+  "energy": {
+    "batteries": [
+      "AA",  "AA",  "AA"
+    ]
+  },
   "zigbee": {
     "manufacturerName": [
       "SONOFF"

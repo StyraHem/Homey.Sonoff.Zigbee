@@ -1,0 +1,57 @@
+{
+  "id": "SonoffSNZB03P",
+  "name": {
+    "en": "Motion Sensor SNZB-03P",
+    "sv": "Rörelsesensor SNZB-03P",
+    "nl": "Bewegingssensor SNZB-03P",
+    "da": "Bevægelsessensor SNZB-03P",
+    "de": "Bewegungssensor SNZB-03P",
+    "es": "Sensor de movimiento SNZB-03P",
+    "fr": "Capteur de mouvement SNZB-03P",
+    "it": "Sensore di movimento SNZB-03P",
+    "no": "Bevegelsessensor SNZB-03P",
+    "pl": "Czujnik ruchu SNZB-03P",
+    "ru": "Датчик движения SNZB-03P",
+    "ko": "모션 센서 SNZB-03P"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_motion",
+    "measure_battery",
+    "sonoff_illuminance"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "eWeLink"
+    ],
+    "productId": [
+      "SNZB-03P"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          1,
+          1030,
+          1280,
+          64529
+        ],
+        "bindings": []
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press button for aprox 10 seconds until the red LED blinks rapidly.",
+        "sv": "Tryck på knappen i cirka 10 sekunder tills den röda lysdioden blinkar snabbt."
+      }
+    }
+  },
+  "$extends": [
+    "defaults"
+  ]
+}

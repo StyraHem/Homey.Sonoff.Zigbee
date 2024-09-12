@@ -3,7 +3,7 @@
 const SonoffBase = require('../sonoffbase');
 const { CLUSTER } = require('zigbee-clusters');
 
-class SonoffSNZB04 extends SonoffBase {
+class SonoffSNZB03 extends SonoffBase {
 
     async onNodeInit({zclNode}) {
 
@@ -30,4 +30,4 @@ class SonoffSNZB04 extends SonoffBase {
 
 }
 
-module.exports = SonoffSNZB04;
+module.exports = SonoffSNZB03;

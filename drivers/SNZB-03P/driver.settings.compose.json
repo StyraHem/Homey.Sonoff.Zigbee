@@ -1,0 +1,116 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Occupied",
+      "nl": "Bezette",
+      "da": "Optaget",
+      "de": "Besetzt",
+      "es": "Ocupado",
+      "fr": "Occupé",
+      "it": "Occupato",
+      "no": "Opptatt",
+      "sv": "Upptagen",
+      "pl": "Zajęty",
+      "ru": "Занятый",
+      "ko": "점유"
+    },
+    "children": [
+      {
+        "id": "occupied_to_unoccupied_delay",
+        "type": "number",
+        "label": {
+          "en": "Delay",
+          "nl": "Vertraging",
+          "da": "Forsinkelse",
+          "de": "Verzögerung",
+          "es": "Retraso",
+          "fr": "Délai",
+          "it": "Ritardo",
+          "no": "Forsinkelse",
+          "sv": "Fördröjning",
+          "pl": "Opóźnienie",
+          "ru": "Задержка",
+          "ko": "지연"
+        },
+        "value": 60,
+        "attr": {
+          "min": 15,
+          "max": 60,
+          "step": 1
+        }
+      },
+      {
+        "id": "occupied_threshold",
+        "type": "dropdown",
+        "label": {
+          "en": "Sensitivity",
+          "nl": "Gevoeligheid",
+          "da": "Følsomhed",
+          "de": "Empfindlichkeit",
+          "es": "Sensibilidad",
+          "fr": "Sensibilité",
+          "it": "Sensibilità",
+          "no": "Følsomhet",
+          "sv": "Känslighet",
+          "pl": "Czułość",
+          "ru": "Чувствительность",
+          "ko": "민감도"
+        },
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "Low",
+              "nl": "Laag",
+              "da": "Lav",
+              "de": "Niedrig",
+              "es": "Bajo",
+              "fr": "Bas",
+              "it": "Basso",
+              "no": "Lav",
+              "sv": "Låg",
+              "pl": "Niski",
+              "ru": "Низкий",
+              "ko": "낮은"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Medium",
+              "nl": "Middel",
+              "da": "Mellem",
+              "de": "Mittel",
+              "es": "Medio",
+              "fr": "Moyen",
+              "it": "Medio",
+              "no": "Medium",
+              "sv": "Medium",
+              "pl": "Średni",
+              "ru": "Средний",
+              "ko": "중간"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Hight",
+              "nl": "Hoog",
+              "da": "Høj",
+              "de": "Hoch",
+              "es": "Alto",
+              "fr": "Haut",
+              "it": "Alto",
+              "no": "Høy",
+              "sv": "Hög",
+              "pl": "Wysoki",
+              "ru": "Высокий",
+              "ko": "높은"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

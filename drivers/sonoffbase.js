@@ -10,7 +10,7 @@ if (process.env.DEBUG === "1") {
 
 class SonoffBase extends ZigBeeDevice {
 
-	lastAskBattery = null;
+	lastPollAttributes = null;
 
 	async onNodeInit({zclNode}, options) {
 		this.log("NodeInit SonoffBase");
@@ -26,8 +26,14 @@ class SonoffBase extends ZigBeeDevice {
 				var nodeHandleFrame = this.node.handleFrame;
 				this.node.handleFrame = (...args) => {
 					nodeHandleFrame.apply(this, args);
-					this.checkBattery();
-					this.checkAttributes();
+
+					var now = Date.now();
+					var dt = (now - this.lastPollAttributes) / 1000;
+					if (dt > 60 * 60) { //Max every hour
+						this.lastPollAttributes = now;	
+						this.checkBattery();
+						this.checkAttributes();
+					}
 				};
 			}
 		}
@@ -39,12 +45,7 @@ class SonoffBase extends ZigBeeDevice {
 
 	async checkBattery() {
 		this.log("Check battery");
-		var now = Date.now();
-		var dt = (now - this.lastAskBattery) / 1000;
-		if (this.lastAskBattery > 60 * 60) { //Max every hour
-			return;
-		}
-		this.lastAskBattery = now;
+		
         try {
             this.log("Ask battery");
 		    this.zclNode.endpoints[1].clusters[CLUSTER.POWER_CONFIGURATION.NAME]

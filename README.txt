@@ -8,11 +8,13 @@ Support devices:
 -Sonoff SNZB-02  (Square thermometer)
 -Sonoff SNZB-02D (Thermometer with display)
 -Sonoff SNZB-02P (Round thermometer)
--Sonoff SNZB-03 (Motion detector)
+-Sonoff SNZB-03  (Motion detector)
 -Sonoff SNZB-04  (Door/window contact)
--Sonoff SNZB-06P  (Presence detector)
--Sonoff ZBMINI-L
--Sonoff ZBMINI-L2
+-Sonoff SNZB-04P (Door/window contact)
+-Sonoff SNZB-06P (Presence detector)
+-Sonoff ZBTRV    (Radiator valve)
+-Sonoff ZBMINI-L (Switch)
+-Sonoff ZBMINI-L2 (Switch)
 -Sonoff RF/TX devices (send and receive)
 
 More devices will be added soon.
