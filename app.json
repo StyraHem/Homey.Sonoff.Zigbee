@@ -36,7 +36,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.2.1",
+  "version": "1.4.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -45,7 +45,7 @@
   "contributing": {
     "donate": {
       "paypal": {
-        "username": "hakan@tarra.se"
+        "username": "shellyforhass"
       }
     }
   },
@@ -317,10 +317,10 @@
           },
           "options": {
             "title": {
-              "en": "Press the button..."
+              "en": "Create a RF button"
             },
             "instruction": {
-              "en": "Press the button on your device once."
+              "en": "Set your device in lerning mode and then click next button below."
             },
             "copyFromRemote": {
               "en": "Copy from Remote"
@@ -364,6 +364,7 @@
         "small": "/drivers/SNZB-01/assets/images/small.png"
       },
       "id": "SNZB-01",
+      "name": {
         "en": "Button SNZB-01",
         "sv": "Knapp SNZB-01",
         "nl": "Knop SNZB-01",
@@ -1362,7 +1363,7 @@
       ],
       "energy": {
         "batteries": [
-          "CR2032"
+          "CR2450"
         ]
       },
       "zigbee": {
@@ -1398,8 +1399,188 @@
             "sv": "Tryck på återställningsknappen på botten med en nål i cirka 10 sekunder tills den röda lysdioden blinkar snabbt."
           }
         }
+      }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-03P/assets/images/large.png",
+        "small": "/drivers/SNZB-03P/assets/images/small.png"
       },
-      "settings": []
+      "id": "SNZB-03P",
+      "name": {
+        "en": "Motion Sensor SNZB-03P",
+        "sv": "Rörelsesensor SNZB-03P",
+        "nl": "Bewegingssensor SNZB-03P",
+        "da": "Bevægelsessensor SNZB-03P",
+        "de": "Bewegungssensor SNZB-03P",
+        "es": "Sensor de movimiento SNZB-03P",
+        "fr": "Capteur de mouvement SNZB-03P",
+        "it": "Sensore di movimento SNZB-03P",
+        "no": "Bevegelsessensor SNZB-03P",
+        "pl": "Czujnik ruchu SNZB-03P",
+        "ru": "Датчик движения SNZB-03P",
+        "ko": "모션 센서 SNZB-03P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "measure_battery",
+        "sonoff_illuminance"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "SNZB-03P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1030,
+              1280,
+              64529
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button for aprox 10 seconds until the red LED blinks rapidly.",
+            "sv": "Tryck på knappen i cirka 10 sekunder tills den röda lysdioden blinkar snabbt."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Occupied",
+            "nl": "Bezette",
+            "da": "Optaget",
+            "de": "Besetzt",
+            "es": "Ocupado",
+            "fr": "Occupé",
+            "it": "Occupato",
+            "no": "Opptatt",
+            "sv": "Upptagen",
+            "pl": "Zajęty",
+            "ru": "Занятый",
+            "ko": "점유"
+          },
+          "children": [
+            {
+              "id": "occupied_to_unoccupied_delay",
+              "type": "number",
+              "label": {
+                "en": "Delay",
+                "nl": "Vertraging",
+                "da": "Forsinkelse",
+                "de": "Verzögerung",
+                "es": "Retraso",
+                "fr": "Délai",
+                "it": "Ritardo",
+                "no": "Forsinkelse",
+                "sv": "Fördröjning",
+                "pl": "Opóźnienie",
+                "ru": "Задержка",
+                "ko": "지연"
+              },
+              "value": 60,
+              "attr": {
+                "min": 15,
+                "max": 60,
+                "step": 1
+              }
+            },
+            {
+              "id": "occupied_threshold",
+              "type": "dropdown",
+              "label": {
+                "en": "Sensitivity",
+                "nl": "Gevoeligheid",
+                "da": "Følsomhed",
+                "de": "Empfindlichkeit",
+                "es": "Sensibilidad",
+                "fr": "Sensibilité",
+                "it": "Sensibilità",
+                "no": "Følsomhet",
+                "sv": "Känslighet",
+                "pl": "Czułość",
+                "ru": "Чувствительность",
+                "ko": "민감도"
+              },
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Low",
+                    "nl": "Laag",
+                    "da": "Lav",
+                    "de": "Niedrig",
+                    "es": "Bajo",
+                    "fr": "Bas",
+                    "it": "Basso",
+                    "no": "Lav",
+                    "sv": "Låg",
+                    "pl": "Niski",
+                    "ru": "Низкий",
+                    "ko": "낮은"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Medium",
+                    "nl": "Middel",
+                    "da": "Mellem",
+                    "de": "Mittel",
+                    "es": "Medio",
+                    "fr": "Moyen",
+                    "it": "Medio",
+                    "no": "Medium",
+                    "sv": "Medium",
+                    "pl": "Średni",
+                    "ru": "Средний",
+                    "ko": "중간"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Hight",
+                    "nl": "Hoog",
+                    "da": "Høj",
+                    "de": "Hoch",
+                    "es": "Alto",
+                    "fr": "Haut",
+                    "it": "Alto",
+                    "no": "Høy",
+                    "sv": "Hög",
+                    "pl": "Wysoki",
+                    "ru": "Высокий",
+                    "ko": "높은"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "platforms": [
@@ -1472,6 +1653,69 @@
         }
       },
       "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/SNZB-04P/assets/images/large.png",
+        "small": "/drivers/SNZB-04P/assets/images/small.png"
+      },
+      "id": "SNZB-04P",
+      "name": {
+        "en": "Door/window Sensor SNZB-04P",
+        "sv": "Dörr-/fönstergivare SNZB-04P",
+        "nl": "Deur-/raam sensor SNZB-04P",
+        "da": "Dør-/vindues sensor SNZB-04P",
+        "de": "Tür-/Fenstersensor SNZB-04P",
+        "es": "Sensor de puerta/ventana SNZB-04P",
+        "fr": "Capteur de porte/fenêtre SNZB-04P",
+        "it": "Sensore porta/finestra SNZB-04P",
+        "no": "Dør-/vindussensor SNZB-04P",
+        "pl": "Czujnik drzwi/okien SNZB-04P",
+        "ru": "Датчик двери/окна SNZB-04P",
+        "ko": "문/창문 센서 SNZB-04P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "alarm_tamper",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "SNZB-04P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280,
+              64529
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-04P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button for aprox 10 seconds until the red LED start blinking."
+          }
+        }
+      }
     },
     {
       "platforms": [
@@ -1655,6 +1899,120 @@
                   }
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/TRVZB/assets/images/large.png",
+        "small": "/drivers/TRVZB/assets/images/small.png"
+      },
+      "id": "TRVZB",
+      "name": {
+        "en": "Termostat TRVZB"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "target_temperature",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "TRVZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              1026,
+              513,
+              6,
+              10,
+              64529
+            ],
+            "bindings": [
+              1,
+              1026,
+              513,
+              6,
+              10
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/TRVZB/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "localTemperatureCalibration",
+              "type": "number",
+              "label": {
+                "en": "Local Temperature Calibration"
+              },
+              "hint": {
+                "en": "Adjust the local temperature calibration."
+              },
+              "min": -7,
+              "max": 7,
+              "step": 0.1,
+              "default": 0
+            },
+            {
+              "id": "child_lock",
+              "type": "checkbox",
+              "label": {
+                "en": "Child lock"
+              }
+            },
+            {
+              "id": "open_window",
+              "type": "checkbox",
+              "label": {
+                "en": "Open window detection"
+              }
+            },
+            {
+              "id": "frost_protection_temperature",
+              "type": "number",
+              "label": {
+                "en": "Frost protection temperature"
+              },
+              "attr": {
+                "min": 4,
+                "max": 35,
+                "step": 0.1
+              }
             }
           ]
         }
@@ -1895,6 +2253,28 @@
         "repetitions": 10,
         "minimalLength": 24,
         "maximalLength": 24
+      },
+      "sonoff_rf_tx": {
+        "sof": [
+          250,
+          8000
+        ],
+        "eof": [],
+        "words": [
+          [
+            250,
+            750
+          ],
+          [
+            750,
+            250
+          ]
+        ],
+        "interval": 10000,
+        "sensitivity": 0.5,
+        "repetitions": 5,
+        "minimalLength": 23,
+        "maximalLength": 23
       }
     }
   }

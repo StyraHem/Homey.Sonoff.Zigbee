@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"search.exclude": {
+			"**/node_modules": false,
+			"**/node_modulesXX": true
+		},
+		"search.useIgnoreFiles": false
+	}
 }

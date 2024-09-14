@@ -1,0 +1,54 @@
+{
+  "id": "SonoffSNZB06P",
+  "name": {
+    "en": "Termostat TRVZB"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_temperature",
+    "target_temperature",
+    "measure_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "AA",  "AA",  "AA"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "SONOFF"
+    ],
+    "productId": [
+      "TRVZB"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          1026,
+          513,
+          6,
+          10,
+          64529
+        ],
+        "bindings": [
+          1,
+          1026,
+          513,
+          6,
+          10
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+      }
+    }
+  },
+  "$extends": [
+    "defaults"
+  ]
+}

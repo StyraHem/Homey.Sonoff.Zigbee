@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const SonoffBase = require('../sonoffbase');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const SonoffCluster = require("../../lib/SonoffCluster");
@@ -14,17 +13,11 @@ const Attributes = [
 	'ultrasonicUnoccupiedToOccupiedThreshold'
 ];
 
-class SonoffSNZB06P extends SonoffBase {
+class SonoffSNZB03P extends SonoffBase {
 
     async onNodeInit({zclNode}) {
 
-		super.onNodeInit({zclNode});
-
-		//Fix upgrade from 1.0.14 
-		if (this.hasCapability('alarm_contact') === true) {
-			await this.removeCapability('alarm_contact');
-			await this.addCapability('alarm_motion');
-		}
+		await super.onNodeInit({zclNode});
 
 		this.configureAttributeReporting([
 			{
@@ -38,14 +31,6 @@ class SonoffSNZB06P extends SonoffBase {
 				attributeName: 'occupancy'
 			}
 		]).catch(this.error);
-
-		let brightCondition = 
-			this.homey.flow.getConditionCard('is_bright');
-		brightCondition
-			.registerRunListener(async ( args, state ) => {
-				const illuminance = await this.getCapabilityValue('sonoff_illuminance');
-				return illuminance == 'bright';
-			});
 
 		zclNode.endpoints[1].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
 			.on('attr.occupancy', (value) => {
@@ -71,9 +56,6 @@ class SonoffSNZB06P extends SonoffBase {
 	}
 
 	async checkAttributes() {
-		// this.readAttribute(SonoffIlluminationCluster, ['illuminance'], (data) => {
-		// 	//this.setCapabilityValue('light_presence', data.illuminance).catch(this.error);
-		// });
 		this.readAttribute(CLUSTER.OCCUPANCY_SENSING, Attributes, (data) => {
 			this.setCapabilityValue('alarm_motion', data.occupancy.occupied).catch(this.error);
 			this.setSettings({
@@ -85,4 +67,4 @@ class SonoffSNZB06P extends SonoffBase {
 
 }
 
-module.exports = SonoffSNZB06P;
+module.exports = SonoffSNZB03P;

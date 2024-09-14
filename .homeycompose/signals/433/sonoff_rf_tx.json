@@ -1,5 +1,7 @@
 {
   "sof": [
+    250,
+    8000
   ],
   "eof": [
   ],
@@ -13,9 +15,9 @@
       250
     ]
   ],
-  "interval": 20000,
+  "interval": 10000,
   "sensitivity": 0.5,
-  "repetitions": 10,
-  "minimalLength": 24,
-  "maximalLength": 24
+  "repetitions": 5,
+  "minimalLength": 23,
+  "maximalLength": 23
 }
