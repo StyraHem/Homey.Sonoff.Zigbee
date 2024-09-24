@@ -10,6 +10,11 @@
     "windowcoverings_set",
     "measure_battery"
   ],
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
   "zigbee": {
     "manufacturerName": [
       "SONOFF"
