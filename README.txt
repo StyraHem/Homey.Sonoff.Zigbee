@@ -13,6 +13,7 @@ Support devices:
 -Sonoff SNZB-04  (Door/window contact)
 -Sonoff SNZB-04P (Door/window contact)
 -Sonoff SNZB-06P (Presence detector)
+-Sonoff ZBCurtain (Curtain)
 -Sonoff ZBTRV    (Radiator valve)
 -Sonoff ZBMINI-L (Switch)
 -Sonoff ZBMINI-L2 (Switch)
