@@ -41,7 +41,7 @@ class SonoffTRVZB extends SonoffBase {
 
 	async onNodeInit({ zclNode }) {
 
-		super.onNodeInit({ zclNode }, {noAttribCheck:true});
+		super.onNodeInit({ zclNode }, {noAttribCheck:false});
 
 		if (this.isFirstInit()) {
 
