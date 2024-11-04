@@ -82,5 +82,8 @@
   },
   "1.5.1": {
     "en": "Add ZBCurtain"
+  },
+  "1.5.2": {
+    "en": "Add battery reading"
   }
 }
