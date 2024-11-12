@@ -85,5 +85,8 @@
   },
   "1.5.2": {
     "en": "Add battery reading"
+  },
+  "1.6.0": {
+    "en": "Fix assets for ZBCurtain"
   }
 }
