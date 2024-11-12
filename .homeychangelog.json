@@ -76,5 +76,17 @@
   },
   "1.4.1": {
     "en": "Update vector icons"
+  },
+  "1.5.0": {
+    "en": "Add support for ZBCurtain"
+  },
+  "1.5.1": {
+    "en": "Add ZBCurtain"
+  },
+  "1.5.2": {
+    "en": "Add battery reading"
+  },
+  "1.6.0": {
+    "en": "Fix assets for ZBCurtain"
   }
 }
