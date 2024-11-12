@@ -88,5 +88,8 @@
   },
   "1.6.0": {
     "en": "Fix assets for ZBCurtain"
+  },
+  "1.6.1": {
+    "en": "Add some error handling"
   }
 }

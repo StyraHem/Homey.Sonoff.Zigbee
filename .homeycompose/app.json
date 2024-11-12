@@ -35,7 +35,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
