@@ -52,7 +52,7 @@ class SonoffBase extends ZigBeeDevice {
 				.readAttributes("batteryPercentageRemaining")
 				.then((value) => {			
 					this.log("BATTERY", value);
-					this.setCapabilityValue('measure_battery', value.batteryPercentageRemaining / 2);
+					this.setCapabilityValue('measure_battery', value.batteryPercentageRemaining / 2).catch(this.error);
 				})
 				.catch(() => {			
 					this.log("Error BATTERY");
