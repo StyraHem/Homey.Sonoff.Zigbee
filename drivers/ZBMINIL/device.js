@@ -26,7 +26,7 @@ class SonoffZBMINIL extends ZigBeeDevice {
         try {
             const { powerOnBehavior } = await this.zclNode.endpoints[1].clusters.onOff.readAttributes('powerOnBehavior');
             //const { switchType, switchAction } = await this.zclNode.endpoints[1].clusters.onOffSwitch.readAttributes('switchType', 'switchAction');
-            await this.setSettings({ power_on_behavior: powerOnBehavior }); //, switch_type: switchType });
+            await this.setSettings({ power_on_behavior: powerOnBehavior }).catch(this.error); //, switch_type: switchType });
         } catch (e) {
             this.log("Could not read / update device settings", e);
         }

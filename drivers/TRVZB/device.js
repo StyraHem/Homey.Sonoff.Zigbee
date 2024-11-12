@@ -114,7 +114,7 @@ class SonoffTRVZB extends SonoffBase {
 		
 		zclNode.endpoints[1].clusters[CLUSTER.THERMOSTAT.NAME]
 			.on('attr.localTemperatureCalibration', (value) => {
-				this.setSettings(o);
+				this.setSettings(o).catch(this.error);
 		});
 
 		Attributes.forEach( (attr) => {
@@ -122,7 +122,7 @@ class SonoffTRVZB extends SonoffBase {
             .on('attr.' + attr, (value) => {
 				var o = {}
 				o[attr]=value;
-				this.setSettings(o);
+				this.setSettings(o).catch(this.error);
 			});
 		});
 
@@ -161,10 +161,10 @@ class SonoffTRVZB extends SonoffBase {
 
 	async checkAttributes() {
 		this.readAttribute(SonoffCluster, Attributes, (data) => {
-			this.setSettings(data);
+			this.setSettings(data).catch(this.error);
 		});
 		this.readAttribute(CLUSTER.THERMOSTAT, ['localTemperatureCalibration'], (data) => {
-			this.setSettings(data);
+			this.setSettings(data).catch(this.error);
 		});
 	}
 

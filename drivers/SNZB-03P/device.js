@@ -61,7 +61,7 @@ class SonoffSNZB03P extends SonoffBase {
 			this.setSettings({
 				occupied_to_unoccupied_delay: data.ultrasonicOccupiedToUnoccupiedDelay,
 				occupied_threshold: data.ultrasonicUnoccupiedToOccupiedThreshold.toString()
-			});
+			}).catch(this.error);
 		});
 	}
 
