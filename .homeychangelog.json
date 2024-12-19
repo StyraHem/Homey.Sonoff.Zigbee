@@ -91,5 +91,8 @@
   },
   "1.6.1": {
     "en": "Add some error handling"
+  },
+  "1.6.2": {
+    "en": "Add 05P and try fix for ZBTRV"
   }
 }
