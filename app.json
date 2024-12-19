@@ -1726,6 +1726,56 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/SNZB-05P/assets/images/large.png",
+        "small": "/drivers/SNZB-05P/assets/images/small.png"
+      },
+      "id": "SNZB-05P",
+      "name": {
+        "en": "Flood/rain Sensor SNZB-05P"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_water",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "SNZB-05P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-05P/assets/learn.svg",
+          "instruction": {
+            "en": "Press button inside device for aprox 10 seconds until the red LED start blinking."
+          }
+        }
+      }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/SNZB-06P/assets/images/large.png",
         "small": "/drivers/SNZB-06P/assets/images/small.png"
       },
@@ -1924,7 +1974,8 @@
       "capabilities": [
         "measure_temperature",
         "target_temperature",
-        "measure_battery"
+        "measure_battery",
+        "onoff"
       ],
       "energy": {
         "batteries": [
@@ -1943,19 +1994,13 @@
         "endpoints": {
           "1": {
             "clusters": [
-              0,
               1,
-              1026,
-              513,
               6,
               10,
+              513,
               64529
             ],
             "bindings": [
-              1,
-              1026,
-              513,
-              6,
               10
             ]
           }
@@ -1963,7 +2008,7 @@
         "learnmode": {
           "image": "/drivers/TRVZB/assets/learn.svg",
           "instruction": {
-            "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+            "en": "Turn the temp to off and press the button for 5 seconds until the signal-symbol start blink."
           }
         }
       },

@@ -14,7 +14,7 @@ module.exports = class MyRFDriver extends RFDriver {
           args.code.toUpperCase() === state.code.toUpperCase();
       return  match;        
     });
-    this.enableRX(this.receive.bind(this))
+    this.enableRX(this.receive.bind(this)).catch(this.error);
   }
 
   async receive (command, { isFirst }) {

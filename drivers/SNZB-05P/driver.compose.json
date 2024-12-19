@@ -1,18 +1,16 @@
 {
-  "id": "SonoffSNZB06P",
+  "id": "SonoffSNZB05P",
   "name": {
-    "en": "Termostat TRVZB"
+    "en": "Flood/rain Sensor SNZB-05P"
   },
   "class": "sensor",
   "capabilities": [
-    "measure_temperature",
-    "target_temperature",
-    "measure_battery",
-    "onoff"
+    "alarm_water",
+    "measure_battery"
   ],
   "energy": {
     "batteries": [
-      "AA",  "AA",  "AA"
+      "CR2477"
     ]
   },
   "zigbee": {
@@ -20,26 +18,21 @@
       "SONOFF"
     ],
     "productId": [
-      "TRVZB"
+      "SNZB-05P"
     ],
     "endpoints": {
       "1": {
         "clusters": [
           1,
-          6,
-          10,
-          513,
-          64529
+          1280
         ],
-        "bindings": [
-          10       
-        ]
+        "bindings": []
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Turn the temp to off and press the button for 5 seconds until the signal-symbol start blink."
+        "en": "Press button inside device for aprox 10 seconds until the red LED start blinking."
       }
     }
   },
