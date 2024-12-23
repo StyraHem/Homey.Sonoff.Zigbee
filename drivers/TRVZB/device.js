@@ -116,7 +116,17 @@ class SonoffTRVZB extends SonoffBase {
 			await this.addCapability('onoff');
         }
 		
-		this.registerCapability('onoff', CLUSTER.ON_OFF);
+		this.registerCapability('onoff', CLUSTER.ON_OFF);		
+		this.registerCapabilityListener("onoff", async (value, opts) => {
+			await this.writeAttributes(CLUSTER.THERMOSTAT, {
+				systemMode: value ? 4 : 0 // Assuming 4 is 'on/heat' and 0 is 'off'
+			});
+			/*return this.setClusterCapabilityValue("onoff", CLUSTER.ON_OFF, value, opts)
+			.catch(err => {
+				this.error(`Error: failed to set cluster capability value (capability: "onoff", cluster: ${CLUSTER.ON_OFF.NAME}, value: ${value})`, err);
+			});		
+			*/	
+		});
 
 		if (this.isFirstInit()) {
 			
@@ -174,7 +184,7 @@ class SonoffTRVZB extends SonoffBase {
 		};
 		*/
 
-		//??await zclNode.endpoints[1].bind(CLUSTER.THERMOSTAT.NAME, new TRVThermostatCluster(this));
+		//await zclNode.endpoints[1].bind(CLUSTER.THERMOSTAT.NAME, new TRVThermostatCluster(this));
 
 		this.registerCapability("measure_temperature", CLUSTER.THERMOSTAT, {
 			report: 'localTemperature',
