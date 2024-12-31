@@ -97,5 +97,8 @@
   },
   "1.6.3": {
     "en": "Fix TRV report timeout"
+  },
+  "1.6.4": {
+    "en": "Add vector image for SNZB-05P"
   }
 }
