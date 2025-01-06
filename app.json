@@ -254,6 +254,30 @@
             "filter": "driver_id=SNZB-01P"
           }
         ]
+      },
+      {
+        "id": "ZBMINIR2:click",
+        "title": {
+          "en": "Singel click",
+          "da": "Enkelt klik",
+          "de": "Einzelklick",
+          "es": "Clic único",
+          "fr": "Clic unique",
+          "it": "Clic singolo",
+          "no": "Enkel klikk",
+          "sv": "Enstaka klick",
+          "pl": "Pojedyncze kliknięcie",
+          "ru": "Одиночный клик",
+          "ko": "단일 클릭",
+          "nl": "Enkele klik"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZBMINIR2"
+          }
+        ]
       }
     ],
     "conditions": [
@@ -2274,6 +2298,148 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBMINIR2/assets/images/large.png",
+        "small": "/drivers/ZBMINIR2/assets/images/small.png"
+      },
+      "id": "ZBMINIR2",
+      "name": {
+        "en": "ZBMINI-R2 Switch",
+        "sv": "ZBMINI-R2 Strömbrytare"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBMINIR2"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINIR2/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        },
+        {
+          "id": "power_on_delay_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Power on delay state"
+          }
+        },
+        {
+          "id": "power_on_delay_time",
+          "type": "number",
+          "label": {
+            "en": "Power on delay time"
+          },
+          "min": 1,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "id": "switch_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch mode"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Edge"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Pluse"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Follow swith"
+              }
+            },
+            {
+              "id": "130",
+              "label": {
+                "en": "Follow switch (invert)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "detach_mode",
+          "type": "checkbox",
+          "label": {
+            "en": "Detach switch"
+          }
         }
       ]
     }

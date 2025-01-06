@@ -96,22 +96,32 @@ class SonoffBase extends ZigBeeDevice {
 		this.writeAttributes(cluster, data);
 	}
 
-	async writeAttributes(cluster, attribs) {
-		if ("NAME" in cluster)
-		cluster = cluster.NAME;
+	async writeAttributes(cluster, attribs, filter=null) {
 		try {
-			this.log("Write attribute", attribs);
-			this.zclNode.endpoints[1].clusters[cluster]
-				.writeAttributes(attribs) 
+			if ("NAME" in cluster)
+				cluster = cluster.NAME;
+			var clust = this.zclNode.endpoints[1].clusters[cluster];
+			var items = {};
+			for(const key in attribs) {
+				if (filter && !filter.includes(key))
+					continue;
+				if (!(key in clust.constructor.attributes))
+					continue;
+				items[key] = attribs[key];
+			}	
+			this.log("Write attribute", items);
+			if (items.length==0)
+				return;
+			clust
+				.writeAttributes(items) 
 				.then((value) => {			
-					this.log("Write attr", attribs);
 					handler(value);
 				})
 				.catch(() => {			
-					this.error("Error write attr", attribs);
+					this.error("Error write attr", items);
 				});
 		} catch (error) {
-			this.error('Error (2) read', attribs, error);
+			this.error('Error (2) read', items, error);
 		}
 	}
 
