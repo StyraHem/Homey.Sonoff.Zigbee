@@ -100,5 +100,8 @@
   },
   "1.6.4": {
     "en": "Add vector image for SNZB-05P"
+  },
+  "1.7.0": {
+    "en": "Add support for Sonoff ZBMINIR2"
   }
 }
