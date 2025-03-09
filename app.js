@@ -8,7 +8,7 @@ const Homey = require("homey");
    inspector.open(9331, '0.0.0.0', true);
 }*/
 
-if (process.env.DEBUG === "1XX") {
+if (process.env.DEBUG === "1X") {
   const inspector = require('inspector');
   if (!inspector.url()) {
     inspector.open(9330, '0.0.0.0', true);

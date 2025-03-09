@@ -1,0 +1,21 @@
+{
+  "triggers": [
+    {
+      "id": "ZBMINIR2:click",
+      "title": {
+        "en": "Singel click",
+        "da": "Enkelt klik",
+        "de": "Einzelklick",
+        "es": "Clic único",
+        "fr": "Clic unique",
+        "it": "Clic singolo",
+        "no": "Enkel klikk",
+        "sv": "Enstaka klick",
+        "pl": "Pojedyncze kliknięcie",
+        "ru": "Одиночный клик",
+        "ko": "단일 클릭",
+        "nl": "Enkele klik"
+      }
+    } 
+  ]
+}

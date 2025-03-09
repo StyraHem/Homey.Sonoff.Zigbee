@@ -3,33 +3,58 @@
 const { ZigBeeDevice } = require("homey-zigbeedriver");
 
 const SonoffOnOffCluster = require("../../lib/SonoffOnOffCluster");
-//const SonoffOnOffSwitchCluster = require("../../lib/SonoffOnOffSwitchCluster");
-
-const { Cluster, CLUSTER } = require('zigbee-clusters');
-
+const { Cluster, CLUSTER, BoundCluster } = require('zigbee-clusters');
 Cluster.addCluster(SonoffOnOffCluster);
-//Cluster.addCluster(SonoffOnOffSwitchCluster);
 
-class SonoffZBMINIL extends ZigBeeDevice {
+const SonoffCluster = require("../../lib/SonoffCluster");
+Cluster.addCluster(SonoffCluster);
+
+const SonoffBase = require('../sonoffbase');
+
+class MyOnOffBoundCluster extends BoundCluster {
+    constructor(node) {
+        super();
+        this.node = node;
+        this._click = node.homey.flow.getDeviceTriggerCard("ZBMINIR2:click");
+    }
+    toggle() {
+        this._click.trigger(this.node, {}, {}).catch(this.node.error);
+    }
+}
+
+const SonoffClusterAttributes = [
+	'power_on_delay_state',
+	'power_on_delay_time',
+    'switch_mode',
+    'detach_mode'
+];
+
+class SonoffZBMINIR2 extends SonoffBase {
 
  /**
    * onInit is called when the device is initialized.
    */
     async onNodeInit({ zclNode }) {
-        this.log('Device initialized');
-        this.printNode();
+        
+        super.onNodeInit({zclNode});
 
         if (this.hasCapability('onoff')) {
             this.registerCapability('onoff', CLUSTER.ON_OFF);
         }
 
-        try {
-            const { powerOnBehavior } = await this.zclNode.endpoints[1].clusters.onOff.readAttributes('powerOnBehavior');
-            //const { switchType, switchAction } = await this.zclNode.endpoints[1].clusters.onOffSwitch.readAttributes('switchType', 'switchAction');
-            await this.setSettings({ power_on_behavior: powerOnBehavior }).catch(this.error); //, switch_type: switchType });
-        } catch (e) {
-            this.log("Could not read / update device settings", e);
-        }
+        this.configureAttributeReporting([			
+			{
+				endpointId: 1,
+				cluster: CLUSTER.ON_OFF,
+				attributeName: 'onOff',
+                minInterval: 0,
+                maxInterval: 3600                
+			}
+		]).catch(this.error);
+
+        this.zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new MyOnOffBoundCluster(this));
+        
+        this.checkAttributes();
     }
 
     /**
@@ -49,6 +74,9 @@ class SonoffZBMINIL extends ZigBeeDevice {
             }
         }
 
+        this.writeAttributes(SonoffCluster, newSettings, changedKeys).catch(this.error);
+
+
         // if (changedKeys.includes('switch_type')) {
         //     try {
         //         // TODO: apparently readonly?
@@ -57,6 +85,18 @@ class SonoffZBMINIL extends ZigBeeDevice {
         //         this.log("Error updating the switch type");
         //     }
         // }
+  }
+
+  async checkAttributes() {
+    
+    this.readAttribute(CLUSTER.ON_OFF, ['powerOnBehavior'], (data) => {
+        this.setSettings({ power_on_behavior: data.powerOnBehavior }).catch(this.error); //, switch_type: switchType });
+    });
+    
+    this.readAttribute(SonoffCluster, SonoffClusterAttributes, (data) => {
+        this.setSettings(data).catch(this.error);
+    });
+    
   }
 
   /**
@@ -68,4 +108,4 @@ class SonoffZBMINIL extends ZigBeeDevice {
 
 }
 
-module.exports = SonoffZBMINIL;
+module.exports = SonoffZBMINIR2;

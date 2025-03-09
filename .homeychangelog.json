@@ -88,5 +88,20 @@
   },
   "1.6.0": {
     "en": "Fix assets for ZBCurtain"
+  },
+  "1.6.1": {
+    "en": "Add some error handling"
+  },
+  "1.6.2": {
+    "en": "Add 05P and try fix for ZBTRV"
+  },
+  "1.6.3": {
+    "en": "Fix TRV report timeout"
+  },
+  "1.6.4": {
+    "en": "Add vector image for SNZB-05P"
+  },
+  "1.7.0": {
+    "en": "Add support for Sonoff ZBMINIR2"
   }
 }
