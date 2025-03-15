@@ -1,0 +1,70 @@
+{
+  "id": "SQ510A",
+  "name": {
+    "en": "Water Detector SQ510A",
+    "sv": "Vattenläckagedetektor SQ510A",
+    "nl": "Waterdetector SQ510A",
+    "da": "Vanddetektor SQ510A",
+    "de": "Wasserdetektor SQ510A",
+    "es": "Detector de agua SQ510A",
+    "fr": "Détecteur d'eau SQ510A",
+    "it": "Rilevatore d'acqua SQ510A",
+    "no": "Vanndetektor SQ510A",
+    "pl": "Czujnik zalania SQ510A",
+    "ko": "물 감지기 SQ510A"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "alarm_water",
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "eWeLink"
+    ],
+    "productId": [
+      "SNZB-03"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          3,
+          1280,
+          32
+        ],
+        "bindings": [
+          1,
+          1280
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Use a SIM ejector tool (or similar thin pin) to press and hold the reset button for about 10 seconds until the LED blinks rapidly. If nothing happens; put two fingers against the detectors and repeat.",
+        "sv": "Använd ett SIM-utmatningsverktyg (eller liknande tunn nål) för att trycka och hålla in återställningsknappen i cirka 10 sekunder tills lysdioden blinkar snabbt. Om inget händer; sätt två fingrar mot detektorerna och upprepa.",
+        "nl": "Gebruik een SIM-uitwerper (of vergelijkbare dunne pin) om de reset-knop ongeveer 10 seconden ingedrukt te houden tot de LED snel knippert. Als er niets gebeurt; plaats twee vingers tegen de detectoren en herhaal.",
+        "da": "Brug et SIM-udskubningsværktøj (eller lignende tynd nål) til at trykke og holde reset-knappen nede i cirka 10 sekunder, indtil LED'en blinker hurtigt. Hvis intet sker; placer to fingre mod detektorerne og gentag.",
+        "de": "Verwenden Sie ein SIM-Auswurfwerkzeug (oder ähnliche dünne Nadel), um die Reset-Taste ca. 10 Sekunden lang gedrückt zu halten, bis die LED schnell blinkt. Wenn nichts passiert; legen Sie zwei Finger an die Detektoren und wiederholen Sie den Vorgang.",
+        "es": "Use un expulsor de SIM (o un pin delgado similar) para mantener presionado el botón de reinicio durante aproximadamente 10 segundos hasta que el LED parpadee rápidamente. Si no sucede nada; coloque dos dedos contra los detectores y repita.",
+        "fr": "Utilisez un outil d'éjection de carte SIM (ou une épingle fine similaire) pour maintenir le bouton de réinitialisation enfoncé pendant environ 10 secondes jusqu'à ce que la LED clignote rapidement. Si rien ne se passe ; placez deux doigts contre les détecteurs et répétez.",
+        "it": "Usa l'estrattore della SIM (o un pin sottile simile) per tenere premuto il pulsante di reset per circa 10 secondi fino a quando il LED lampeggia rapidamente. Se non succede nulla; metti due dita contro i rilevatori e ripeti.",
+        "no": "Bruk et SIM-utskytingsverktøy (eller lignende tynn nål) til å trykke og holde reset-knappen i cirka 10 sekunder til LED-en blinker raskt. Hvis ingenting skjer; plasser to fingre mot detektorene og gjenta.",
+        "pl": "Użyj narzędzia do wysuwania karty SIM (lub podobnego cienkiego szpilki), aby nacisnąć i przytrzymać przycisk reset przez około 10 sekund, aż dioda LED zacznie szybko migać. Jeśli nic się nie dzieje; przyłóż dwa palce do detektorów i powtórz.",
+        "ko": "SIM 카드 제거 도구(또는 유사한 얇은 핀)를 사용하여 LED가 빠르게 깜박일 때까지 약 10초 동안 리셋 버튼을 길게 누르세요. 반응이 없으면 감지기에 두 손가락을 대고 반복하세요."
+      }
+    }
+  },
+  "$extends": [
+    "defaults"
+  ]
+}
