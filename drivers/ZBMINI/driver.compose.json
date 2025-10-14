@@ -1,0 +1,36 @@
+{
+  "id": "SonoffZBMINI",
+  "name": {
+    "en": "ZBMINI Switch",
+    "sv": "ZBMINI Strömbrytare"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "SONOFF"
+    ],
+    "productId": [
+      "01MINIZB"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ],
+        "bindings": [
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+      }
+    }
+  },
+  "$extends": ["defaults"]
+}

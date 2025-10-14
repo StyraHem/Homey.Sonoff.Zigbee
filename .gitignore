@@ -69,3 +69,9 @@ typings
 /.homeybuild/
 
 /.vscode/
+
+# Ignore interview dumps (sensitive device data)
+**/interview.json
+interview.json
+
+/temp/
