@@ -207,7 +207,16 @@ class SonoffZBMINIR2 extends SonoffBase {
     });
     
     this.readAttribute(SonoffCluster, SonoffClusterAttributes, (data) => {
-        this.setSettings(data).catch(this.error);
+        // Convert numeric values to boolean for settings that require boolean type
+        const settingsData = {
+            ...data,
+            TurboMode: data.TurboMode !== 0, // Convert number to boolean
+            network_led: data.network_led !== 0,
+            power_on_delay_state: data.power_on_delay_state !== 0,
+            switch_mode: data.switch_mode !== 0,
+            detach_mode: data.detach_mode !== 0
+        };
+        this.setSettings(settingsData).catch(this.error);
     });
     
   }
