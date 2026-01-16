@@ -45,7 +45,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Remove the cover on the underside and press reset button with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+        "en": "Remove the cover on the underside and press the reset button with a pin for approx. 10 seconds until the red LED blinks rapidly.",
         "nl": "Verwijder de deksel aan de onderkant en druk ongeveer 10 seconden op de resetknop met een pen totdat de rode LED snel knippert.",
         "da": "Fjern dækslet på undersiden og tryk på nulstillingsknappen med en nål i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
         "de": "Entfernen Sie die Abdeckung an der Unterseite und drücken Sie ca. 10 Sekunden lang mit einer Nadel die Reset-Taste, bis die rote LED schnell blinkt.",

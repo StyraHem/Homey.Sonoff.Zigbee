@@ -46,7 +46,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button for aprox 10 seconds until the red LED blinks rapidly.",
+        "en": "Press the button for approx. 10 seconds until the red LED blinks rapidly.",
         "sv": "Tryck på knappen i cirka 10 sekunder tills den röda lysdioden blinkar snabbt."
       }
     }
