@@ -2,7 +2,7 @@
   "id": "SonoffRF",
   "connectivity": ["rf433"],
   "name": {
-    "en": "RF-button",
+    "en": "RF button",
     "sv": "RF-knapp"
   },
   "class": "button",
@@ -26,7 +26,7 @@
           "en": "Create a RF button"
         },
         "instruction": {
-          "en": "Set your device in lerning mode and then click next button below."
+          "en": "Set your device in learning mode and then click the Next button below."
         },
         "copyFromRemote": {
           "en": "Copy from Remote"

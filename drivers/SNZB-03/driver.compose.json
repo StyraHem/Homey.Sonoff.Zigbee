@@ -43,7 +43,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press reset on bottom with a pin for aprox 10 seconds until the red LED blinks rapidly.",
+        "en": "Press the reset button on the bottom with a pin for approx. 10 seconds until the red LED blinks rapidly.",
         "nl": "Druk op reset aan de onderkant met een speld voor ongeveer 10 seconden totdat de rode LED snel knippert.",
         "da": "Tryk på reset i bunden med en nål i cirka 10 sekunder, indtil den røde LED blinker hurtigt.",
         "de": "Drücken Sie unten auf die Reset-Taste mit einer Nadel für ca. 10 Sekunden, bis die rote LED schnell blinkt.",

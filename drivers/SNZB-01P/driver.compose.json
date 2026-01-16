@@ -45,7 +45,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press button on side for aprox 10 seconds until the red LED blinks rapidly.",
+        "en": "Press the button on the side for approx. 10 seconds until the red LED blinks rapidly.",
         "nl": "Druk op de knop aan de zijkant voor ongeveer 10 seconden totdat de rode LED snel begint te knipperen.",
         "da": "Tryk på knappen på siden i ca. 10 sekunder, indtil den røde LED blinker hurtigt.",
         "de": "Drücken Sie die Taste an der Seite ungefähr 10 Sekunden lang, bis die rote LED schnell blinkt.",

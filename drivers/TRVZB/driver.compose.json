@@ -1,7 +1,7 @@
 {
   "id": "SonoffSNZB06P",
   "name": {
-    "en": "Termostat TRVZB"
+    "en": "Thermostat TRVZB"
   },
   "class": "sensor",
   "capabilities": [
@@ -39,7 +39,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Turn the temp to off and press the button for 5 seconds until the signal-symbol start blink."
+        "en": "Turn the temp to off and press the button for 5 seconds until the signal-symbol starts blinking."
       }
     }
   },

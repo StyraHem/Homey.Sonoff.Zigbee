@@ -1,7 +1,7 @@
 {
   "id": "SonoffZBCurtain",
   "name": {
-    "en": "ZBCurtain SCurtainwitch",
+    "en": "ZBCurtain Curtainswitch",
     "sv": "ZBCurtain Gardin"
   },
   "class": "curtain",
@@ -42,7 +42,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learn.svg",
       "instruction": {
-        "en": "Press the button on side for aprox. 10 seconds until the LED blinks rapidly."
+        "en": "Press the button on side for approx. 10 seconds until the LED blinks rapidly."
       }
     }
   },
