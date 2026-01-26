@@ -1,94 +1,208 @@
 [
   {
-    "id": "power_on_behavior",
-    "type": "dropdown",
+    "id": "TurboMode",
+    "type": "checkbox",
+    "value": false,
     "label": {
-      "en": "Power-on behavior"
+      "en": "Turbo Mode"
     },
-    "value": "off",
-    "values": [
+    "hint": {
+      "en": "Improves Zigbee range for distant devices."
+    }
+  },
+  {
+    "id": "network_led",
+    "type": "checkbox",
+    "value": true,
+    "label": {
+      "en": "Network LED"
+    },
+    "hint": {
+      "en": "Show network status LED."
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch Configuration"
+    },
+    "children": [
       {
-        "id": "off",
+        "id": "switch_mode",
+        "type": "dropdown",
         "label": {
-          "en": "Off"
-        }
+          "en": "Switch Type"
+        },
+        "hint": {
+          "en": "Physical switch connection type."
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Toggle"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Momentary"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Follow"
+            }
+          },
+          {
+            "id": "130",
+            "label": {
+              "en": "Follow Inverted"
+            }
+          }
+        ]
       },
       {
-        "id": "on",
+        "id": "detach_mode",
+        "type": "checkbox",
+        "value": false,
         "label": {
-          "en": "On"
-        }
-      },
-      {
-        "id": "toggle",
-        "label": {
-          "en": "Toggle"
-        }
-      },
-      {
-        "id": "last_state",
-        "label": {
-          "en": "Last state"
+          "en": "Detach Relay"
+        },
+        "hint": {
+          "en": "Switch triggers scenes only. Relay stays unchanged."
         }
       }
     ]
   },
   {
-    "id": "power_on_delay_state",
-    "type": "checkbox",
+    "type": "group",
     "label": {
-      "en": "Power on delay state"
-    }
-  },
-  {
-    "id": "power_on_delay_time",
-    "type": "number",
-    "label": {
-      "en": "Power on delay time"
+      "en": "Power-on Behavior"
     },
-    "min": 1,
-    "max": 3600,
-    "step": 1
-  },
-  {
-    "id": "switch_mode",
-    "type": "dropdown",
-    "label": {
-      "en": "Switch mode"
-    },
-    "value": "0",
-    "values": [
+    "children": [
       {
-        "id": "0",
+        "id": "power_on_behavior",
+        "type": "dropdown",
         "label": {
-          "en": "Edge"
+          "en": "Power-on State"
+        },
+        "hint": {
+          "en": "Relay state after power restore."
+        },
+        "value": "off",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "Turn On"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Turn Off"
+            }
+          },
+          {
+            "id": "toggle",
+            "label": {
+              "en": "Toggle"
+            }
+          },
+          {
+            "id": "last_state",
+            "label": {
+              "en": "Last State"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power_on_delay_state",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+          "en": "Power-on Delay"
+        },
+        "hint": {
+          "en": "Delay relay after power restore."
         }
       },
       {
-        "id": "1",
+        "id": "power_on_delay_time",
+        "type": "number",
         "label": {
-          "en": "Pluse"
-        }
-      },
-      {
-        "id": "2",
-        "label": {
-          "en": "Follow swith"
-        }
-      },
-      {
-        "id": "130",
-        "label": {
-          "en": "Follow switch (invert)"
-        }
+          "en": "Delay (s)"
+        },
+        "hint": {
+          "en": "Wait time before relay switches (0.5-3599.5s)."
+        },
+        "value": 2,
+        "min": 0.5,
+        "max": 3599.5,
+        "step": 0.5
       }
     ]
   },
   {
-    "id": "detach_mode",
-    "type": "checkbox",
+    "type": "group",
     "label": {
-      "en": "Detach switch"
-    }
+      "en": "Inching"
+    },
+    "children": [
+      {
+        "id": "inching_enabled",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+          "en": "Enable Inching"
+        },
+        "hint": {
+          "en": "Auto-switch relay after set time."
+        }
+      },
+      {
+        "id": "inching_time",
+        "type": "number",
+        "label": {
+          "en": "Duration (s)"
+        },
+        "hint": {
+          "en": "Time before auto-switch (0.5-3599.5s)."
+        },
+        "value": 1,
+        "min": 0.5,
+        "max": 3599.5,
+        "step": 0.5
+      },
+      {
+        "id": "inching_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "Inching"
+        },
+        "hint": {
+          "en": "Auto switch order."
+        },
+        "value": "on",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "On → Off"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Off → On"
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -34,7 +34,7 @@
     "ru": "Оживляет ваш дом",
     "ko": "집에 생명을 불어넣다"
   },
-  "category": "lights",
+  "category": "appliances",
   "version": "1.7.0",
   "compatibility": ">=5.0.0",
   "author": {

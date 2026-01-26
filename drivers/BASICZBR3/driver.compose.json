@@ -1,0 +1,50 @@
+{
+  "name": {
+    "en": "Switch (Basic ZBR3)"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "energy": {
+    "approximation": {
+      "usageOn": 1,
+      "usageOff": 1
+    }
+  },
+  "platforms": ["local", "cloud"],
+  "connectivity": ["zigbee"],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+ 
+ 
+  "zigbee": {
+    "manufacturerName": "SONOFF",
+    "productId": [
+      "BASICZBR3"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Push the button for aprox 8 seconds until the LED blinks rapidly."
+      }
+    }
+  }
+}
