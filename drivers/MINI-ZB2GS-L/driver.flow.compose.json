@@ -15,6 +15,20 @@
         "ru": "Одиночный клик",
         "ko": "단일 클릭",
         "nl": "Enkele klik"
+      },
+      "hint": {
+        "en": "This trigger fires when the physical switch is pressed and the 'Detach Relay' setting is enabled.",
+        "it": "Questo trigger si attiva quando viene premuto l'interruttore fisico e l'impostazione 'Stacca Relè' è abilitata.",
+        "nl": "Deze trigger wordt geactiveerd wanneer de fysieke schakelaar wordt ingedrukt en de instelling 'Relais ontkoppelen' is ingeschakeld.",
+        "da": "Denne trigger aktiveres, når der trykkes på den fysiske kontakt, og indstillingen 'Frakobl relæ' er aktiveret.",
+        "de": "Dieser Trigger wird ausgelöst, wenn der physische Schalter gedrückt wird und die Einstellung 'Relais trennen' aktiviert ist.",
+        "es": "Este activador se dispara cuando se presiona el interruptor físico y la configuración 'Desconectar relé' está habilitada.",
+        "fr": "Ce déclencheur s'active lorsque l'interrupteur physique est pressé et que le paramètre 'Détacher le relais' est activé.",
+        "no": "Denne utløseren aktiveres når den fysiske bryteren trykkes og innstillingen 'Koble fra relé' er aktivert.",
+        "sv": "Denna trigger aktiveras när den fysiska strömbrytaren trycks och inställningen 'Frånkoppla relä' är aktiverad.",
+        "pl": "Ten wyzwalacz uruchamia się, gdy zostanie naciśnięty fizyczny przełącznik, a ustawienie 'Odłącz przekaźnik' jest włączone.",
+        "ru": "Этот триггер срабатывает при нажатии физического переключателя и включенной настройке 'Отсоединить реле'.",
+        "ko": "물리적 스위치를 누르고 '릴레이 분리' 설정이 활성화된 경우 이 트리거가 실행됩니다."
       }
     }
   ]
