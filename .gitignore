@@ -60,8 +60,9 @@ typings
 # dotenv environment variables file
 .env
 
-#Backup
+# Backup
 *.DS_Store
+**/bck/
 
 
 
@@ -74,4 +75,7 @@ typings
 **/interview.json
 interview.json
 
+
 /temp/
+
+*.code-workspace

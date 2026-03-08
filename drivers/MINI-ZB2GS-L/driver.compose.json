@@ -1,0 +1,61 @@
+{
+  "id": "SonoffMINI-ZB2GS-L",
+  "name": {
+    "en": "MINI-ZB2GS-L Smart Switch (Channel 1)",
+    "it": "MINI-ZB2GS-L Interruttore Smart (Canale 1)"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "SONOFF"
+    ],
+    "productId": [
+      "MINI-ZB2GS-L"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6,
+          64529
+        ],
+        "bindings": [
+          6
+        ]
+      },
+      "2": {
+        "clusters": [
+          0,
+          6,
+          64529
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "devices": {
+      "secondChannel": {
+        "class": "socket",
+        "name": {
+          "en": "MINI-ZB2GS-L Smart Switch (Channel 2)",
+          "it": "MINI-ZB2GS-L Interruttore Smart (Canale 2)"
+        },
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press the button on the device for approximately 10 seconds until the LED blinks rapidly.",
+        "it": "Premi il pulsante sul dispositivo per circa 10 secondi fino a quando il LED lampeggia rapidamente."
+      }
+    }
+  },
+  "$extends": ["defaults"]
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch Mode",
+      "it": "Cambia Modalità"
+    },
+    "children": [
+      {
+        "id": "switch_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "Mode",
+          "it": "Modalità"
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Edge Mode",
+              "it": "Modalità Edge"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Pulse Mode",
+              "it": "Modalità Impulso"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Following Mode",
+              "it": "Modalità Inseguimento"
+            }
+          },
+          {
+            "id": "130",
+            "label": {
+              "en": "Following Mode (Reverse)",
+              "it": "Modalità Inseguimento (Inverti)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "detach_mode",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+          "en": "Detach Relay",
+          "it": "Stacca Relè"
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power-on",
+      "it": "Accensione"
+    },
+    "children": [
+      {
+        "id": "power_on_behavior",
+        "type": "dropdown",
+        "label": {
+          "en": "Power-on State",
+          "it": "Stato all'Accensione"
+        },
+        "hint": {
+          "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+          "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+        },
+        "value": "off",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "On",
+              "it": "Acceso"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Off",
+              "it": "Spento"
+            }
+          },
+          {
+            "id": "last_state",
+            "label": {
+              "en": "Last state",
+              "it": "Ultimo stato"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power_on_delay_state",
+        "type": "checkbox",
+        "value": false,
+        "hint": {
+          "en": "Power-on state will be delayed for the time you set.",
+          "it": "Lo stato all'accensione sarà ritardato per il tempo impostato."
+        },
+        "label": {
+          "en": "Delay",
+          "it": "Ritardo"
+        }
+      },
+      {
+        "id": "power_on_delay_time",
+        "type": "number",
+        "label": {
+          "en": "Duration (seconds)",
+          "it": "Durata (secondi)"
+        },
+        "value": 28,
+        "min": 0.5,
+        "max": 3599.5,
+        "step": 0.5
+      }
+    ]
+  }
+]

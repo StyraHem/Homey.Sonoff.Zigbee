@@ -25,46 +25,46 @@ class MyOnOffBoundCluster extends BoundCluster {
 const SonoffClusterAttributes = [
     'TurboMode',
     'network_led',
-	'power_on_delay_state',
-	'power_on_delay_time',
+    'power_on_delay_state',
+    'power_on_delay_time',
     'switch_mode',
     'detach_mode'
 ];
 
 class SonoffZBMINIR2 extends SonoffBase {
 
- /**
-   * onInit is called when the device is initialized.
-   */
+    /**
+      * onInit is called when the device is initialized.
+      */
     async onNodeInit({ zclNode }) {
-        
-        super.onNodeInit({zclNode});
+
+        super.onNodeInit({ zclNode });
 
         if (this.hasCapability('onoff')) {
             this.registerCapability('onoff', CLUSTER.ON_OFF);
         }
 
-        this.configureAttributeReporting([			
-			{
-				endpointId: 1,
-				cluster: CLUSTER.ON_OFF,
-				attributeName: 'onOff',
+        this.configureAttributeReporting([
+            {
+                endpointId: 1,
+                cluster: CLUSTER.ON_OFF,
+                attributeName: 'onOff',
                 minInterval: 0,
-                maxInterval: 3600                
-			}
-		]).catch(this.error);
+                maxInterval: 3600
+            }
+        ]).catch(this.error);
 
         this.zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new MyOnOffBoundCluster(this));
-        
+
         this.checkAttributes();
-        
+
         // Apply inching settings on initialization
         const settings = this.getSettings();
         if (settings.inching_enabled !== undefined) {
             try {
                 await this.setInching(
                     settings.inching_enabled,
-                    settings.inching_time || 1000,
+                    settings.inching_time || 1,
                     settings.inching_mode || 'on'
                 );
                 this.log('Initial inching settings applied');
@@ -91,12 +91,21 @@ class SonoffZBMINIR2 extends SonoffBase {
             }
         }
 
-        this.writeAttributes(SonoffCluster, newSettings, changedKeys).catch(this.error);
+        // Convert TurboMode boolean checkbox → int16 expected by device (20=on, 9=off)
+        // Convert power_on_delay_time from seconds (UI) to 0.5s units for wire (scale: 2)
+        const settingsToWrite = { ...newSettings };
+        if (settingsToWrite.TurboMode !== undefined) {
+            settingsToWrite.TurboMode = settingsToWrite.TurboMode ? 20 : 9;
+        }
+        if (settingsToWrite.power_on_delay_time !== undefined) {
+            settingsToWrite.power_on_delay_time = Math.round(settingsToWrite.power_on_delay_time * 2);
+        }
+        this.writeAttributes(SonoffCluster, settingsToWrite, changedKeys).catch(this.error);
 
         // Handle inching settings changes
         const inchingKeys = ['inching_enabled', 'inching_mode', 'inching_time'];
         const inchingChanged = changedKeys.some(key => inchingKeys.includes(key));
-        
+
         if (inchingChanged) {
             try {
                 await this.setInching(
@@ -114,7 +123,7 @@ class SonoffZBMINIR2 extends SonoffBase {
                 throw new Error('Failed to update inching settings');
             }
         }
-  }
+    }
 
     /**
      * Set inching (auto-off/on) configuration
@@ -124,106 +133,107 @@ class SonoffZBMINIR2 extends SonoffBase {
      */
     async setInching(enabled = false, time = 1, mode = 'on') {
         try {
-        // Convert time from seconds to milliseconds, then to 0.5 second units (as per Zigbee2MQTT)
-        const msTime = Math.round(time * 1000);
-        const rawTimeUnits = Math.round(msTime / 500);
-        const tmpTime = Math.min(Math.max(rawTimeUnits, 1), 0xffff);
-        
-        // Build payload according to Zigbee2MQTT format (sonoff.ts lines 231-271)
-        const payloadValue = [];
-        payloadValue[0] = 0x01;  // Cmd
-        payloadValue[1] = 0x17;  // SubCmd - INCHING SUBCOMMAND
-        payloadValue[2] = 0x07;  // Length (7 bytes of data follow)
-        payloadValue[3] = 0x80;  // SeqNum
-        
-        // Byte 4: Mode (bit flags)
-        payloadValue[4] = 0x00;
-        if (enabled) {
-            payloadValue[4] |= 0x80;  // Bit 7: Enable inching
-        }
-        if (mode === 'on') {
-            payloadValue[4] |= 0x01;  // Bit 0: Inching mode (1=ON then OFF, 0=OFF then ON)
-        }
-        
-        payloadValue[5] = 0x00;  // Channel (0 = channel 1)
-        
-        // Byte 6-7: Timeout (little-endian, in 0.5s units)
-        payloadValue[6] = tmpTime & 0xff;         // Low byte
-        payloadValue[7] = (tmpTime >> 8) & 0xff;  // High byte
-        
-        payloadValue[8] = 0x00;  // Reserve
-        payloadValue[9] = 0x00;  // Reserve
-        
-        // Byte 10: CheckCode (XOR checksum of first length+3 bytes)
-        payloadValue[10] = 0x00;
-        for (let i = 0; i < payloadValue[2] + 3; i++) {
-            payloadValue[10] ^= payloadValue[i];
-        }
-        
-        this.log('Sending inching command:', {
-            enabled,
-            mode,
-            time_ms: time,
-            time_half_seconds: tmpTime,
-            payload_array: payloadValue,
-            payload_hex: Buffer.from(payloadValue).toString('hex'),
-            payload_breakdown: {
-                cmd: '0x' + payloadValue[0].toString(16).padStart(2, '0'),
-                subcmd: '0x' + payloadValue[1].toString(16).padStart(2, '0'),
-                length: payloadValue[2],
-                seqnum: '0x' + payloadValue[3].toString(16).padStart(2, '0'),
-                mode_byte: '0x' + payloadValue[4].toString(16).padStart(2, '0'),
-                channel: payloadValue[5],
-                time_low: '0x' + payloadValue[6].toString(16).padStart(2, '0'),
-                time_high: '0x' + payloadValue[7].toString(16).padStart(2, '0'),
-                checksum: '0x' + payloadValue[10].toString(16).padStart(2, '0')
+            // Convert time from seconds to milliseconds, then to 0.5 second units (as per Zigbee2MQTT)
+            const msTime = Math.round(time * 1000);
+            const rawTimeUnits = Math.round(msTime / 500);
+            const tmpTime = Math.min(Math.max(rawTimeUnits, 1), 0xffff);
+
+            // Build payload according to Zigbee2MQTT format (sonoff.ts lines 231-271)
+            const payloadValue = [];
+            payloadValue[0] = 0x01;  // Cmd
+            payloadValue[1] = 0x17;  // SubCmd - INCHING SUBCOMMAND
+            payloadValue[2] = 0x07;  // Length (7 bytes of data follow)
+            payloadValue[3] = 0x80;  // SeqNum
+
+            // Byte 4: Mode (bit flags)
+            payloadValue[4] = 0x00;
+            if (enabled) {
+                payloadValue[4] |= 0x80;  // Bit 7: Enable inching
             }
-        });
-        
-        // Get the cluster instance
-        const cluster = this.zclNode.endpoints[1].clusters['SonoffCluster'];
-        
-        // Call the protocolData command exactly as Zigbee2MQTT does
-        // Pass the complete payload array (including Cmd byte) in the data field
-        const payloadBuffer = Buffer.from(payloadValue);
+            if (mode === 'on') {
+                payloadValue[4] |= 0x01;  // Bit 0: Inching mode (1=ON then OFF, 0=OFF then ON)
+            }
 
-        await cluster.protocolData(
-            { data: payloadBuffer },
-            { disableDefaultResponse: true, waitForResponse: false }
-        );
-        
-        this.log('Inching command sent successfully')
-        
-    } catch (error) {
-        this.error('Failed to set inching:', error);
-        throw error;
+            payloadValue[5] = 0x00;  // Channel (0 = channel 1)
+
+            // Byte 6-7: Timeout (little-endian, in 0.5s units)
+            payloadValue[6] = tmpTime & 0xff;         // Low byte
+            payloadValue[7] = (tmpTime >> 8) & 0xff;  // High byte
+
+            payloadValue[8] = 0x00;  // Reserve
+            payloadValue[9] = 0x00;  // Reserve
+
+            // Byte 10: CheckCode (XOR checksum of first length+3 bytes)
+            payloadValue[10] = 0x00;
+            for (let i = 0; i < payloadValue[2] + 3; i++) {
+                payloadValue[10] ^= payloadValue[i];
+            }
+
+            this.log('Sending inching command:', {
+                enabled,
+                mode,
+                time_ms: time,
+                time_half_seconds: tmpTime,
+                payload_array: payloadValue,
+                payload_hex: Buffer.from(payloadValue).toString('hex'),
+                payload_breakdown: {
+                    cmd: '0x' + payloadValue[0].toString(16).padStart(2, '0'),
+                    subcmd: '0x' + payloadValue[1].toString(16).padStart(2, '0'),
+                    length: payloadValue[2],
+                    seqnum: '0x' + payloadValue[3].toString(16).padStart(2, '0'),
+                    mode_byte: '0x' + payloadValue[4].toString(16).padStart(2, '0'),
+                    channel: payloadValue[5],
+                    time_low: '0x' + payloadValue[6].toString(16).padStart(2, '0'),
+                    time_high: '0x' + payloadValue[7].toString(16).padStart(2, '0'),
+                    checksum: '0x' + payloadValue[10].toString(16).padStart(2, '0')
+                }
+            });
+
+            // Get the cluster instance
+            const cluster = this.zclNode.endpoints[1].clusters['SonoffCluster'];
+
+            // Call the protocolData command exactly as Zigbee2MQTT does
+            // Pass the complete payload array (including Cmd byte) in the data field
+            const payloadBuffer = Buffer.from(payloadValue);
+
+            await cluster.protocolData(
+                { data: payloadBuffer },
+                { disableDefaultResponse: true, waitForResponse: false }
+            );
+
+            this.log('Inching command sent successfully')
+
+        } catch (error) {
+            this.error('Failed to set inching:', error);
+            throw error;
+        }
     }
-  }
 
-  async checkAttributes() {
-    
-    this.readAttribute(CLUSTER.ON_OFF, ['powerOnBehavior'], (data) => {
-        this.setSettings({ power_on_behavior: data.powerOnBehavior }).catch(this.error); //, switch_type: switchType });
-    });
-    
-    this.readAttribute(SonoffCluster, SonoffClusterAttributes, (data) => {
-        // Convert numeric values to boolean for settings that require boolean type
-        const settingsData = {
-            ...data,
-            TurboMode: data.TurboMode !== 0, // Convert number to boolean
-            network_led: data.network_led !== 0,
-            power_on_delay_state: data.power_on_delay_state !== 0,
-            switch_mode: data.switch_mode !== 0,
-            detach_mode: data.detach_mode !== 0
-        };
-        this.setSettings(settingsData).catch(this.error);
-    });
-    
-  }
+    async checkAttributes() {
 
-  /**
-   * onDeleted is called when the user deleted the device.
-   */
+        this.readAttribute(CLUSTER.ON_OFF, ['powerOnBehavior'], (data) => {
+            this.setSettings({ power_on_behavior: data.powerOnBehavior }).catch(this.error); //, switch_type: switchType });
+        });
+
+        this.readAttribute(SonoffCluster, SonoffClusterAttributes, (data) => {
+            // Convert numeric values to the correct type for each setting
+            const settingsData = {
+                ...data,
+                TurboMode: data.TurboMode === 20,                   // int16 → boolean (20=on, 9=off)
+                network_led: Boolean(data.network_led),             // bool → boolean (checkbox)
+                power_on_delay_state: Boolean(data.power_on_delay_state), // bool → boolean (checkbox)
+                power_on_delay_time: data.power_on_delay_time / 2, // raw 0.5s units → seconds for UI (scale: 2)
+                switch_mode: String(data.switch_mode),             // number → string (dropdown: "0","1","2","130")
+                detach_mode: Boolean(data.detach_mode)              // bool → boolean (checkbox)
+            };
+            this.setSettings(settingsData).catch(this.error);
+        });
+
+    }
+
+    /**
+     * onDeleted is called when the user deleted the device.
+     */
     async onDeleted() {
         this.log("smartswitch removed");
     }

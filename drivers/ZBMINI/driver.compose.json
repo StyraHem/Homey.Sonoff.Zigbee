@@ -4,7 +4,7 @@
     "en": "ZBMINI Switch",
     "sv": "ZBMINI Strömbrytare"
   },
-  "class": "light",
+  "class": "socket",
   "capabilities": [
     "onoff"
   ],

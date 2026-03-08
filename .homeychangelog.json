@@ -103,5 +103,8 @@
   },
   "1.7.0": {
     "en": "Add support for Sonoff ZBMINIR2"
+  },
+  "1.8.0": {
+    "en": "Improved ZBMINR2 with all Sonoff custom clusters, added ZBMINI, MINI-ZB2GS and MINI-ZB2GS-L drivers"
   }
 }
