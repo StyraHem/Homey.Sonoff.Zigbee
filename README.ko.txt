@@ -20,5 +20,5 @@ Homey 앱이 Sonoff 기기들을 지원합니다.
 -Sonoff ZBMINI-L2 (스위치)
 -Sonoff ZBMINIR2 (스위치 / 라우터)
 -Sonoff MINI-ZB2GS (스마트 스위치 2채널)
--Sonoff MINI-ZB2GS-L (스마트 스위치 1채널)
+-Sonoff MINI-ZB2GS-L (스마트 스위치 2채널)
 -Sonoff RF/TX 기기 (송수신)

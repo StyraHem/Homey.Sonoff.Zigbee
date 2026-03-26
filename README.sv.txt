@@ -20,5 +20,5 @@ Stöds enheter:
 -Sonoff ZBMINI-L2 (Strömbrytare)
 -Sonoff ZBMINIR2 (Strömbrytare / Router)
 -Sonoff MINI-ZB2GS (Smart Strömbrytare 2-kanals)
--Sonoff MINI-ZB2GS-L (Smart Strömbrytare 1-kanals)
+-Sonoff MINI-ZB2GS-L (Smart Strömbrytare 2-kanals)
 -Sonoff RF/TX-enheter (skicka och ta emot)

@@ -20,5 +20,5 @@ Ondersteunde apparaten:
 -Sonoff ZBMINI-L2 (Schakelaar)
 -Sonoff ZBMINIR2 (Schakelaar / Router)
 -Sonoff MINI-ZB2GS (Slimme Schakelaar 2-kanaals)
--Sonoff MINI-ZB2GS-L (Slimme Schakelaar 1-kanaals)
+-Sonoff MINI-ZB2GS-L (Slimme Schakelaar 2-kanaals)
 -Sonoff RF/TX apparaten (zenden en ontvangen)

@@ -20,5 +20,5 @@ Unterstützte Geräte:
 -Sonoff ZBMINI-L2 (Schalter)
 -Sonoff ZBMINIR2 (Schalter / Router)
 -Sonoff MINI-ZB2GS (Smart-Schalter 2-Kanal)
--Sonoff MINI-ZB2GS-L (Smart-Schalter 1-Kanal)
+-Sonoff MINI-ZB2GS-L (Smart-Schalter 2-Kanal)
 -Sonoff RF/TX Geräte (Senden und Empfangen)

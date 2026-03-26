@@ -20,5 +20,5 @@ Understøttede enheder:
 -Sonoff ZBMINI-L2 (Afbryder)
 -Sonoff ZBMINIR2 (Afbryder / Router)
 -Sonoff MINI-ZB2GS (Smart Afbryder 2-kanal)
--Sonoff MINI-ZB2GS-L (Smart Afbryder 1-kanal)
+-Sonoff MINI-ZB2GS-L (Smart Afbryder 2-kanal)
 -Sonoff RF/TX enheder (sende og modtage)

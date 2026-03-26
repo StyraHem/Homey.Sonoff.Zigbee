@@ -20,5 +20,5 @@ Dispositivi supportati:
 -Sonoff ZBMINI-L2 (Interruttore)
 -Sonoff ZBMINIR2 (Interruttore / Router)
 -Sonoff MINI-ZB2GS (Interruttore Smart a 2 canali)
--Sonoff MINI-ZB2GS-L (Interruttore Smart a 1 canale)
+-Sonoff MINI-ZB2GS-L (Interruttore Smart a 2 canali)
 -Sonoff Dispositivi RF/TX (invia e ricevi)

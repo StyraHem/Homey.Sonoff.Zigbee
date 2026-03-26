@@ -69,12 +69,35 @@
       },
       {
         "id": "detach_mode",
-        "type": "checkbox",
-        "value": false,
+        "type": "dropdown",
+        "value": "off",
         "label": {
           "en": "Detach Relay",
           "it": "Stacca Relè"
-        }
+        },
+        "values": [
+          {
+            "id": "off",
+            "label": {
+              "en": "Off (Normal switch)",
+              "it": "Off (Interruttore normale)"
+            }
+          },
+          {
+            "id": "on_button",
+            "label": {
+              "en": "On - Button only",
+              "it": "On - Solo pulsante fisico"
+            }
+          },
+          {
+            "id": "on_button_switch",
+            "label": {
+              "en": "On - Button & App Switch (Virtual)",
+              "it": "On - Pulsante fisico e Switch App (Virtuale)"
+            }
+          }
+        ]
       }
     ]
   },

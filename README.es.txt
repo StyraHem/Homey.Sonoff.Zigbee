@@ -20,5 +20,5 @@ Dispositivos soportados:
 -Sonoff ZBMINI-L2 (Interruptor)
 -Sonoff ZBMINIR2 (Interruptor / Router)
 -Sonoff MINI-ZB2GS (Interruptor Inteligente 2 canales)
--Sonoff MINI-ZB2GS-L (Interruptor Inteligente 1 canal)
+-Sonoff MINI-ZB2GS-L (Interruptor Inteligente 2 canales)
 -Sonoff Dispositivos RF/TX (enviar y recibir)

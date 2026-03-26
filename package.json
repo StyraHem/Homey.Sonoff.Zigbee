@@ -1,6 +1,6 @@
 {
   "name": "se.styrahem.sonoff.zigbee",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "dependencies": {
     "homey-rfdriver": "^3.3.2",
     "homey-zigbeedriver": "^1.6.2",

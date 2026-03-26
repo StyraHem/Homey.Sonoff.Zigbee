@@ -19,6 +19,19 @@ if (process.env.DEBUG === "1X") {
 class SonoffZigbeeApp extends Homey.App {
   onInit() {
     this.log("Sonoff Zigbee - StyraHem, initiating...");
+
+    // Register global Action Card to update switch UI without hardware interaction
+    this.homey.flow.getActionCard('set_ui_onoff')
+      .registerRunListener(async (args, state) => {
+        let newValue;
+        if (args.status === 'toggle') {
+            newValue = !args.device.getCapabilityValue('onoff');
+        } else {
+            newValue = args.status === 'on';
+        }
+        await args.device.setCapabilityValue('onoff', newValue);
+        return true;
+      });
   }
 }
 

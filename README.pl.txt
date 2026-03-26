@@ -20,5 +20,5 @@ Wspierane urządzenia:
 -Sonoff ZBMINI-L2 (Przełącznik)
 -Sonoff ZBMINIR2 (Przełącznik / Router)
 -Sonoff MINI-ZB2GS (Inteligentny Przełącznik 2-kanałowy)
--Sonoff MINI-ZB2GS-L (Inteligentny Przełącznik 1-kanałowy)
+-Sonoff MINI-ZB2GS-L (Inteligentny Przełącznik 2-kanałowy)
 -Sonoff Urządzenia RF/TX (wysyłanie i odbieranie)

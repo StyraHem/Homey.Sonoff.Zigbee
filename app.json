@@ -36,7 +36,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -370,6 +370,57 @@
         ]
       }
     ],
+    "actions": [
+      {
+        "id": "set_ui_onoff",
+        "title": {
+          "en": "Set switch status (UI only)",
+          "it": "Imposta stato interruttore (solo UI)"
+        },
+        "titleFormatted": {
+          "en": "Set to [[status]]",
+          "it": "Imposta su [[status]]"
+        },
+        "hint": {
+          "en": "Updates the switch's on/off status in the Homey app without actually physically toggling the relay via Zigbee.",
+          "it": "Aggiorna lo stato acceso/spento dell'interruttore nell'app Homey senza commutare fisicamente il relè tramite Zigbee."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZBMINIR2|MINI-ZB2GS|MINI-ZB2GS-L"
+          },
+          {
+            "name": "status",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "on",
+                "label": {
+                  "en": "On",
+                  "it": "Acceso"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off",
+                  "it": "Spento"
+                }
+              },
+              {
+                "id": "toggle",
+                "label": {
+                  "en": "Toggle",
+                  "it": "Inverti"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "conditions": [
       {
         "id": "is_bright",
@@ -539,12 +590,35 @@
             },
             {
               "id": "detach_mode",
-              "type": "checkbox",
-              "value": false,
+              "type": "dropdown",
+              "value": "off",
               "label": {
                 "en": "Detach Relay",
                 "it": "Stacca Relè"
-              }
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -802,12 +876,35 @@
             },
             {
               "id": "detach_mode",
-              "type": "checkbox",
-              "value": false,
+              "type": "dropdown",
+              "value": "off",
               "label": {
                 "en": "Detach Relay",
                 "it": "Stacca Relè"
-              }
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -3057,12 +3154,35 @@
             },
             {
               "id": "detach_mode",
-              "type": "checkbox",
-              "value": false,
+              "type": "dropdown",
+              "value": "off",
               "label": {
                 "en": "Detach Relay",
                 "it": "Stacca Relè"
-              }
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
             }
           ]
         },

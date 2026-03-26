@@ -12,13 +12,22 @@ Cluster.addCluster(SonoffCluster);
 const SonoffBase = require('../sonoffbase');
 
 class MyOnOffBoundCluster extends BoundCluster {
-    constructor(node) {
+    /**
+     * @private
+     * @param {object} node - The device instance.
+     * @param {Function} onToggle - Callback invoked when the physical button sends a toggle.
+     */
+    constructor(node, onToggle) {
         super();
         this.node = node;
-        this._click = node.homey.flow.getDeviceTriggerCard("MINI-ZB2GS:click");
+        this._onToggle = onToggle;
     }
+
+    /** Called by the Zigbee stack when the physical button sends a toggle command. */
     toggle() {
-        this._click.trigger(this.node, {}, {}).catch(this.node.error);
+        if (typeof this._onToggle === 'function') {
+            this._onToggle();
+        }
     }
 }
 
@@ -59,19 +68,96 @@ class SonoffMINIZB2GS extends SonoffBase {
         super.onNodeInit({ zclNode });
 
         const ep = this.endpointId;
-        this.log(`MINI-ZB2GS Channel ${ep} initializing`);
+        this.log(`MINI-ZB2GS Channel ${ep} initializing (Device ID: ${this.getData().id})`);
+
+        if (this.zclNode && this.zclNode.endpoints[ep]) {
+            this.log(`Endpoint ${ep} exists. Clusters:`, Object.keys(this.zclNode.endpoints[ep].clusters));
+        } else {
+            this.error(`CRITICAL: Endpoint ${ep} NOT FOUND on zclNode!`);
+        }
 
         if (this.hasCapability('onoff')) {
+            this.log(`Registering onoff capability for endpoint ${ep}`);
+            // registerCapability sets up attribute report listeners (device -> UI) and proper Zigbee command handling.
+            // This is required for the UI to update when the physical button is pressed.
             this.registerCapability('onoff', CLUSTER.ON_OFF, {
                 endpoint: ep,
+            });
+
+            // Override the outgoing command listener to handle virtual mode.
+            // registerCapabilityListener called after registerCapability replaces
+            // only the outgoing direction (UI -> device), keeping attribute reporting intact.
+            this.registerCapabilityListener('onoff', async (value, opts) => {
+                const detachModeStr = this.getSetting('detach_mode');
+
+                // Virtual switch mode: fire the Flow trigger and skip the Zigbee command.
+                if (detachModeStr === 'on_button_switch') {
+                    const clickTrigger = this.homey.flow.getDeviceTriggerCard("MINI-ZB2GS:click");
+                    if (clickTrigger) {
+                        clickTrigger.trigger(this, {}, {}).catch(this.error);
+                    }
+                    return;
+                }
+
+                // Normal mode: Send the command through the root device's zclNode context to ensure
+                // that when the Zigbee response arrives homey delivers it to the root ZCL context, 
+                // resolving the transaction handler properly (prevents timeout on sub-devices).
+                const targetZclNode = ep === 1 ? this.zclNode : this.getSiblingDevice()?.zclNode;
+                if (!targetZclNode) {
+                    this.error(`Cannot send on/off command: target ZCL node not found for endpoint ${ep}`);
+                    return;
+                }
+
+                if (value) {
+                    return targetZclNode.endpoints[ep].clusters.onOff.setOn().catch(this.error);
+                } else {
+                    return targetZclNode.endpoints[ep].clusters.onOff.setOff().catch(this.error);
+                }
             });
         }
 
         // Do NOT call configureAttributeReporting — device auto-reports from both endpoints.
         // Calling it on endpoint 2 causes a timeout that corrupts that cluster's internal state.
 
-        // Bind toggle command from external switch
-        this.zclNode.endpoints[ep].bind(CLUSTER.ON_OFF.NAME, new MyOnOffBoundCluster(this));
+        // Method to handle a physical toggle event for a specific device instance
+        const triggerToggleForDevice = (targetDevice) => {
+            const detachMode = targetDevice.getSetting('detach_mode');
+            const ep = targetDevice.endpointId;
+
+            if (detachMode === 'on_button' || detachMode === 'on_button_switch') {
+                targetDevice.log(`Triggering 'click' flow for channel ${targetDevice.channelIndex + 1}`);
+                const clickTrigger = targetDevice.homey.flow.getDeviceTriggerCard("MINI-ZB2GS:click");
+                if (clickTrigger) {
+                    clickTrigger.trigger(targetDevice, {}, {}).catch(targetDevice.error);
+                }
+            }
+
+            if (detachMode === 'on_button_switch') {
+                const current = targetDevice.getCapabilityValue('onoff');
+                targetDevice.setCapabilityValue('onoff', !current).catch(targetDevice.error);
+            }
+        };
+
+        try {
+            this.zclNode.endpoints[ep].bind(CLUSTER.ON_OFF.NAME, new MyOnOffBoundCluster(this, () => triggerToggleForDevice(this)));
+        } catch (e) {
+            this.error(`FAILED to bind endpoint ${ep}:`, e.message);
+        }
+
+        // Ensure endpoint 2 binding is active via Root (safety measure for dual-channel)
+        if (ep === 1) {
+            const sibling = this.getSiblingDevice();
+            if (sibling && this.zclNode.endpoints[2]) {
+                try {
+                    this.zclNode.endpoints[2].bind(CLUSTER.ON_OFF.NAME, new MyOnOffBoundCluster(sibling, () => {
+                        triggerToggleForDevice(sibling);
+                    }));
+                } catch (e) {
+                    this.log(`Notice: Proactive binding of ep2 failed:`, e.message);
+                }
+            }
+        }
+
 
         // Register listeners on incoming attribute reports to keep settings in sync.
         // This is the primary sync mechanism for ep2 (active reads on ep2 time out).
@@ -91,7 +177,8 @@ class SonoffMINIZB2GS extends SonoffBase {
                 await this.setInching(
                     settings.inching_enabled,
                     settings.inching_time || 1,
-                    settings.inching_mode || 'on'
+                    settings.inching_mode || 'on',
+                    this.channelIndex
                 );
                 this.log('Initial inching settings applied');
             } catch (error) {
@@ -109,9 +196,12 @@ class SonoffMINIZB2GS extends SonoffBase {
         // Power-on behavior (per channel, on genOnOff cluster)
         if (changedKeys.includes("power_on_behavior")) {
             try {
-                await this.zclNode.endpoints[ep].clusters.onOff.writeAttributes({
-                    powerOnBehavior: newSettings.power_on_behavior
-                });
+                const targetZclNode = ep === 1 ? this.zclNode : this.getSiblingDevice()?.zclNode;
+                if (targetZclNode) {
+                    await targetZclNode.endpoints[ep].clusters.onOff.writeAttributes({
+                        powerOnBehavior: newSettings.power_on_behavior
+                    });
+                }
             } catch (error) {
                 this.log("Error updating the power on behavior");
             }
@@ -154,7 +244,10 @@ class SonoffMINIZB2GS extends SonoffBase {
         // Handle detach relay mode (bitmap on endpoint 1)
         if (changedKeys.includes('detach_mode')) {
             try {
-                await this.updateDetachRelay(newSettings.detach_mode);
+                const isDetached = newSettings.detach_mode === true ||
+                    newSettings.detach_mode === 'on_button' ||
+                    newSettings.detach_mode === 'on_button_switch';
+                await this.updateDetachRelay(isDetached);
             } catch (error) {
                 this.error('Error updating detach relay mode:', error);
             }
@@ -169,7 +262,8 @@ class SonoffMINIZB2GS extends SonoffBase {
                 await this.setInching(
                     newSettings.inching_enabled,
                     newSettings.inching_time,
-                    newSettings.inching_mode
+                    newSettings.inching_mode,
+                    this.channelIndex
                 );
                 this.log('Inching settings updated:', {
                     enabled: newSettings.inching_enabled,
@@ -188,95 +282,52 @@ class SonoffMINIZB2GS extends SonoffBase {
      * Reads the current bitmap, modifies the relevant bit, and writes back.
      */
     async updateDetachRelay(enabled) {
-        try {
-            let bitmap = 0;
-            try {
-                const data = await this.zclNode.endpoints[1].clusters['SonoffCluster']
-                    .readAttributes('detach_relay_mode2');
-                if (typeof data.detach_relay_mode2 === 'number') bitmap = data.detach_relay_mode2;
-            } catch (e) {
-                this.log('Could not read current detach relay bitmap, using 0');
-            }
+        this.log(`[DetachRelay] Updating for channel ${this.endpointId}: ${enabled}`);
 
-            const bitMask = 1 << this.channelIndex; // ch1 → bit0, ch2 → bit1
-            bitmap = enabled ? (bitmap | bitMask) : (bitmap & ~bitMask);
-
-            await this.zclNode.endpoints[1].clusters['SonoffCluster']
-                .writeAttributes({ detach_relay_mode2: bitmap });
-
-            this.log(`Detach relay updated: channel${this.endpointId}=${enabled}, bitmap=0x${bitmap.toString(16)}`);
-        } catch (error) {
-            this.error('Error updating detach relay:', error);
-            throw error;
+        // Zigbee responses always arrive on the root device's cluster instance.
+        // If we are the sub-device (channel 2), delegate to the root (channel 1) to
+        // ensure _trxHandlers are registered on the right zclNode.
+        const handler = this.endpointId === 1 ? this : this.getSiblingDevice();
+        if (!handler) {
+            this.error('[DetachRelay] Cannot update: root device (channel 1) not found.');
+            return;
         }
-    }
 
-    /**
-     * Set inching (auto-off/on) configuration for this channel.
-     * @param {boolean} enabled - Enable or disable inching
-     * @param {number} time - Time in seconds (0.5-3599.5)
-     * @param {string} mode - 'on' (turn ON then OFF) or 'off' (turn OFF then ON)
-     */
-    async setInching(enabled = false, time = 1, mode = 'on') {
-        try {
-            const msTime = Math.round(time * 1000);
-            const rawTimeUnits = Math.round(msTime / 500);
-            const tmpTime = Math.min(Math.max(rawTimeUnits, 1), 0xffff);
+        return new Promise((resolve, reject) => {
+            handler.readAttribute(SonoffCluster, ['detach_relay_mode2'], (data) => {
+                this.log(`[DetachRelay] Current bitmap data:`, data);
 
-            const payloadValue = [];
-            payloadValue[0] = 0x01;  // Cmd
-            payloadValue[1] = 0x17;  // SubCmd - INCHING
-            payloadValue[2] = 0x07;  // Length (7 bytes of data follow)
-            payloadValue[3] = 0x80;  // SeqNum
+                if (!data || typeof data.detach_relay_mode2 !== 'number') {
+                    const msg = '[DetachRelay] Invalid data received for detach_relay_mode2';
+                    this.error(msg, data);
+                    return reject(new Error(msg));
+                }
 
-            // Byte 4: Mode (bit flags)
-            payloadValue[4] = 0x00;
-            if (enabled) {
-                payloadValue[4] |= 0x80;  // Bit 7: Enable inching
-            }
-            if (mode === 'on') {
-                payloadValue[4] |= 0x01;  // Bit 0: Inching mode (1=ON then OFF, 0=OFF then ON)
-            }
+                const bitmap = data.detach_relay_mode2;
+                const bitMask = 1 << this.channelIndex; // ch1 → bit0, ch2 → bit1
+                const newBitmap = enabled ? (bitmap | bitMask) : (bitmap & ~bitMask);
 
-            // Byte 5: Channel (0 = channel 1, 1 = channel 2)
-            payloadValue[5] = this.channelIndex;
+                this.log(`[DetachRelay] bitmap=0x${bitmap.toString(16)} mask=0x${bitMask.toString(16)} new=0x${newBitmap.toString(16)}`);
 
-            // Byte 6-7: Timeout (little-endian, in 0.5s units)
-            payloadValue[6] = tmpTime & 0xff;
-            payloadValue[7] = (tmpTime >> 8) & 0xff;
+                if (newBitmap === bitmap) {
+                    this.log(`[DetachRelay] Bitmap already correct, no write needed.`);
+                    return resolve();
+                }
 
-            payloadValue[8] = 0x00;  // Reserve
-            payloadValue[9] = 0x00;  // Reserve
-
-            // Byte 10: CheckCode (XOR checksum of first length+3 bytes)
-            payloadValue[10] = 0x00;
-            for (let i = 0; i < payloadValue[2] + 3; i++) {
-                payloadValue[10] ^= payloadValue[i];
-            }
-
-            this.log('Sending inching command:', {
-                enabled,
-                mode,
-                channel: this.channelIndex,
-                time_seconds: time,
-                time_half_seconds: tmpTime,
-                payload_hex: Buffer.from(payloadValue).toString('hex')
+                handler.writeAttributes(SonoffCluster, { detach_relay_mode2: newBitmap })
+                    .then(() => {
+                        this.log(`[DetachRelay] Update successful for channel ${this.endpointId}`);
+                        resolve();
+                    })
+                    .catch((err) => {
+                        this.error('[DetachRelay] Write failed:', err);
+                        reject(err);
+                    });
             });
-
-            const cluster = this.zclNode.endpoints[1].clusters['SonoffCluster'];
-            const payloadBuffer = Buffer.from(payloadValue);
-
-            await cluster.protocolData(
-                { data: payloadBuffer },
-                { disableDefaultResponse: true, waitForResponse: false }
-            );
-
-            this.log('Inching command sent successfully for channel', this.channelIndex);
-        } catch (error) {
-            this.error('Failed to set inching:', error);
-            throw error;
-        }
+        });
     }
+
+
 
     /**
      * Write attributes to a specific endpoint, filtering by allowed keys.
@@ -288,7 +339,14 @@ class SonoffMINIZB2GS extends SonoffBase {
             if (typeof cluster === 'function' || (typeof cluster === 'object' && "NAME" in cluster)) {
                 clusterName = cluster.NAME;
             }
-            const clust = this.zclNode.endpoints[endpointId].clusters[clusterName];
+
+            const targetZclNode = this.endpointId === 1 ? this.zclNode : this.getSiblingDevice()?.zclNode;
+            if (!targetZclNode) {
+                this.error(`Cannot write attributes: target ZCL node not found for endpoint ${endpointId}`);
+                return;
+            }
+
+            const clust = targetZclNode.endpoints[endpointId].clusters[clusterName];
             if (!clust) {
                 this.log(`Cluster ${clusterName} not found on endpoint ${endpointId}`);
                 return;
@@ -303,43 +361,26 @@ class SonoffMINIZB2GS extends SonoffBase {
 
             if (!Object.keys(items).length) return;
 
-            this.log("Write attributes to endpoint", endpointId, items);
-            return await clust.writeAttributes(items);
+            this.log(`Write attributes sequentially to endpoint ${endpointId}`, items);
+            const results = [];
+            for (const [key, value] of Object.entries(items)) {
+                try {
+                    this.log(`Writing single attribute to endpoint ${endpointId}: { ${key}: ${value} }`);
+                    const res = await clust.writeAttributes({ [key]: value });
+                    results.push(res);
+                } catch (err) {
+                    this.error(`Error writing single attribute ${key} to endpoint ${endpointId}:`, err);
+                    throw err; // Fail fast if one attribute fails
+                }
+            }
+            return Object.keys(items).length === 1 ? results[0] : results;
         } catch (error) {
-            this.error("Error writing attrs to endpoint", endpointId, items, error);
+            this.error("Error writing attrs sequentially to endpoint", endpointId, items, error);
             throw error;
         }
     }
 
-    /**
-     * Read attributes from a specific endpoint.
-     */
-    async readAttributeOnEndpoint(endpointId, cluster, attr, handler) {
-        let clusterName = cluster;
-        if (typeof cluster === 'function' || (typeof cluster === 'object' && "NAME" in cluster)) {
-            clusterName = cluster.NAME;
-        }
-        if (!Array.isArray(attr)) attr = [attr];
 
-        try {
-            this.log("Read attributes from endpoint", endpointId, attr);
-            const clust = this.zclNode.endpoints[endpointId].clusters[clusterName];
-            if (!clust) {
-                this.log(`Cluster ${clusterName} not found on endpoint ${endpointId}`);
-                return;
-            }
-            clust.readAttributes(...attr)
-                .then((value) => {
-                    this.log("Got attr from endpoint", endpointId, attr, value);
-                    handler(value);
-                })
-                .catch((e) => {
-                    this.error("Error reading attr from endpoint", endpointId, attr, e);
-                });
-        } catch (error) {
-            this.error('Error (outer) reading from endpoint', endpointId, attr, error);
-        }
-    }
 
     /**
      * Register listeners on incoming attribute reports to keep settings in sync.
@@ -348,30 +389,97 @@ class SonoffMINIZB2GS extends SonoffBase {
      */
     registerAttributeReportListeners() {
         const ep = this.endpointId;
+        this.log(`Registering listeners for Channel ${ep}`);
 
-        // Per-channel: onOff cluster on this endpoint
-        const onOffCluster = this.zclNode.endpoints[ep].clusters.onOff;
+        if (!this.zclNode.endpoints[ep]) {
+            this.error(`Cannot register listeners: Endpoint ${ep} missing`);
+            return;
+        }
+
+        // (Debug listeners on raw frames removed in production version)
+
+        // Per-channel: onOff cluster on this endpoint.
+        // The sub-device (ep === 2) already has its onOff capability handled by registerCapability,
+        // but we still register a manual listener here to ensure UI updates are received
+        // since the SDK may not route ep2 attribute reports to the sub-device instance.
+        let onOffCluster = this.zclNode.endpoints[ep].clusters.onOff;
+        if (!onOffCluster && typeof CLUSTER.ON_OFF === 'function') {
+            this.log(`Manually instantiating onOff cluster for endpoint ${ep}`);
+            onOffCluster = new CLUSTER.ON_OFF(this.zclNode.endpoints[ep]);
+            this.zclNode.endpoints[ep].clusters.onOff = onOffCluster;
+        }
+        this.log(`onOffCluster for Channel ${ep}:`, onOffCluster ? 'found' : 'NOT FOUND');
+
         if (onOffCluster) {
             onOffCluster.on('attr.onOff', (value) => {
-                this.setCapabilityValue('onoff', !!value).catch(this.error);
+                this.log(`[Channel ${ep}] onOff report received: `, value);
+                // Note: setCapabilityValue('onoff') is omitted here because:
+                // 1. For Channel 1: registerCapability() already handles it automatically.
+                // 2. For Channel 2: The Proxy in the Root Device instance handles it because
+                //    the SDK often fails to route the report to this sub-device instance.
             });
             onOffCluster.on('attr.powerOnBehavior', (value) => {
-                this.setSettings({ power_on_behavior: value }).catch(this.error);
+                const current = this.getSetting('power_on_behavior');
+                if (current !== value) {
+                    this.setSettings({ power_on_behavior: value }).catch(this.error);
+                }
             });
+        }
+
+        // ROOT DEVICE ONLY: proxy ep2 onOff reports to the Channel 2 sibling.
+        // The SDK routes Zigbee frames to a single ZCLNode shared by both device instances.
+        // Attribute reports for ep2 do not always fire on the sub-device's own listeners,
+        // so we register a proxy here on ep1 (root) to ensure the sibling UI stays in sync.
+        if (ep === 1) {
+            this.log(`[Proxy] Setting up ep2 → sibling proxy listener`);
+            const ep2Endpoint = this.zclNode.endpoints[2];
+            if (ep2Endpoint) {
+                let ep2OnOffCluster = ep2Endpoint.clusters.onOff;
+                if (!ep2OnOffCluster && typeof CLUSTER.ON_OFF === 'function') {
+                    this.log(`[Proxy] Manually instantiating onOff cluster for endpoint 2`);
+                    ep2OnOffCluster = new CLUSTER.ON_OFF(ep2Endpoint);
+                    ep2Endpoint.clusters.onOff = ep2OnOffCluster;
+                }
+                this.log(`[Proxy] ep2 onOffCluster:`, ep2OnOffCluster ? 'found' : 'NOT FOUND');
+                if (ep2OnOffCluster) {
+                    ep2OnOffCluster.on('attr.onOff', (value) => {
+                        this.log(`[Proxy Channel 2] onOff report received: `, value);
+                        const sibling = this.getSiblingDevice();
+                        if (sibling) {
+                            this.log(`[Proxy Channel 2] Updating sibling device UI to: `, !!value);
+                            sibling.setCapabilityValue('onoff', !!value).catch(this.error);
+                        } else {
+                            this.error(`[Proxy Channel 2] Sibling device NOT FOUND`);
+                        }
+                    });
+                    this.log(`[Proxy] ep2 attr.onOff listener registered successfully`);
+                }
+            } else {
+                this.error(`[Proxy] Endpoint 2 NOT FOUND on zclNode`);
+            }
         }
 
         // Per-channel: SonoffCluster on this endpoint
         const sonoffCluster = this.zclNode.endpoints[ep].clusters['SonoffCluster'];
         if (sonoffCluster) {
             sonoffCluster.on('attr.switch_mode', (value) => {
-                this.setSettings({ switch_mode: String(value) }).catch(this.error);
+                const valStr = String(value);
+                if (this.getSetting('switch_mode') !== valStr) {
+                    this.setSettings({ switch_mode: valStr }).catch(this.error);
+                }
             });
             sonoffCluster.on('attr.power_on_delay_state', (value) => {
-                this.setSettings({ power_on_delay_state: Boolean(value) }).catch(this.error);
+                const valBool = Boolean(value);
+                if (this.getSetting('power_on_delay_state') !== valBool) {
+                    this.setSettings({ power_on_delay_state: valBool }).catch(this.error);
+                }
             });
             sonoffCluster.on('attr.power_on_delay_time', (value) => {
                 // Raw value is in 0.5s units (scale: 2); convert to seconds for UI
-                this.setSettings({ power_on_delay_time: value / 2 }).catch(this.error);
+                const valSec = value / 2;
+                if (this.getSetting('power_on_delay_time') !== valSec) {
+                    this.setSettings({ power_on_delay_time: valSec }).catch(this.error);
+                }
             });
         }
 
@@ -381,15 +489,28 @@ class SonoffMINIZB2GS extends SonoffBase {
         if (ep1Sonoff) {
             ep1Sonoff.on('attr.TurboMode', (value) => {
                 // Device reports int16: 20 = on, 9 = off (other values treated as off)
-                this.setSettings({ TurboMode: value === 20 }).catch(this.error);
+                const valBool = value === 20;
+                if (this.getSetting('TurboMode') !== valBool) {
+                    this.setSettings({ TurboMode: valBool }).catch(this.error);
+                }
             });
             ep1Sonoff.on('attr.network_led', (value) => {
-                this.setSettings({ network_led: value !== 0 }).catch(this.error);
+                const valBool = value !== 0;
+                if (this.getSetting('network_led') !== valBool) {
+                    this.setSettings({ network_led: valBool }).catch(this.error);
+                }
             });
             ep1Sonoff.on('attr.detach_relay_mode2', (value) => {
                 // value is a plain number (bitmap8): bit0=ch1, bit1=ch2
                 const isDetached = typeof value === 'number' && ((value >> this.channelIndex) & 1) !== 0;
-                this.setSettings({ detach_mode: isDetached }).catch(this.error);
+                const currentDetachMode = this.getSetting('detach_mode');
+
+                let newMode = 'off';
+                if (isDetached) {
+                    newMode = currentDetachMode === 'on_button_switch' ? 'on_button_switch' : 'on_button';
+                }
+
+                this.setSettings({ detach_mode: newMode }).catch(this.error);
             });
         }
     }
@@ -402,42 +523,57 @@ class SonoffMINIZB2GS extends SonoffBase {
         const ep = this.endpointId;
 
         // Read power-on behavior from this channel's endpoint
-        this.readAttributeOnEndpoint(ep, CLUSTER.ON_OFF, ['powerOnBehavior'], (data) => {
-            if (data.powerOnBehavior !== undefined) {
-                this.setSettings({ power_on_behavior: data.powerOnBehavior }).catch(this.error);
+        this.log(`[checkAttributes] Reading powerOnBehavior from endpoint ${ep}`);
+        try {
+            const data = await this.zclNode.endpoints[ep].clusters.onOff.readAttributes(['powerOnBehavior']);
+            if (data && data.powerOnBehavior !== undefined) {
+                await this.setSettings({ power_on_behavior: data.powerOnBehavior });
             }
-        });
+        } catch (e) {
+            this.error(`[checkAttributes] Error reading powerOnBehavior from ep ${ep}:`, e.message);
+        }
 
-        // Read per-channel SonoffCluster attributes from this endpoint
-        this.readAttributeOnEndpoint(ep, SonoffCluster, SonoffClusterPerChannelAttributes, (data) => {
-            const settingsData = {};
-            if (data.switch_mode !== undefined) settingsData.switch_mode = String(data.switch_mode);
-            if (data.power_on_delay_state !== undefined) settingsData.power_on_delay_state = Boolean(data.power_on_delay_state);
-            // Raw value is in 0.5s units (scale: 2); convert to seconds for UI
-            if (data.power_on_delay_time !== undefined) settingsData.power_on_delay_time = data.power_on_delay_time / 2;
-            if (Object.keys(settingsData).length) {
-                this.setSettings(settingsData).catch(this.error);
+        // Read per-channel SonoffCluster attributes one by one
+        const perChannelAttrs = ['switch_mode', 'power_on_delay_state', 'power_on_delay_time'];
+        this.log(`[checkAttributes] Reading per-channel attributes from endpoint ${ep}`);
+        for (const attrName of perChannelAttrs) {
+            try {
+                const data = await this.zclNode.endpoints[ep].clusters['SonoffCluster'].readAttributes(attrName);
+                if (data && data[attrName] !== undefined) {
+                    const settingsData = {};
+                    if (attrName === 'switch_mode') settingsData.switch_mode = String(data.switch_mode);
+                    else if (attrName === 'power_on_delay_state') settingsData.power_on_delay_state = Boolean(data.power_on_delay_state);
+                    else if (attrName === 'power_on_delay_time') settingsData.power_on_delay_time = data.power_on_delay_time / 2;
+                    await this.setSettings(settingsData);
+                }
+            } catch (e) {
+                this.error(`[checkAttributes] Error reading ${attrName} from ep ${ep}:`, e.message);
             }
-        });
+        }
 
         // Read global attributes (from endpoint 1)
-        this.readAttributeOnEndpoint(1, SonoffCluster, SonoffClusterGlobalAttributes, (data) => {
-            const settingsData = {};
-            if (data.TurboMode !== undefined) settingsData.TurboMode = data.TurboMode === 20; // 20=on, 9=off
-            if (data.network_led !== undefined) settingsData.network_led = Boolean(data.network_led);
-            if (Object.keys(settingsData).length) {
-                this.setSettings(settingsData).catch(this.error);
+        this.log(`[checkAttributes] Reading global attributes from endpoint 1`);
+        const globalAttrs = ['TurboMode', 'network_led', 'detach_relay_mode2'];
+        for (const attrName of globalAttrs) {
+            try {
+                const data = await this.zclNode.endpoints[1].clusters['SonoffCluster'].readAttributes(attrName);
+                if (data && data[attrName] !== undefined) {
+                    if (attrName === 'TurboMode') await this.setSettings({ TurboMode: data.TurboMode === 20 });
+                    else if (attrName === 'network_led') await this.setSettings({ network_led: Boolean(data.network_led) });
+                    else if (attrName === 'detach_relay_mode2') {
+                        const isDetached = ((data.detach_relay_mode2 >> this.channelIndex) & 1) !== 0;
+                        const currentDetachMode = this.getSetting('detach_mode');
+                        let newMode = 'off';
+                        if (isDetached) {
+                            newMode = currentDetachMode === 'on_button_switch' ? 'on_button_switch' : 'on_button';
+                        }
+                        await this.setSettings({ detach_mode: newMode });
+                    }
+                }
+            } catch (e) {
+                this.error(`[checkAttributes] Error reading ${attrName} from ep 1:`, e.message);
             }
-        });
-
-        // Read detach relay bitmap from endpoint 1
-        // detach_relay_mode2 is a plain number (bitmap8): bit0=ch1, bit1=ch2
-        this.readAttributeOnEndpoint(1, SonoffCluster, ['detach_relay_mode2'], (data) => {
-            if (data.detach_relay_mode2 !== undefined) {
-                const isDetached = ((data.detach_relay_mode2 >> this.channelIndex) & 1) !== 0;
-                this.setSettings({ detach_mode: isDetached }).catch(this.error);
-            }
-        });
+        }
     }
 
     async onDeleted() {
@@ -449,9 +585,17 @@ class SonoffMINIZB2GS extends SonoffBase {
      * Both sub-devices share the same ZCLNode instance, so we match on that reference.
      */
     getSiblingDevice() {
-        return this.driver.getDevices().find(
-            device => device !== this && device.zclNode === this.zclNode
-        );
+        const myNodeId = this.zclNode?.endpoint?.node?.netAddress || this.getData()?.id;
+        const sibling = this.driver.getDevices().find(device => {
+            if (device === this) return false;
+            const otherNodeId = device.zclNode?.endpoint?.node?.netAddress || device.getData()?.id;
+            return otherNodeId === myNodeId;
+        });
+
+        if (!sibling) {
+            this.log(`[getSiblingDevice] No sibling found. My Node ID: ${myNodeId}, Devices online: ${this.driver.getDevices().length}`);
+        }
+        return sibling;
     }
 }
 

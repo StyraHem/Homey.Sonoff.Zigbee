@@ -1,0 +1,49 @@
+{
+  "id": "set_ui_onoff",
+  "title": {
+    "en": "Set switch status (UI only)",
+    "it": "Imposta stato interruttore (solo UI)"
+  },
+  "titleFormatted": {
+    "en": "Set to [[status]]",
+    "it": "Imposta su [[status]]"
+  },
+  "hint": {
+    "en": "Updates the switch's on/off status in the Homey app without actually physically toggling the relay via Zigbee.",
+    "it": "Aggiorna lo stato acceso/spento dell'interruttore nell'app Homey senza commutare fisicamente il relè tramite Zigbee."
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ZBMINIR2|MINI-ZB2GS|MINI-ZB2GS-L"
+    },
+    {
+      "name": "status",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "on",
+          "label": {
+            "en": "On",
+            "it": "Acceso"
+          }
+        },
+        {
+          "id": "off",
+          "label": {
+            "en": "Off",
+            "it": "Spento"
+          }
+        },
+        {
+          "id": "toggle",
+          "label": {
+            "en": "Toggle",
+            "it": "Inverti"
+          }
+        }
+      ]
+    }
+  ]
+}

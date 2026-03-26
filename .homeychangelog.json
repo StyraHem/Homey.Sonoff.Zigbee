@@ -109,5 +109,8 @@
   },
   "1.8.1": {
     "en": "Improved flow triggers and updated localized documentation"
+  },
+  "1.9.0": {
+    "en": "Improved stability and reliability for MINI-ZB2GS and MINI-ZB2GS-L dual-channel devices, including better status synchronization and support for 'Detach Relay' mode. Enhanced internal communication logic for all Sonoff Zigbee devices."
   }
 }

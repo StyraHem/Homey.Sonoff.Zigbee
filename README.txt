@@ -20,5 +20,5 @@ Support devices:
 -Sonoff ZBMINI-L2 (Switch)
 -Sonoff ZBMINIR2 (Switch / Routing)
 -Sonoff MINI-ZB2GS (Smart Switch 2-channel)
--Sonoff MINI-ZB2GS-L (Smart Switch 1-channel)
+-Sonoff MINI-ZB2GS-L (Smart Switch 2-channel)
 -Sonoff RF/TX devices (send and receive)

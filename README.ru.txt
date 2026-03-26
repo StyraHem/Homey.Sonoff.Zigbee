@@ -20,5 +20,5 @@ Sonoff Zigbee
 -Sonoff ZBMINI-L2 (Выключатель)
 -Sonoff ZBMINIR2 (Выключатель / Роутер)
 -Sonoff MINI-ZB2GS (Умный выключатель 2-канальный)
--Sonoff MINI-ZB2GS-L (Умный выключатель 1-канальный)
+-Sonoff MINI-ZB2GS-L (Умный выключатель 2-канальный)
 -Sonoff Устройства RF/TX (прием и передача)

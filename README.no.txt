@@ -20,5 +20,5 @@ Støttede enheter:
 -Sonoff ZBMINI-L2 (Bryter)
 -Sonoff ZBMINIR2 (Bryter / Ruter)
 -Sonoff MINI-ZB2GS (Smart Bryter 2-kanals)
--Sonoff MINI-ZB2GS-L (Smart Bryter 1-kanals)
+-Sonoff MINI-ZB2GS-L (Smart Bryter 2-kanals)
 -Sonoff RF/TX enheter (sende og motta)
