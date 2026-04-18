@@ -75,7 +75,7 @@ typings
 **/interview.json
 interview.json
 
-
+/.agents/
 /temp/
 INSTALL.md
 *.code-workspace
