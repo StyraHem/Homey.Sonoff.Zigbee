@@ -1,7 +1,7 @@
 {
   "triggers": [
     {
-      "id": "{{driverId}}:single_click",
+      "id": "SNZB-01:single_click",
       "title": {
         "en": "Singel click",
         "nl": "Enkele klik",
@@ -18,7 +18,7 @@
       }
     },
     {
-      "id": "{{driverId}}:double_click",
+      "id": "SNZB-01:double_click",
       "title": {
         "en": "Double click",
         "nl": "Dubbele klik",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "{{driverId}}:long_click",
+      "id": "SNZB-01:long_click",
       "title": {
         "en": "Long click",
         "nl": "Lange klik",

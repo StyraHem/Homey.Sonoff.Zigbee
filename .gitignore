@@ -60,8 +60,9 @@ typings
 # dotenv environment variables file
 .env
 
-#Backup
+# Backup
 *.DS_Store
+**/bck/
 
 
 
@@ -69,3 +70,13 @@ typings
 /.homeybuild/
 
 /.vscode/
+
+# Ignore interview dumps (sensitive device data)
+**/interview.json
+interview.json
+
+/.agents/
+/temp/
+INSTALL.md
+*.code-workspace
+log_avvio.txt

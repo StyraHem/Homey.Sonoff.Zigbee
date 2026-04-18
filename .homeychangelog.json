@@ -103,5 +103,14 @@
   },
   "1.7.0": {
     "en": "Add support for Sonoff ZBMINIR2"
+  },
+  "1.8.0": {
+    "en": "Improved ZBMINR2 with all Sonoff custom clusters, added ZBMINI, MINI-ZB2GS and MINI-ZB2GS-L drivers"
+  },
+  "1.8.1": {
+    "en": "Improved flow triggers and updated localized documentation"
+  },
+  "1.9.0": {
+    "en": "Improved stability and reliability for MINI-ZB2GS and MINI-ZB2GS-L dual-channel devices, including better status synchronization and support for 'Detach Relay' mode. Enhanced internal communication logic for all Sonoff Zigbee devices."
   }
 }

@@ -1,29 +1,46 @@
 [
   {
-    "id": "power_on_behavior",
-    "type": "dropdown",
+    "type": "group",
     "label": {
-      "en": "Power-on behavior"
+      "en": "Power-on",
+      "it": "Accensione"
     },
-    "value": "off",
-    "values": [
+    "children": [
       {
-        "id": "off",
+        "id": "power_on_behavior",
+        "type": "dropdown",
         "label": {
-          "en": "Off"
-        }
-      },
-      {
-        "id": "on",
-        "label": {
-          "en": "On"
-        }
-      },
-      {
-        "id": "last_state",
-        "label": {
-          "en": "Last state"
-        }
+          "en": "Power-on State",
+          "it": "Stato all'Accensione"
+        },
+        "hint": {
+          "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+          "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+        },
+        "value": "off",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "On",
+              "it": "Acceso"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Off",
+              "it": "Spento"
+            }
+          },
+          {
+            "id": "last_state",
+            "label": {
+              "en": "Last state",
+              "it": "Ultimo stato"
+            }
+          }
+        ]
       }
     ]
   }
