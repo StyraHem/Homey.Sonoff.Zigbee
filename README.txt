@@ -17,4 +17,8 @@ Support devices:
 -Sonoff ZBTRV    (Radiator valve)
 -Sonoff ZBMINI-L (Switch)
 -Sonoff ZBMINI-L2 (Switch)
+-Sonoff ZBMINI-R2 (Switch)
+-Sonoff ZBM5-1C-120 (Wall switch, 1-gang)
+-Sonoff ZBM5-2C-120 (Wall switch, 2-gang)
+-Sonoff ZBM5-3C-120 (Wall switch, 3-gang)
 -Sonoff RF/TX devices (send and receive)

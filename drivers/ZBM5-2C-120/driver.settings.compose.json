@@ -1,0 +1,94 @@
+[
+  {
+    "id": "power_on_behavior",
+    "type": "dropdown",
+    "label": {
+      "en": "Power-on behavior"
+    },
+    "value": "off",
+    "values": [
+      {
+        "id": "off",
+        "label": {
+          "en": "Off"
+        }
+      },
+      {
+        "id": "on",
+        "label": {
+          "en": "On"
+        }
+      },
+      {
+        "id": "toggle",
+        "label": {
+          "en": "Toggle"
+        }
+      },
+      {
+        "id": "last_state",
+        "label": {
+          "en": "Last state"
+        }
+      }
+    ]
+  },
+  {
+    "id": "power_on_delay_state",
+    "type": "checkbox",
+    "label": {
+      "en": "Power on delay state"
+    }
+  },
+  {
+    "id": "power_on_delay_time",
+    "type": "number",
+    "label": {
+      "en": "Power on delay time"
+    },
+    "min": 1,
+    "max": 3600,
+    "step": 1
+  },
+  {
+    "id": "switch_mode",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch mode"
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Edge"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Pluse"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Follow swith"
+        }
+      },
+      {
+        "id": "130",
+        "label": {
+          "en": "Follow switch (invert)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "detach_mode",
+    "type": "checkbox",
+    "label": {
+      "en": "Detach switch"
+    }
+  }
+]

@@ -36,7 +36,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -2146,6 +2146,526 @@
         }
       },
       "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBM5-1C-120/assets/images/large.png",
+        "small": "/drivers/ZBM5-1C-120/assets/images/small.png"
+      },
+      "id": "ZBM5-1C-120",
+      "name": {
+        "en": "ZBM5-1C-120 Switch",
+        "sv": "ZBM5-1C-120 Strömbrytare"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBM5-1C-120"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              32,
+              2821,
+              64599,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBM5-1C-120/assets/learn.svg",
+          "instruction": {
+            "en": "Press and hold the button on the front of the switch for approximately 5 seconds until the indicator LED flashes blue."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        },
+        {
+          "id": "power_on_delay_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Power on delay state"
+          }
+        },
+        {
+          "id": "power_on_delay_time",
+          "type": "number",
+          "label": {
+            "en": "Power on delay time"
+          },
+          "min": 1,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "id": "switch_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch mode"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Edge"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Pluse"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Follow swith"
+              }
+            },
+            {
+              "id": "130",
+              "label": {
+                "en": "Follow switch (invert)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "detach_mode",
+          "type": "checkbox",
+          "label": {
+            "en": "Detach switch"
+          }
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBM5-2C-120/assets/images/large.png",
+        "small": "/drivers/ZBM5-2C-120/assets/images/small.png"
+      },
+      "id": "ZBM5-2C-120",
+      "name": {
+        "en": "ZBM5-2C-120 Switch (2-gang)",
+        "sv": "ZBM5-2C-120 Strömbrytare (2-knapps)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBM5-2C-120"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              32,
+              2821,
+              64599,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              64599
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "devices": {
+          "gang2": {
+            "class": "light",
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "Gang 2",
+              "sv": "Knapp 2"
+            },
+            "settings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBM5-2C-120/assets/learn.svg",
+          "instruction": {
+            "en": "Press and hold the button on the front of the switch for approximately 5 seconds until the indicator LED flashes blue."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        },
+        {
+          "id": "power_on_delay_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Power on delay state"
+          }
+        },
+        {
+          "id": "power_on_delay_time",
+          "type": "number",
+          "label": {
+            "en": "Power on delay time"
+          },
+          "min": 1,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "id": "switch_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch mode"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Edge"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Pluse"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Follow swith"
+              }
+            },
+            {
+              "id": "130",
+              "label": {
+                "en": "Follow switch (invert)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "detach_mode",
+          "type": "checkbox",
+          "label": {
+            "en": "Detach switch"
+          }
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/ZBM5-3C-120/assets/images/large.png",
+        "small": "/drivers/ZBM5-3C-120/assets/images/small.png"
+      },
+      "id": "ZBM5-3C-120",
+      "name": {
+        "en": "ZBM5-3C-120 Switch (3-gang)",
+        "sv": "ZBM5-3C-120 Strömbrytare (3-knapps)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBM5-3C-120"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              32,
+              2821,
+              64599,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              64599
+            ],
+            "bindings": [
+              6
+            ]
+          },
+          "3": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              64599
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "devices": {
+          "gang2": {
+            "class": "light",
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "Gang 2",
+              "sv": "Knapp 2"
+            },
+            "settings": []
+          },
+          "gang3": {
+            "class": "light",
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "Gang 3",
+              "sv": "Knapp 3"
+            },
+            "settings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBM5-3C-120/assets/learn.svg",
+          "instruction": {
+            "en": "Press and hold the button on the front of the switch for approximately 5 seconds until the indicator LED flashes blue."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_on_behavior",
+          "type": "dropdown",
+          "label": {
+            "en": "Power-on behavior"
+          },
+          "value": "off",
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "last_state",
+              "label": {
+                "en": "Last state"
+              }
+            }
+          ]
+        },
+        {
+          "id": "power_on_delay_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Power on delay state"
+          }
+        },
+        {
+          "id": "power_on_delay_time",
+          "type": "number",
+          "label": {
+            "en": "Power on delay time"
+          },
+          "min": 1,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "id": "switch_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch mode"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Edge"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Pluse"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Follow swith"
+              }
+            },
+            {
+              "id": "130",
+              "label": {
+                "en": "Follow switch (invert)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "detach_mode",
+          "type": "checkbox",
+          "label": {
+            "en": "Detach switch"
+          }
+        }
+      ]
     },
     {
       "platforms": [

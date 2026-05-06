@@ -1,0 +1,44 @@
+{
+  "id": "ZBM5-1C-120",
+  "name": {
+    "en": "ZBM5-1C-120 Switch",
+    "sv": "ZBM5-1C-120 Strömbrytare"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "SONOFF"
+    ],
+    "productId": [
+      "ZBM5-1C-120"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          32,
+          2821,
+          64599,
+          64529
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press and hold the button on the front of the switch for approximately 5 seconds until the indicator LED flashes blue."
+      }
+    }
+  },
+  "$extends": ["defaults"]
+}

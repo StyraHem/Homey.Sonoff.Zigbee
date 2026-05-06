@@ -103,5 +103,8 @@
   },
   "1.7.0": {
     "en": "Add support for Sonoff ZBMINIR2"
+  },
+  "1.8.0": {
+    "en": "Add support for Sonoff ZBM5-1C/2C/3C-120 wall switches; multi-gang variants expose each gang as its own Homey device tile via sub-devices"
   }
 }
