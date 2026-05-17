@@ -36,7 +36,7 @@
     "ko": "집에 생명을 불어넣다"
   },
   "category": "lights",
-  "version": "1.7.0",
+  "version": "1.9.0",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Håkan Åkerberg",
@@ -97,6 +97,82 @@
           }
         ],
         "id": "sonoff_rf"
+      },
+      {
+        "id": "MINI-ZB2GS:click",
+        "title": {
+          "en": "Single click",
+          "da": "Enkelt klik",
+          "de": "Einzelklick",
+          "es": "Clic único",
+          "fr": "Clic unique",
+          "it": "Clic singolo",
+          "no": "Enkel klikk",
+          "sv": "Enstaka klick",
+          "pl": "Pojedyncze kliknięcie",
+          "ru": "Одиночный клик",
+          "ko": "단일 클릭",
+          "nl": "Enkele klik"
+        },
+        "hint": {
+          "en": "This trigger fires when the physical switch is pressed and the 'Detach Relay' setting is enabled.",
+          "it": "Questo trigger si attiva quando viene premuto l'interruttore fisico e l'impostazione 'Stacca Relè' è abilitata.",
+          "nl": "Deze trigger wordt geactiveerd wanneer de fysieke schakelaar wordt ingedrukt en de instelling 'Relais ontkoppelen' is ingeschakeld.",
+          "da": "Denne trigger aktiveres, når der trykkes på den fysiske kontakt, og indstillingen 'Frakobl relæ' er aktiveret.",
+          "de": "Dieser Trigger wird ausgelöst, wenn der physische Schalter gedrückt wird und die Einstellung 'Relais trennen' aktiviert ist.",
+          "es": "Este activador se dispara cuando se presiona el interruptor físico y la configuración 'Desconectar relé' está habilitada.",
+          "fr": "Ce déclencheur s'active lorsque l'interrupteur physique est pressé et que le paramètre 'Détacher le relais' est activé.",
+          "no": "Denne utløseren aktiveres når den fysiske bryteren trykkes og innstillingen 'Koble fra relé' er aktivert.",
+          "sv": "Denna trigger aktiveras när den fysiska strömbrytaren trycks och inställningen 'Frånkoppla relä' är aktiverad.",
+          "pl": "Ten wyzwalacz uruchamia się, gdy zostanie naciśnięty fizyczny przełącznik, a ustawienie 'Odłącz przekaźnik' jest włączone.",
+          "ru": "Этот триггер срабатывает при нажатии физического переключателя и включенной настройке 'Отсоединить реле'.",
+          "ko": "물리적 스위치를 누르고 '릴레이 분리' 설정이 활성화된 경우 이 트리거가 실행됩니다."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=MINI-ZB2GS"
+          }
+        ]
+      },
+      {
+        "id": "MINI-ZB2GS-L:click",
+        "title": {
+          "en": "Single click",
+          "da": "Enkelt klik",
+          "de": "Einzelklick",
+          "es": "Clic único",
+          "fr": "Clic unique",
+          "it": "Clic singolo",
+          "no": "Enkel klikk",
+          "sv": "Enstaka klick",
+          "pl": "Pojedyncze kliknięcie",
+          "ru": "Одиночный клик",
+          "ko": "단일 클릭",
+          "nl": "Enkele klik"
+        },
+        "hint": {
+          "en": "This trigger fires when the physical switch is pressed and the 'Detach Relay' setting is enabled.",
+          "it": "Questo trigger si attiva quando viene premuto l'interruttore fisico e l'impostazione 'Stacca Relè' è abilitata.",
+          "nl": "Deze trigger wordt geactiveerd wanneer de fysieke schakelaar wordt ingedrukt en de instelling 'Relais ontkoppelen' is ingeschakeld.",
+          "da": "Denne trigger aktiveres, når der trykkes på den fysiske kontakt, og indstillingen 'Frakobl relæ' er aktiveret.",
+          "de": "Dieser Trigger wird ausgelöst, wenn der physische Schalter gedrückt wird und die Einstellung 'Relais trennen' aktiviert ist.",
+          "es": "Este activador se dispara cuando se presiona el interruptor físico y la configuración 'Desconectar relé' está habilitada.",
+          "fr": "Ce déclencheur s'active lorsque l'interrupteur physique est pressé et que le paramètre 'Détacher le relais' est activé.",
+          "no": "Denne utløseren aktiveres når den fysiske bryteren trykkes og innstillingen 'Koble fra relé' er aktivert.",
+          "sv": "Denna trigger aktiveras när den fysiska strömbrytaren trycks och inställningen 'Frånkoppla relä' är aktiverad.",
+          "pl": "Ten wyzwalacz uruchamia się, gdy zostanie naciśnięty fizyczny przełącznik, a ustawienie 'Odłącz przekaźnik' jest włączone.",
+          "ru": "Этот триггер срабатывает при нажатии физического переключателя и включенной настройке 'Отсоединить реле'.",
+          "ko": "물리적 스위치를 누르고 '릴레이 분리' 설정이 활성화된 경우 이 트리거가 실행됩니다."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=MINI-ZB2GS-L"
+          }
+        ]
       },
       {
         "id": "on_receive",
@@ -180,6 +256,390 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=SNZB-01"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button1_single",
+        "title": {
+          "en": "Button 1 – single press",
+          "es": "Botón 1 – pulsación simple",
+          "nl": "Knop 1 – enkel klikken",
+          "de": "Taste 1 – einfach drücken",
+          "fr": "Bouton 1 – appui simple",
+          "it": "Pulsante 1 – pressione singola",
+          "da": "Knap 1 – enkelt tryk",
+          "no": "Knapp 1 – enkelt trykk",
+          "sv": "Knapp 1 – enkelklick",
+          "pl": "Przycisk 1 – pojedyncze",
+          "ru": "Кнопка 1 – одно нажатие",
+          "ko": "버튼 1 – 단일 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button1_double",
+        "title": {
+          "en": "Button 1 – double press",
+          "es": "Botón 1 – doble pulsación",
+          "nl": "Knop 1 – dubbel klikken",
+          "de": "Taste 1 – doppelt drücken",
+          "fr": "Bouton 1 – double appui",
+          "it": "Pulsante 1 – doppia pressione",
+          "da": "Knap 1 – dobbelt tryk",
+          "no": "Knapp 1 – dobbelt trykk",
+          "sv": "Knapp 1 – dubbelklick",
+          "pl": "Przycisk 1 – podwójne",
+          "ru": "Кнопка 1 – двойное нажатие",
+          "ko": "버튼 1 – 이중 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button1_long",
+        "title": {
+          "en": "Button 1 – long press",
+          "es": "Botón 1 – pulsación larga",
+          "nl": "Knop 1 – lang ingedrukt",
+          "de": "Taste 1 – lang drücken",
+          "fr": "Bouton 1 – appui long",
+          "it": "Pulsante 1 – pressione lunga",
+          "da": "Knap 1 – langt tryk",
+          "no": "Knapp 1 – langt trykk",
+          "sv": "Knapp 1 – långtryckning",
+          "pl": "Przycisk 1 – długie",
+          "ru": "Кнопка 1 – долгое нажатие",
+          "ko": "버튼 1 – 길게 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button1_triple",
+        "title": {
+          "en": "Button 1 – triple press",
+          "es": "Botón 1 – triple pulsación",
+          "nl": "Knop 1 – drievoudig klikken",
+          "de": "Taste 1 – dreifach drücken",
+          "fr": "Bouton 1 – triple appui",
+          "it": "Pulsante 1 – tripla pressione",
+          "da": "Knap 1 – tredobbelt tryk",
+          "no": "Knapp 1 – trippelt trykk",
+          "sv": "Knapp 1 – trippelklick",
+          "pl": "Przycisk 1 – potrójne",
+          "ru": "Кнопка 1 – тройное нажатие",
+          "ko": "버튼 1 – 세 번 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button2_single",
+        "title": {
+          "en": "Button 2 – single press",
+          "es": "Botón 2 – pulsación simple",
+          "nl": "Knop 2 – enkel klikken",
+          "de": "Taste 2 – einfach drücken",
+          "fr": "Bouton 2 – appui simple",
+          "it": "Pulsante 2 – pressione singola",
+          "da": "Knap 2 – enkelt tryk",
+          "no": "Knapp 2 – enkelt trykk",
+          "sv": "Knapp 2 – enkelklick",
+          "pl": "Przycisk 2 – pojedyncze",
+          "ru": "Кнопка 2 – одно нажатие",
+          "ko": "버튼 2 – 단일 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button2_double",
+        "title": {
+          "en": "Button 2 – double press",
+          "es": "Botón 2 – doble pulsación",
+          "nl": "Knop 2 – dubbel klikken",
+          "de": "Taste 2 – doppelt drücken",
+          "fr": "Bouton 2 – double appui",
+          "it": "Pulsante 2 – doppia pressione",
+          "da": "Knap 2 – dobbelt tryk",
+          "no": "Knapp 2 – dobbelt trykk",
+          "sv": "Knapp 2 – dubbelklick",
+          "pl": "Przycisk 2 – podwójne",
+          "ru": "Кнопка 2 – двойное нажатие",
+          "ko": "버튼 2 – 이중 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button2_long",
+        "title": {
+          "en": "Button 2 – long press",
+          "es": "Botón 2 – pulsación larga",
+          "nl": "Knop 2 – lang ingedrukt",
+          "de": "Taste 2 – lang drücken",
+          "fr": "Bouton 2 – appui long",
+          "it": "Pulsante 2 – pressione lunga",
+          "da": "Knap 2 – langt tryk",
+          "no": "Knapp 2 – langt trykk",
+          "sv": "Knapp 2 – långtryckning",
+          "pl": "Przycisk 2 – długie",
+          "ru": "Кнопка 2 – долгое нажатие",
+          "ko": "버튼 2 – 길게 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button2_triple",
+        "title": {
+          "en": "Button 2 – triple press",
+          "es": "Botón 2 – triple pulsación",
+          "nl": "Knop 2 – drievoudig klikken",
+          "de": "Taste 2 – dreifach drücken",
+          "fr": "Bouton 2 – triple appui",
+          "it": "Pulsante 2 – tripla pressione",
+          "da": "Knap 2 – tredobbelt tryk",
+          "no": "Knapp 2 – trippelt trykk",
+          "sv": "Knapp 2 – trippelklick",
+          "pl": "Przycisk 2 – potrójne",
+          "ru": "Кнопка 2 – тройное нажатие",
+          "ko": "버튼 2 – 세 번 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button3_single",
+        "title": {
+          "en": "Button 3 – single press",
+          "es": "Botón 3 – pulsación simple",
+          "nl": "Knop 3 – enkel klikken",
+          "de": "Taste 3 – einfach drücken",
+          "fr": "Bouton 3 – appui simple",
+          "it": "Pulsante 3 – pressione singola",
+          "da": "Knap 3 – enkelt tryk",
+          "no": "Knapp 3 – enkelt trykk",
+          "sv": "Knapp 3 – enkelklick",
+          "pl": "Przycisk 3 – pojedyncze",
+          "ru": "Кнопка 3 – одно нажатие",
+          "ko": "버튼 3 – 단일 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button3_double",
+        "title": {
+          "en": "Button 3 – double press",
+          "es": "Botón 3 – doble pulsación",
+          "nl": "Knop 3 – dubbel klikken",
+          "de": "Taste 3 – doppelt drücken",
+          "fr": "Bouton 3 – double appui",
+          "it": "Pulsante 3 – doppia pressione",
+          "da": "Knap 3 – dobbelt tryk",
+          "no": "Knapp 3 – dobbelt trykk",
+          "sv": "Knapp 3 – dubbelklick",
+          "pl": "Przycisk 3 – podwójne",
+          "ru": "Кнопка 3 – двойное нажатие",
+          "ko": "버튼 3 – 이중 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button3_long",
+        "title": {
+          "en": "Button 3 – long press",
+          "es": "Botón 3 – pulsación larga",
+          "nl": "Knop 3 – lang ingedrukt",
+          "de": "Taste 3 – lang drücken",
+          "fr": "Bouton 3 – appui long",
+          "it": "Pulsante 3 – pressione lunga",
+          "da": "Knap 3 – langt tryk",
+          "no": "Knapp 3 – langt trykk",
+          "sv": "Knapp 3 – långtryckning",
+          "pl": "Przycisk 3 – długie",
+          "ru": "Кнопка 3 – долгое нажатие",
+          "ko": "버튼 3 – 길게 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button3_triple",
+        "title": {
+          "en": "Button 3 – triple press",
+          "es": "Botón 3 – triple pulsación",
+          "nl": "Knop 3 – drievoudig klikken",
+          "de": "Taste 3 – dreifach drücken",
+          "fr": "Bouton 3 – triple appui",
+          "it": "Pulsante 3 – tripla pressione",
+          "da": "Knap 3 – tredobbelt tryk",
+          "no": "Knapp 3 – trippelt trykk",
+          "sv": "Knapp 3 – trippelklick",
+          "pl": "Przycisk 3 – potrójne",
+          "ru": "Кнопка 3 – тройное нажатие",
+          "ko": "버튼 3 – 세 번 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button4_single",
+        "title": {
+          "en": "Button 4 – single press",
+          "es": "Botón 4 – pulsación simple",
+          "nl": "Knop 4 – enkel klikken",
+          "de": "Taste 4 – einfach drücken",
+          "fr": "Bouton 4 – appui simple",
+          "it": "Pulsante 4 – pressione singola",
+          "da": "Knap 4 – enkelt tryk",
+          "no": "Knapp 4 – enkelt trykk",
+          "sv": "Knapp 4 – enkelklick",
+          "pl": "Przycisk 4 – pojedyncze",
+          "ru": "Кнопка 4 – одно нажатие",
+          "ko": "버튼 4 – 단일 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button4_double",
+        "title": {
+          "en": "Button 4 – double press",
+          "es": "Botón 4 – doble pulsación",
+          "nl": "Knop 4 – dubbel klikken",
+          "de": "Taste 4 – doppelt drücken",
+          "fr": "Bouton 4 – double appui",
+          "it": "Pulsante 4 – doppia pressione",
+          "da": "Knap 4 – dobbelt tryk",
+          "no": "Knapp 4 – dobbelt trykk",
+          "sv": "Knapp 4 – dubbelklick",
+          "pl": "Przycisk 4 – podwójne",
+          "ru": "Кнопка 4 – двойное нажатие",
+          "ko": "버튼 4 – 이중 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button4_long",
+        "title": {
+          "en": "Button 4 – long press",
+          "es": "Botón 4 – pulsación larga",
+          "nl": "Knop 4 – lang ingedrukt",
+          "de": "Taste 4 – lang drücken",
+          "fr": "Bouton 4 – appui long",
+          "it": "Pulsante 4 – pressione lunga",
+          "da": "Knap 4 – langt tryk",
+          "no": "Knapp 4 – langt trykk",
+          "sv": "Knapp 4 – långtryckning",
+          "pl": "Przycisk 4 – długie",
+          "ru": "Кнопка 4 – долгое нажатие",
+          "ko": "버튼 4 – 길게 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01M:button4_triple",
+        "title": {
+          "en": "Button 4 – triple press",
+          "es": "Botón 4 – triple pulsación",
+          "nl": "Knop 4 – drievoudig klikken",
+          "de": "Taste 4 – dreifach drücken",
+          "fr": "Bouton 4 – triple appui",
+          "it": "Pulsante 4 – tripla pressione",
+          "da": "Knap 4 – tredobbelt tryk",
+          "no": "Knapp 4 – trippelt trykk",
+          "sv": "Knapp 4 – trippelklick",
+          "pl": "Przycisk 4 – potrójne",
+          "ru": "Кнопка 4 – тройное нажатие",
+          "ko": "버튼 4 – 세 번 누름"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01M"
           }
         ]
       },
@@ -271,11 +731,76 @@
           "ko": "단일 클릭",
           "nl": "Enkele klik"
         },
+        "hint": {
+          "en": "This trigger fires when the physical switch is pressed and the 'Detach Relay' setting is enabled.",
+          "it": "Questo trigger si attiva quando viene premuto l'interruttore fisico e l'impostazione 'Stacca Relè' è abilitata.",
+          "nl": "Deze trigger wordt geactiveerd wanneer de fysieke schakelaar wordt ingedrukt en de instelling 'Relais ontkoppelen' is ingeschakeld.",
+          "da": "Denne trigger aktiveres, når der trykkes på den fysiske kontakt, og indstillingen 'Frakobl relæ' er aktiveret.",
+          "de": "Dieser Trigger wird ausgelöst, wenn der physische Schalter gedrückt wird und die Einstellung 'Relais trennen' aktiviert ist.",
+          "es": "Este activador se dispara cuando se presiona el interruptor físico y la configuración 'Desconectar relé' está habilitada.",
+          "fr": "Ce déclencheur s'active lorsque l'interrupteur physique est pressé et que le paramètre 'Détacher le relais' est activé.",
+          "no": "Denne utløseren aktiveres når den fysiske bryteren trykkes og innstillingen 'Koble fra relé' er aktivert.",
+          "sv": "Denna trigger aktiveras när den fysiska strömbrytaren trycks och inställningen 'Frånkoppla relä' är aktiverad.",
+          "pl": "Ten wyzwalacz uruchamia się, gdy zostanie naciśnięty fizyczny przełącznik, a ustawienie 'Odłącz przekaźnik' jest włączone.",
+          "ru": "Этот триггер срабатывает при нажатии физического переключателя и включенной настройке 'Отсоединить реле'.",
+          "ko": "물리적 스위치를 누르고 '릴레이 분리' 설정이 활성화된 경우 이 트리거가 실행됩니다."
+        },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=ZBMINIR2"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "set_ui_onoff",
+        "title": {
+          "en": "Set switch status (UI only)",
+          "it": "Imposta stato interruttore (solo UI)"
+        },
+        "titleFormatted": {
+          "en": "Set to [[status]]",
+          "it": "Imposta su [[status]]"
+        },
+        "hint": {
+          "en": "Updates the switch's on/off status in the Homey app without actually physically toggling the relay via Zigbee.",
+          "it": "Aggiorna lo stato acceso/spento dell'interruttore nell'app Homey senza commutare fisicamente il relè tramite Zigbee."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZBMINIR2|MINI-ZB2GS|MINI-ZB2GS-L"
+          },
+          {
+            "name": "status",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "on",
+                "label": {
+                  "en": "On",
+                  "it": "Acceso"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off",
+                  "it": "Spento"
+                }
+              },
+              {
+                "id": "toggle",
+                "label": {
+                  "en": "Toggle",
+                  "it": "Inverti"
+                }
+              }
+            ]
           }
         ]
       }
@@ -308,6 +833,864 @@
     ]
   },
   "drivers": [
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/MINI-ZB2GS/assets/images/large.png",
+        "small": "/drivers/MINI-ZB2GS/assets/images/small.png"
+      },
+      "id": "MINI-ZB2GS",
+      "name": {
+        "en": "MINI-ZB2GS Switch",
+        "it": "MINI-ZB2GS Switch"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "MINI-ZB2GS"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              6,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "devices": {
+          "secondChannel": {
+            "class": "socket",
+            "name": {
+              "en": "MINI-ZB2GS Switch (Channel 2)",
+              "it": "MINI-ZB2GS Switch (Canale 2)"
+            },
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/MINI-ZB2GS/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the device for approximately 10 seconds until the LED blinks rapidly.",
+            "it": "Premi il pulsante sul dispositivo per circa 10 secondi fino a quando il LED lampeggia rapidamente."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "TurboMode",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Turbo Mode",
+            "it": "Modalità Turbo"
+          },
+          "hint": {
+            "en": "Enhancing the signal strength.",
+            "it": "Migliora la forza del segnale."
+          }
+        },
+        {
+          "id": "network_led",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Network Indicator",
+            "it": "Indicatore di rete"
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Switch Mode",
+            "it": "Cambia Modalità"
+          },
+          "children": [
+            {
+              "id": "switch_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Mode",
+                "it": "Modalità"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Edge Mode",
+                    "it": "Modalità Edge"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Pulse Mode",
+                    "it": "Modalità Impulso"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Following Mode",
+                    "it": "Modalità Inseguimento"
+                  }
+                },
+                {
+                  "id": "130",
+                  "label": {
+                    "en": "Following Mode (Reverse)",
+                    "it": "Modalità Inseguimento (Inverti)"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "detach_mode",
+              "type": "dropdown",
+              "value": "off",
+              "label": {
+                "en": "Detach Relay",
+                "it": "Stacca Relè"
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Power-on",
+            "it": "Accensione"
+          },
+          "children": [
+            {
+              "id": "power_on_behavior",
+              "type": "dropdown",
+              "label": {
+                "en": "Power-on State",
+                "it": "Stato all'Accensione"
+              },
+              "hint": {
+                "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+                "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+              },
+              "value": "off",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On",
+                    "it": "Acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off",
+                    "it": "Spento"
+                  }
+                },
+                {
+                  "id": "last_state",
+                  "label": {
+                    "en": "Last state",
+                    "it": "Ultimo stato"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "power_on_delay_state",
+              "type": "checkbox",
+              "value": false,
+              "hint": {
+                "en": "Power-on state will be delayed for the time you set.",
+                "it": "Lo stato all'accensione sarà ritardato per il tempo impostato."
+              },
+              "label": {
+                "en": "Delay",
+                "it": "Ritardo"
+              }
+            },
+            {
+              "id": "power_on_delay_time",
+              "type": "number",
+              "label": {
+                "en": "Duration (seconds)",
+                "it": "Durata (secondi)"
+              },
+              "value": 28,
+              "min": 0.5,
+              "max": 3599.5,
+              "step": 0.5
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Inching Settings",
+            "it": "Impostazioni di Inching"
+          },
+          "children": [
+            {
+              "id": "inching_enabled",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Enable Inching",
+                "it": "Abilita Inching"
+              },
+              "hint": {
+                "en": "Automatically turn off/on after a set time.",
+                "it": "Spegne/accende automaticamente dopo un tempo impostato."
+              }
+            },
+            {
+              "id": "inching_time",
+              "type": "number",
+              "label": {
+                "en": "Inching time (seconds)",
+                "it": "Tempo di Inching (secondi)"
+              },
+              "value": 1,
+              "min": 0.5,
+              "max": 3599.5,
+              "step": 0.5
+            },
+            {
+              "id": "inching_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Status",
+                "it": "Stato"
+              },
+              "hint": {
+                "en": "Choose whether to turn on or off after the set time.",
+                "it": "Scegli se accendere o spegnere dopo il tempo impostato."
+              },
+              "value": "on",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "Auto-On",
+                    "it": "Auto-acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Auto-Off",
+                    "it": "Auto-spento"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/MINI-ZB2GS-L/assets/images/large.png",
+        "small": "/drivers/MINI-ZB2GS-L/assets/images/small.png"
+      },
+      "id": "MINI-ZB2GS-L",
+      "name": {
+        "en": "MINI-ZB2GS-L Smart Switch (Channel 1)",
+        "it": "MINI-ZB2GS-L Interruttore Smart (Canale 1)"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "MINI-ZB2GS-L"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              6,
+              64529
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "devices": {
+          "secondChannel": {
+            "class": "socket",
+            "name": {
+              "en": "MINI-ZB2GS-L Smart Switch (Channel 2)",
+              "it": "MINI-ZB2GS-L Interruttore Smart (Canale 2)"
+            },
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/MINI-ZB2GS-L/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the device for approximately 10 seconds until the LED blinks rapidly.",
+            "it": "Premi il pulsante sul dispositivo per circa 10 secondi fino a quando il LED lampeggia rapidamente."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Switch Mode",
+            "it": "Cambia Modalità"
+          },
+          "children": [
+            {
+              "id": "switch_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Mode",
+                "it": "Modalità"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Edge Mode",
+                    "it": "Modalità Edge"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Pulse Mode",
+                    "it": "Modalità Impulso"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Following Mode",
+                    "it": "Modalità Inseguimento"
+                  }
+                },
+                {
+                  "id": "130",
+                  "label": {
+                    "en": "Following Mode (Reverse)",
+                    "it": "Modalità Inseguimento (Inverti)"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "detach_mode",
+              "type": "dropdown",
+              "value": "off",
+              "label": {
+                "en": "Detach Relay",
+                "it": "Stacca Relè"
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Power-on",
+            "it": "Accensione"
+          },
+          "children": [
+            {
+              "id": "power_on_behavior",
+              "type": "dropdown",
+              "label": {
+                "en": "Power-on State",
+                "it": "Stato all'Accensione"
+              },
+              "hint": {
+                "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+                "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+              },
+              "value": "off",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On",
+                    "it": "Acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off",
+                    "it": "Spento"
+                  }
+                },
+                {
+                  "id": "last_state",
+                  "label": {
+                    "en": "Last state",
+                    "it": "Ultimo stato"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "power_on_delay_state",
+              "type": "checkbox",
+              "value": false,
+              "hint": {
+                "en": "Power-on state will be delayed for the time you set.",
+                "it": "Lo stato all'accensione sarà ritardato per il tempo impostato."
+              },
+              "label": {
+                "en": "Delay",
+                "it": "Ritardo"
+              }
+            },
+            {
+              "id": "power_on_delay_time",
+              "type": "number",
+              "label": {
+                "en": "Duration (seconds)",
+                "it": "Durata (secondi)"
+              },
+              "value": 28,
+              "min": 0.5,
+              "max": 3599.5,
+              "step": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/MINI-ZBDIM/assets/images/large.png",
+        "small": "/drivers/MINI-ZBDIM/assets/images/small.png"
+      },
+      "name": {
+        "en": "MINI-ZBDIM Dimmer",
+        "es": "Atenuador MINI-ZBDIM",
+        "nl": "MINI-ZBDIM Dimmer",
+        "de": "MINI-ZBDIM Dimmer",
+        "fr": "Variateur MINI-ZBDIM",
+        "it": "Dimmer MINI-ZBDIM",
+        "no": "MINI-ZBDIM Dimmer",
+        "sv": "MINI-ZBDIM Dimmer",
+        "pl": "Ściemniacz MINI-ZBDIM",
+        "ru": "Диммер MINI-ZBDIM",
+        "ko": "MINI-ZBDIM 디머"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "measure_power",
+        "measure_voltage",
+        "measure_current"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "MINI-ZBDIM"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              2820,
+              2821,
+              64599,
+              64529
+            ],
+            "bindings": [
+              6,
+              8,
+              2820
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/MINI-ZBDIM/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the device for 5 seconds until the LED blinks rapidly to enter pairing mode.",
+            "es": "Mantén pulsado el botón del dispositivo durante 5 segundos hasta que el LED parpadee rápidamente para entrar en modo de emparejamiento."
+          }
+        }
+      },
+      "id": "MINI-ZBDIM",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General Settings",
+            "es": "Ajustes Generales"
+          },
+          "children": [
+            {
+              "id": "switch_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "External Switch Mode",
+                "es": "Modo de Interruptor Externo"
+              },
+              "hint": {
+                "en": "Choose the type of physical switch connected to the device.",
+                "es": "Elige el tipo de interruptor físico conectado al dispositivo."
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Edge (Toggle Switch)",
+                    "es": "Interruptor normal (Edge)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Pulse (Push Button)",
+                    "es": "Pulsador (Pulse)"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Double Pulse",
+                    "es": "Doble Pulsación"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Triple Pulse",
+                    "es": "Triple Pulsación"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "power_on_behavior",
+              "type": "dropdown",
+              "label": {
+                "en": "Power-on Behavior",
+                "es": "Comportamiento tras apagón"
+              },
+              "hint": {
+                "en": "State of the device after power is restored.",
+                "es": "Estado del dispositivo al restaurarse la luz."
+              },
+              "value": "off",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On",
+                    "es": "Encendido"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off",
+                    "es": "Apagado"
+                  }
+                },
+                {
+                  "id": "previous",
+                  "label": {
+                    "en": "Previous State",
+                    "es": "Último estado"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Dimmer Settings",
+            "es": "Ajustes del Atenuador"
+          },
+          "children": [
+            {
+              "id": "min_brightness_threshold",
+              "type": "number",
+              "label": {
+                "en": "Minimum Brightness (%)",
+                "es": "Brillo Mínimo (%)"
+              },
+              "hint": {
+                "en": "Lowest brightness level mapped to 1% on the slider.",
+                "es": "El nivel de brillo más bajo equivalente al 1% en la app."
+              },
+              "value": 1,
+              "min": 1,
+              "max": 99,
+              "step": 1
+            },
+            {
+              "id": "max_brightness_threshold",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brightness (%)",
+                "es": "Brillo Máximo (%)"
+              },
+              "hint": {
+                "en": "Highest brightness level mapped to 100% on the slider.",
+                "es": "El nivel de brillo más alto equivalente al 100% en la app."
+              },
+              "value": 100,
+              "min": 2,
+              "max": 100,
+              "step": 1
+            },
+            {
+              "id": "dimming_light_rate",
+              "type": "dropdown",
+              "label": {
+                "en": "Dimming Speed (External Switch)",
+                "es": "Velocidad de atenuación física"
+              },
+              "hint": {
+                "en": "Speed of brightness change when using the physical switch.",
+                "es": "Velocidad de cambio de brillo usando el interruptor de pared."
+              },
+              "value": "1",
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1x (Slowest)",
+                    "es": "1x (Más lento)"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "2x",
+                    "es": "2x"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "3x (Normal)",
+                    "es": "3x (Normal)"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "4x",
+                    "es": "4x"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "5x (Fastest)",
+                    "es": "5x (Más rápido)"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "App Transition Time (s)",
+                "es": "Tiempo de transición desde App (s)"
+              },
+              "hint": {
+                "en": "Duration of brightness transitions from the app.",
+                "es": "Duración de las transiciones al cambiar el brillo desde la app."
+              },
+              "value": 0,
+              "min": 0,
+              "max": 5,
+              "step": 0.1
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Inching Settings",
+            "es": "Ajustes de Inching (Auto-apagado)"
+          },
+          "children": [
+            {
+              "id": "inching_enabled",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Enable Inching",
+                "es": "Activar Inching"
+              },
+              "hint": {
+                "en": "Automatically turn off/on after a set time.",
+                "es": "Se apaga o enciende automáticamente tras el tiempo indicado."
+              }
+            },
+            {
+              "id": "inching_time",
+              "type": "number",
+              "label": {
+                "en": "Inching Time (seconds)",
+                "es": "Duración Inching (segundos)"
+              },
+              "value": 1,
+              "min": 0.5,
+              "max": 86399,
+              "step": 0.5
+            },
+            {
+              "id": "inching_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Mode",
+                "es": "Modo"
+              },
+              "value": "on",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "Auto-On (Turn on after X seconds)",
+                    "es": "Auto-Encendido"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Auto-Off (Turn off after X seconds)",
+                    "es": "Auto-Apagado"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "platforms": [
         "local",
@@ -448,6 +1831,114 @@
           }
         }
       }
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "name": {
+        "en": "Button SNZB-01M",
+        "nl": "Knop SNZB-01M",
+        "da": "Knap SNZB-01M",
+        "de": "Taste SNZB-01M",
+        "es": "Botón SNZB-01M",
+        "fr": "Bouton SNZB-01M",
+        "it": "Pulsante SNZB-01M",
+        "no": "Knapp SNZB-01M",
+        "sv": "Knapp SNZB-01M",
+        "pl": "Przycisk SNZB-01M",
+        "ru": "Кнопка SNZB-01M",
+        "ko": "버튼 SNZB-01M"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "images": {
+        "small": "/drivers/SNZB-01M/assets/images/small.png",
+        "large": "/drivers/SNZB-01M/assets/images/large.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "SNZB-01M"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              32,
+              64530
+            ],
+            "bindings": [
+              3,
+              4,
+              5,
+              6,
+              8,
+              25,
+              4096
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              64530
+            ],
+            "bindings": [
+              6,
+              8
+            ]
+          },
+          "3": {
+            "clusters": [
+              0,
+              64530
+            ],
+            "bindings": [
+              6,
+              8
+            ]
+          },
+          "4": {
+            "clusters": [
+              0,
+              64530
+            ],
+            "bindings": [
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press and hold the pairing button for 5 seconds until the LED blinks rapidly.",
+            "nl": "Houd de koppelknop 5 seconden ingedrukt totdat de LED snel begint te knipperen.",
+            "da": "Tryk og hold paringsknappen i 5 sekunder, indtil LED'en blinker hurtigt.",
+            "de": "Halten Sie die Pairing-Taste 5 Sekunden lang gedrückt, bis die LED schnell blinkt.",
+            "es": "Mantén pulsado el botón de emparejamiento durante 5 segundos hasta que el LED parpadee rápidamente.",
+            "fr": "Appuyez et maintenez le bouton de jumelage pendant 5 secondes jusqu'à ce que la LED clignote rapidement.",
+            "it": "Tenere premuto il pulsante di associazione per 5 secondi finché il LED non lampeggia rapidamente.",
+            "no": "Hold paringsknappen inne i 5 sekunder til LED-en blinker raskt.",
+            "sv": "Håll in parningsknappen i 5 sekunder tills LED-lampan blinkar snabbt.",
+            "pl": "Naciśnij i przytrzymaj przycisk parowania przez 5 sekund, aż dioda LED zacznie szybko migać.",
+            "ru": "Нажмите и удерживайте кнопку сопряжения в течение 5 секунд, пока светодиод не начнет быстро мигать.",
+            "ko": "LED가 빠르게 깜박이기 시작할 때까지 페어링 버튼을 5초 동안 길게 누르세요."
+          }
+        }
+      },
+      "id": "SNZB-01M"
     },
     {
       "platforms": [
@@ -2156,6 +3647,52 @@
         "zigbee"
       ],
       "images": {
+        "large": "/drivers/ZBMINI/assets/images/large.png",
+        "small": "/drivers/ZBMINI/assets/images/small.png"
+      },
+      "id": "ZBMINI",
+      "name": {
+        "en": "ZBMINI Switch",
+        "sv": "ZBMINI Strömbrytare"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "01MINIZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINI/assets/learn.svg",
+          "instruction": {
+            "en": "Press the button on the top for aprox. 10 seconds until the green LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
         "large": "/drivers/ZBMINIL/assets/images/large.png",
         "small": "/drivers/ZBMINIL/assets/images/small.png"
       },
@@ -2164,7 +3701,7 @@
         "en": "ZBMINI-L Switch",
         "sv": "ZBMINI-L Strömbrytare"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff"
       ],
@@ -2241,7 +3778,7 @@
         "en": "ZBMINI-L2 Switch",
         "sv": "ZBMINI-L2 Strömbrytare"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff"
       ],
@@ -2272,30 +3809,47 @@
       },
       "settings": [
         {
-          "id": "power_on_behavior",
-          "type": "dropdown",
+          "type": "group",
           "label": {
-            "en": "Power-on behavior"
+            "en": "Power-on",
+            "it": "Accensione"
           },
-          "value": "off",
-          "values": [
+          "children": [
             {
-              "id": "off",
+              "id": "power_on_behavior",
+              "type": "dropdown",
               "label": {
-                "en": "Off"
-              }
-            },
-            {
-              "id": "on",
-              "label": {
-                "en": "On"
-              }
-            },
-            {
-              "id": "last_state",
-              "label": {
-                "en": "Last state"
-              }
+                "en": "Power-on State",
+                "it": "Stato all'Accensione"
+              },
+              "hint": {
+                "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+                "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+              },
+              "value": "off",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On",
+                    "it": "Acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off",
+                    "it": "Spento"
+                  }
+                },
+                {
+                  "id": "last_state",
+                  "label": {
+                    "en": "Last state",
+                    "it": "Ultimo stato"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -2318,7 +3872,7 @@
         "en": "ZBMINI-R2 Switch",
         "sv": "ZBMINI-R2 Strömbrytare"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff"
       ],
@@ -2350,96 +3904,239 @@
       },
       "settings": [
         {
-          "id": "power_on_behavior",
-          "type": "dropdown",
+          "id": "TurboMode",
+          "type": "checkbox",
+          "value": false,
           "label": {
-            "en": "Power-on behavior"
+            "en": "Turbo Mode",
+            "it": "Modalità Turbo"
           },
-          "value": "off",
-          "values": [
+          "hint": {
+            "en": "Enhancing the signal strength.",
+            "it": "Migliora la forza del segnale."
+          }
+        },
+        {
+          "id": "network_led",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Network Indicator",
+            "it": "Indicatore di rete"
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Switch Mode",
+            "it": "Cambia Modalità"
+          },
+          "children": [
             {
-              "id": "off",
+              "id": "switch_mode",
+              "type": "dropdown",
               "label": {
-                "en": "Off"
-              }
+                "en": "Mode",
+                "it": "Modalità"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Edge Mode",
+                    "it": "Modalità Edge"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Pulse Mode",
+                    "it": "Modalità Impulso"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Following Mode",
+                    "it": "Modalità Inseguimento"
+                  }
+                },
+                {
+                  "id": "130",
+                  "label": {
+                    "en": "Following Mode (Reverse)",
+                    "it": "Modalità Inseguimento (Inverti)"
+                  }
+                }
+              ]
             },
             {
-              "id": "on",
+              "id": "detach_mode",
+              "type": "dropdown",
+              "value": "off",
               "label": {
-                "en": "On"
-              }
-            },
-            {
-              "id": "toggle",
-              "label": {
-                "en": "Toggle"
-              }
-            },
-            {
-              "id": "last_state",
-              "label": {
-                "en": "Last state"
-              }
+                "en": "Detach Relay",
+                "it": "Stacca Relè"
+              },
+              "values": [
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off (Normal switch)",
+                    "it": "Off (Interruttore normale)"
+                  }
+                },
+                {
+                  "id": "on_button",
+                  "label": {
+                    "en": "On - Button only",
+                    "it": "On - Solo pulsante fisico"
+                  }
+                },
+                {
+                  "id": "on_button_switch",
+                  "label": {
+                    "en": "On - Button & App Switch (Virtual)",
+                    "it": "On - Pulsante fisico e Switch App (Virtuale)"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "id": "power_on_delay_state",
-          "type": "checkbox",
+          "type": "group",
           "label": {
-            "en": "Power on delay state"
-          }
-        },
-        {
-          "id": "power_on_delay_time",
-          "type": "number",
-          "label": {
-            "en": "Power on delay time"
+            "en": "Power-on",
+            "it": "Accensione"
           },
-          "min": 1,
-          "max": 3600,
-          "step": 1
-        },
-        {
-          "id": "switch_mode",
-          "type": "dropdown",
-          "label": {
-            "en": "Switch mode"
-          },
-          "value": "0",
-          "values": [
+          "children": [
             {
-              "id": "0",
+              "id": "power_on_behavior",
+              "type": "dropdown",
               "label": {
-                "en": "Edge"
+                "en": "Power-on State",
+                "it": "Stato all'Accensione"
+              },
+              "hint": {
+                "en": "The state of the device when the power restores from a power outage or being turned off physically.",
+                "it": "Stato del dispositivo al momento dell'interruzione dell'alimentazione o dello spegnimento dell'interruttore."
+              },
+              "value": "off",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On",
+                    "it": "Acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off",
+                    "it": "Spento"
+                  }
+                },
+                {
+                  "id": "last_state",
+                  "label": {
+                    "en": "Last state",
+                    "it": "Ultimo stato"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "power_on_delay_state",
+              "type": "checkbox",
+              "value": false,
+              "hint": {
+                "en": "Power-on state will be delayed for the time you set.",
+                "it": "Lo stato all'accensione sarà ritardato per il tempo impostato."
+              },
+              "label": {
+                "en": "Delay",
+                "it": "Ritardo"
               }
             },
             {
-              "id": "1",
+              "id": "power_on_delay_time",
+              "type": "number",
               "label": {
-                "en": "Pluse"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Follow swith"
-              }
-            },
-            {
-              "id": "130",
-              "label": {
-                "en": "Follow switch (invert)"
-              }
+                "en": "Duration (seconds)",
+                "it": "Durata (secondi)"
+              },
+              "value": 28,
+              "min": 0.5,
+              "max": 3599.5,
+              "step": 0.5
             }
           ]
         },
         {
-          "id": "detach_mode",
-          "type": "checkbox",
+          "type": "group",
           "label": {
-            "en": "Detach switch"
-          }
+            "en": "Inching Settings",
+            "it": "Impostazioni di Inching"
+          },
+          "children": [
+            {
+              "id": "inching_enabled",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Enable Inching",
+                "it": "Abilita Inching"
+              },
+              "hint": {
+                "en": "Automatically turn off/on after a set time.",
+                "it": "Spegne/accende automaticamente dopo un tempo impostato."
+              }
+            },
+            {
+              "id": "inching_time",
+              "type": "number",
+              "label": {
+                "en": "Inching time (seconds)",
+                "it": "Tempo di Inching (secondi)"
+              },
+              "value": 1,
+              "min": 0.5,
+              "max": 3599.5,
+              "step": 0.5
+            },
+            {
+              "id": "inching_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Status",
+                "it": "Stato"
+              },
+              "hint": {
+                "en": "Choose whether to turn on or off after the set time.",
+                "it": "Scegli se accendere o spegnere dopo il tempo impostato."
+              },
+              "value": "on",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "Auto-On",
+                    "it": "Auto-acceso"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Auto-Off",
+                    "it": "Auto-spento"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

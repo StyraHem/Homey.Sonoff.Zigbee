@@ -1,0 +1,41 @@
+{
+  "name": {
+    "en": "MINI-ZBDIM Dimmer",
+    "es": "Atenuador MINI-ZBDIM",
+    "nl": "MINI-ZBDIM Dimmer",
+    "de": "MINI-ZBDIM Dimmer",
+    "fr": "Variateur MINI-ZBDIM",
+    "it": "Dimmer MINI-ZBDIM",
+    "no": "MINI-ZBDIM Dimmer",
+    "sv": "MINI-ZBDIM Dimmer",
+    "pl": "Ściemniacz MINI-ZBDIM",
+    "ru": "Диммер MINI-ZBDIM",
+    "ko": "MINI-ZBDIM 디머"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "measure_power",
+    "measure_voltage",
+    "measure_current"
+  ],
+  "zigbee": {
+    "manufacturerName": ["SONOFF"],
+    "productId": ["MINI-ZBDIM"],
+    "endpoints": {
+      "1": {
+        "clusters": [0, 3, 4, 5, 6, 8, 2820, 2821, 64599, 64529],
+        "bindings": [6, 8, 2820]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learn.svg",
+      "instruction": {
+        "en": "Press the button on the device for 5 seconds until the LED blinks rapidly to enter pairing mode.",
+        "es": "Mantén pulsado el botón del dispositivo durante 5 segundos hasta que el LED parpadee rápidamente para entrar en modo de emparejamiento."
+      }
+    }
+  },
+  "$extends": ["defaults"]
+}
