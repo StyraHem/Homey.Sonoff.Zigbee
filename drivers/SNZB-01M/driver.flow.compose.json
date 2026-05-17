@@ -1,0 +1,276 @@
+{
+  "triggers": [
+    {
+      "id": "SNZB-01M:button1_single",
+      "title": {
+        "en": "Button 1 – single press",
+        "es": "Botón 1 – pulsación simple",
+        "nl": "Knop 1 – enkel klikken",
+        "de": "Taste 1 – einfach drücken",
+        "fr": "Bouton 1 – appui simple",
+        "it": "Pulsante 1 – pressione singola",
+        "da": "Knap 1 – enkelt tryk",
+        "no": "Knapp 1 – enkelt trykk",
+        "sv": "Knapp 1 – enkelklick",
+        "pl": "Przycisk 1 – pojedyncze",
+        "ru": "Кнопка 1 – одно нажатие",
+        "ko": "버튼 1 – 단일 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button1_double",
+      "title": {
+        "en": "Button 1 – double press",
+        "es": "Botón 1 – doble pulsación",
+        "nl": "Knop 1 – dubbel klikken",
+        "de": "Taste 1 – doppelt drücken",
+        "fr": "Bouton 1 – double appui",
+        "it": "Pulsante 1 – doppia pressione",
+        "da": "Knap 1 – dobbelt tryk",
+        "no": "Knapp 1 – dobbelt trykk",
+        "sv": "Knapp 1 – dubbelklick",
+        "pl": "Przycisk 1 – podwójne",
+        "ru": "Кнопка 1 – двойное нажатие",
+        "ko": "버튼 1 – 이중 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button1_long",
+      "title": {
+        "en": "Button 1 – long press",
+        "es": "Botón 1 – pulsación larga",
+        "nl": "Knop 1 – lang ingedrukt",
+        "de": "Taste 1 – lang drücken",
+        "fr": "Bouton 1 – appui long",
+        "it": "Pulsante 1 – pressione lunga",
+        "da": "Knap 1 – langt tryk",
+        "no": "Knapp 1 – langt trykk",
+        "sv": "Knapp 1 – långtryckning",
+        "pl": "Przycisk 1 – długie",
+        "ru": "Кнопка 1 – долгое нажатие",
+        "ko": "버튼 1 – 길게 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button1_triple",
+      "title": {
+        "en": "Button 1 – triple press",
+        "es": "Botón 1 – triple pulsación",
+        "nl": "Knop 1 – drievoudig klikken",
+        "de": "Taste 1 – dreifach drücken",
+        "fr": "Bouton 1 – triple appui",
+        "it": "Pulsante 1 – tripla pressione",
+        "da": "Knap 1 – tredobbelt tryk",
+        "no": "Knapp 1 – trippelt trykk",
+        "sv": "Knapp 1 – trippelklick",
+        "pl": "Przycisk 1 – potrójne",
+        "ru": "Кнопка 1 – тройное нажатие",
+        "ko": "버튼 1 – 세 번 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button2_single",
+      "title": {
+        "en": "Button 2 – single press",
+        "es": "Botón 2 – pulsación simple",
+        "nl": "Knop 2 – enkel klikken",
+        "de": "Taste 2 – einfach drücken",
+        "fr": "Bouton 2 – appui simple",
+        "it": "Pulsante 2 – pressione singola",
+        "da": "Knap 2 – enkelt tryk",
+        "no": "Knapp 2 – enkelt trykk",
+        "sv": "Knapp 2 – enkelklick",
+        "pl": "Przycisk 2 – pojedyncze",
+        "ru": "Кнопка 2 – одно нажатие",
+        "ko": "버튼 2 – 단일 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button2_double",
+      "title": {
+        "en": "Button 2 – double press",
+        "es": "Botón 2 – doble pulsación",
+        "nl": "Knop 2 – dubbel klikken",
+        "de": "Taste 2 – doppelt drücken",
+        "fr": "Bouton 2 – double appui",
+        "it": "Pulsante 2 – doppia pressione",
+        "da": "Knap 2 – dobbelt tryk",
+        "no": "Knapp 2 – dobbelt trykk",
+        "sv": "Knapp 2 – dubbelklick",
+        "pl": "Przycisk 2 – podwójne",
+        "ru": "Кнопка 2 – двойное нажатие",
+        "ko": "버튼 2 – 이중 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button2_long",
+      "title": {
+        "en": "Button 2 – long press",
+        "es": "Botón 2 – pulsación larga",
+        "nl": "Knop 2 – lang ingedrukt",
+        "de": "Taste 2 – lang drücken",
+        "fr": "Bouton 2 – appui long",
+        "it": "Pulsante 2 – pressione lunga",
+        "da": "Knap 2 – langt tryk",
+        "no": "Knapp 2 – langt trykk",
+        "sv": "Knapp 2 – långtryckning",
+        "pl": "Przycisk 2 – długie",
+        "ru": "Кнопка 2 – долгое нажатие",
+        "ko": "버튼 2 – 길게 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button2_triple",
+      "title": {
+        "en": "Button 2 – triple press",
+        "es": "Botón 2 – triple pulsación",
+        "nl": "Knop 2 – drievoudig klikken",
+        "de": "Taste 2 – dreifach drücken",
+        "fr": "Bouton 2 – triple appui",
+        "it": "Pulsante 2 – tripla pressione",
+        "da": "Knap 2 – tredobbelt tryk",
+        "no": "Knapp 2 – trippelt trykk",
+        "sv": "Knapp 2 – trippelklick",
+        "pl": "Przycisk 2 – potrójne",
+        "ru": "Кнопка 2 – тройное нажатие",
+        "ko": "버튼 2 – 세 번 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button3_single",
+      "title": {
+        "en": "Button 3 – single press",
+        "es": "Botón 3 – pulsación simple",
+        "nl": "Knop 3 – enkel klikken",
+        "de": "Taste 3 – einfach drücken",
+        "fr": "Bouton 3 – appui simple",
+        "it": "Pulsante 3 – pressione singola",
+        "da": "Knap 3 – enkelt tryk",
+        "no": "Knapp 3 – enkelt trykk",
+        "sv": "Knapp 3 – enkelklick",
+        "pl": "Przycisk 3 – pojedyncze",
+        "ru": "Кнопка 3 – одно нажатие",
+        "ko": "버튼 3 – 단일 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button3_double",
+      "title": {
+        "en": "Button 3 – double press",
+        "es": "Botón 3 – doble pulsación",
+        "nl": "Knop 3 – dubbel klikken",
+        "de": "Taste 3 – doppelt drücken",
+        "fr": "Bouton 3 – double appui",
+        "it": "Pulsante 3 – doppia pressione",
+        "da": "Knap 3 – dobbelt tryk",
+        "no": "Knapp 3 – dobbelt trykk",
+        "sv": "Knapp 3 – dubbelklick",
+        "pl": "Przycisk 3 – podwójne",
+        "ru": "Кнопка 3 – двойное нажатие",
+        "ko": "버튼 3 – 이중 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button3_long",
+      "title": {
+        "en": "Button 3 – long press",
+        "es": "Botón 3 – pulsación larga",
+        "nl": "Knop 3 – lang ingedrukt",
+        "de": "Taste 3 – lang drücken",
+        "fr": "Bouton 3 – appui long",
+        "it": "Pulsante 3 – pressione lunga",
+        "da": "Knap 3 – langt tryk",
+        "no": "Knapp 3 – langt trykk",
+        "sv": "Knapp 3 – långtryckning",
+        "pl": "Przycisk 3 – długie",
+        "ru": "Кнопка 3 – долгое нажатие",
+        "ko": "버튼 3 – 길게 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button3_triple",
+      "title": {
+        "en": "Button 3 – triple press",
+        "es": "Botón 3 – triple pulsación",
+        "nl": "Knop 3 – drievoudig klikken",
+        "de": "Taste 3 – dreifach drücken",
+        "fr": "Bouton 3 – triple appui",
+        "it": "Pulsante 3 – tripla pressione",
+        "da": "Knap 3 – tredobbelt tryk",
+        "no": "Knapp 3 – trippelt trykk",
+        "sv": "Knapp 3 – trippelklick",
+        "pl": "Przycisk 3 – potrójne",
+        "ru": "Кнопка 3 – тройное нажатие",
+        "ko": "버튼 3 – 세 번 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button4_single",
+      "title": {
+        "en": "Button 4 – single press",
+        "es": "Botón 4 – pulsación simple",
+        "nl": "Knop 4 – enkel klikken",
+        "de": "Taste 4 – einfach drücken",
+        "fr": "Bouton 4 – appui simple",
+        "it": "Pulsante 4 – pressione singola",
+        "da": "Knap 4 – enkelt tryk",
+        "no": "Knapp 4 – enkelt trykk",
+        "sv": "Knapp 4 – enkelklick",
+        "pl": "Przycisk 4 – pojedyncze",
+        "ru": "Кнопка 4 – одно нажатие",
+        "ko": "버튼 4 – 단일 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button4_double",
+      "title": {
+        "en": "Button 4 – double press",
+        "es": "Botón 4 – doble pulsación",
+        "nl": "Knop 4 – dubbel klikken",
+        "de": "Taste 4 – doppelt drücken",
+        "fr": "Bouton 4 – double appui",
+        "it": "Pulsante 4 – doppia pressione",
+        "da": "Knap 4 – dobbelt tryk",
+        "no": "Knapp 4 – dobbelt trykk",
+        "sv": "Knapp 4 – dubbelklick",
+        "pl": "Przycisk 4 – podwójne",
+        "ru": "Кнопка 4 – двойное нажатие",
+        "ko": "버튼 4 – 이중 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button4_long",
+      "title": {
+        "en": "Button 4 – long press",
+        "es": "Botón 4 – pulsación larga",
+        "nl": "Knop 4 – lang ingedrukt",
+        "de": "Taste 4 – lang drücken",
+        "fr": "Bouton 4 – appui long",
+        "it": "Pulsante 4 – pressione lunga",
+        "da": "Knap 4 – langt tryk",
+        "no": "Knapp 4 – langt trykk",
+        "sv": "Knapp 4 – långtryckning",
+        "pl": "Przycisk 4 – długie",
+        "ru": "Кнопка 4 – долгое нажатие",
+        "ko": "버튼 4 – 길게 누름"
+      }
+    },
+    {
+      "id": "SNZB-01M:button4_triple",
+      "title": {
+        "en": "Button 4 – triple press",
+        "es": "Botón 4 – triple pulsación",
+        "nl": "Knop 4 – drievoudig klikken",
+        "de": "Taste 4 – dreifach drücken",
+        "fr": "Bouton 4 – triple appui",
+        "it": "Pulsante 4 – tripla pressione",
+        "da": "Knap 4 – tredobbelt tryk",
+        "no": "Knapp 4 – trippelt trykk",
+        "sv": "Knapp 4 – trippelklick",
+        "pl": "Przycisk 4 – potrójne",
+        "ru": "Кнопка 4 – тройное нажатие",
+        "ko": "버튼 4 – 세 번 누름"
+      }
+    }
+  ]
+}

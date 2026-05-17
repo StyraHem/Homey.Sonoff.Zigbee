@@ -1,0 +1,41 @@
+'use strict';
+
+const { ZigBeeDevice } = require("homey-zigbeedriver");
+const { CLUSTER } = require('zigbee-clusters');
+
+class SonoffMiniZBDim extends ZigBeeDevice {
+
+  async onNodeInit({ zclNode }) {
+    this.log('MINI-ZBDIM Dimmer initialized');
+
+    // Register On/Off capability
+    if (this.hasCapability('onoff')) {
+      this.registerCapability('onoff', CLUSTER.ON_OFF);
+    }
+
+    // Register Dim capability
+    if (this.hasCapability('dim')) {
+      this.registerCapability('dim', CLUSTER.LEVEL_CONTROL);
+    }
+
+    // Register Power Measurement capabilities
+    if (this.hasCapability('measure_power')) {
+      this.registerCapability('measure_power', CLUSTER.ELECTRICAL_MEASUREMENT);
+    }
+
+    if (this.hasCapability('measure_voltage')) {
+      this.registerCapability('measure_voltage', CLUSTER.ELECTRICAL_MEASUREMENT);
+    }
+
+    if (this.hasCapability('measure_current')) {
+      this.registerCapability('measure_current', CLUSTER.ELECTRICAL_MEASUREMENT);
+    }
+  }
+
+  async onDeleted() {
+    this.log("MINI-ZBDIM Dimmer removed");
+  }
+
+}
+
+module.exports = SonoffMiniZBDim;

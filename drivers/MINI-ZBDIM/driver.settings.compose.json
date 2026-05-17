@@ -1,0 +1,226 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "General Settings",
+      "es": "Ajustes Generales"
+    },
+    "children": [
+      {
+        "id": "switch_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "External Switch Mode",
+          "es": "Modo de Interruptor Externo"
+        },
+        "hint": {
+          "en": "Choose the type of physical switch connected to the device.",
+          "es": "Elige el tipo de interruptor físico conectado al dispositivo."
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Edge (Toggle Switch)",
+              "es": "Interruptor normal (Edge)"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Pulse (Push Button)",
+              "es": "Pulsador (Pulse)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Double Pulse",
+              "es": "Doble Pulsación"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Triple Pulse",
+              "es": "Triple Pulsación"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power_on_behavior",
+        "type": "dropdown",
+        "label": {
+          "en": "Power-on Behavior",
+          "es": "Comportamiento tras apagón"
+        },
+        "hint": {
+          "en": "State of the device after power is restored.",
+          "es": "Estado del dispositivo al restaurarse la luz."
+        },
+        "value": "off",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "On",
+              "es": "Encendido"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Off",
+              "es": "Apagado"
+            }
+          },
+          {
+            "id": "previous",
+            "label": {
+              "en": "Previous State",
+              "es": "Último estado"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimmer Settings",
+      "es": "Ajustes del Atenuador"
+    },
+    "children": [
+      {
+        "id": "min_brightness_threshold",
+        "type": "number",
+        "label": {
+          "en": "Minimum Brightness (%)",
+          "es": "Brillo Mínimo (%)"
+        },
+        "hint": {
+          "en": "Lowest brightness level mapped to 1% on the slider.",
+          "es": "El nivel de brillo más bajo equivalente al 1% en la app."
+        },
+        "value": 1,
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "id": "max_brightness_threshold",
+        "type": "number",
+        "label": {
+          "en": "Maximum Brightness (%)",
+          "es": "Brillo Máximo (%)"
+        },
+        "hint": {
+          "en": "Highest brightness level mapped to 100% on the slider.",
+          "es": "El nivel de brillo más alto equivalente al 100% en la app."
+        },
+        "value": 100,
+        "min": 2,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "id": "dimming_light_rate",
+        "type": "dropdown",
+        "label": {
+          "en": "Dimming Speed (External Switch)",
+          "es": "Velocidad de atenuación física"
+        },
+        "hint": {
+          "en": "Speed of brightness change when using the physical switch.",
+          "es": "Velocidad de cambio de brillo usando el interruptor de pared."
+        },
+        "value": "1",
+        "values": [
+          { "id": "1", "label": { "en": "1x (Slowest)", "es": "1x (Más lento)" } },
+          { "id": "2", "label": { "en": "2x", "es": "2x" } },
+          { "id": "3", "label": { "en": "3x (Normal)", "es": "3x (Normal)" } },
+          { "id": "4", "label": { "en": "4x", "es": "4x" } },
+          { "id": "5", "label": { "en": "5x (Fastest)", "es": "5x (Más rápido)" } }
+        ]
+      },
+      {
+        "id": "transition_time",
+        "type": "number",
+        "label": {
+          "en": "App Transition Time (s)",
+          "es": "Tiempo de transición desde App (s)"
+        },
+        "hint": {
+          "en": "Duration of brightness transitions from the app.",
+          "es": "Duración de las transiciones al cambiar el brillo desde la app."
+        },
+        "value": 0,
+        "min": 0,
+        "max": 5,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inching Settings",
+      "es": "Ajustes de Inching (Auto-apagado)"
+    },
+    "children": [
+      {
+        "id": "inching_enabled",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+          "en": "Enable Inching",
+          "es": "Activar Inching"
+        },
+        "hint": {
+          "en": "Automatically turn off/on after a set time.",
+          "es": "Se apaga o enciende automáticamente tras el tiempo indicado."
+        }
+      },
+      {
+        "id": "inching_time",
+        "type": "number",
+        "label": {
+          "en": "Inching Time (seconds)",
+          "es": "Duración Inching (segundos)"
+        },
+        "value": 1,
+        "min": 0.5,
+        "max": 86399,
+        "step": 0.5
+      },
+      {
+        "id": "inching_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "Mode",
+          "es": "Modo"
+        },
+        "value": "on",
+        "values": [
+          {
+            "id": "on",
+            "label": {
+              "en": "Auto-On (Turn on after X seconds)",
+              "es": "Auto-Encendido"
+            }
+          },
+          {
+            "id": "off",
+            "label": {
+              "en": "Auto-Off (Turn off after X seconds)",
+              "es": "Auto-Apagado"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
