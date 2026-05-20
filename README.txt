@@ -1,7 +1,9 @@
-⚠️ ARCHIVED — This repository is no longer maintained.
+⚠️ This repository is no longer actively developed.
 
 Development has moved to a private internal repository.
-No pull requests or issues will be reviewed or accepted.
+Pull requests will not be reviewed or accepted.
+
+Issues and bug reports are still welcome — please use the Issues tab.
 
 ---
 

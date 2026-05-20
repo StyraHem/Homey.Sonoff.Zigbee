@@ -1,7 +1,9 @@
-⚠️ ARKIVERAD — Det här repot underhålls inte längre.
+⚠️ Det här repot är inte längre aktivt under utveckling.
 
 Utvecklingen har flyttats till ett privat internt repo.
-Pull requests och issues kommer inte att granskas eller accepteras.
+Pull requests kommer inte att granskas eller accepteras.
+
+Issues och buggrapporter är fortfarande välkomna — använd Issues-fliken.
 
 ---
 
