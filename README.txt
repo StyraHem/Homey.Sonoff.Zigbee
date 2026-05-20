@@ -1,3 +1,10 @@
+⚠️ ARCHIVED — This repository is no longer maintained.
+
+Development has moved to a private internal repository.
+No pull requests or issues will be reviewed or accepted.
+
+---
+
 Sonoff Zigbee
 
 The Homey App will add support for Sonoff Devices.

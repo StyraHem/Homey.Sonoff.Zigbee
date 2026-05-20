@@ -1,3 +1,10 @@
+⚠️ ARKIVERAD — Det här repot underhålls inte längre.
+
+Utvecklingen har flyttats till ett privat internt repo.
+Pull requests och issues kommer inte att granskas eller accepteras.
+
+---
+
 Sonoff Zigbee
 
 Homey Appen kommer att lägga till stöd för Sonoff-enheter.
