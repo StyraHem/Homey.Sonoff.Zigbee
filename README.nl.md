@@ -1,6 +1,10 @@
+<a href="https://styrahem.se"><img src="docs/styrahem-logo.svg" alt="StyraHem" width="80" align="right"></a>
+
 # Sonoff Zigbee voor Homey
 
 Homey-app die ondersteuning toevoegt voor Sonoff Zigbee-apparaten.
+
+Gemaakt door [StyraHem](https://styrahem.se) — Zweedse smarthome- en IoT-specialisten.
 
 - **App Store:** https://homey.app/en-us/app/se.styrahem.sonoff.zigbee/Sonoff/
 - **Testversie:** https://homey.app/en-us/app/se.styrahem.sonoff.zigbee/Sonoff/test/

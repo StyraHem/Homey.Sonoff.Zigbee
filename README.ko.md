@@ -1,6 +1,10 @@
+<a href="https://styrahem.se"><img src="docs/styrahem-logo.svg" alt="StyraHem" width="80" align="right"></a>
+
 # Homey용 Sonoff Zigbee
 
 Sonoff Zigbee 장치를 지원하는 Homey 앱입니다.
+
+[StyraHem](https://styrahem.se) 제작 — 스마트홈 및 IoT 전문 스웨덴 기업.
 
 - **앱 스토어:** https://homey.app/en-us/app/se.styrahem.sonoff.zigbee/Sonoff/
 - **테스트 버전:** https://homey.app/en-us/app/se.styrahem.sonoff.zigbee/Sonoff/test/
