@@ -16,36 +16,37 @@ Sonoff Zigbee 장치를 지원하는 Homey 앱입니다.
 
 ## 지원되는 장치
 
-| 아이콘 | 드라이버 | 이름 | 클래스 | 제조사 / productId |
-|---|---|---|---|---|
-| <img src="docs/icons/BASICZBR3.svg" width="48"> | `BASICZBR3` | 스위치 BASICZBR3 | `socket` | `SONOFF` / `BASICZBR3` |
-| <img src="docs/icons/MINI-ZB2GS.svg" width="48"> | `MINI-ZB2GS` | 스위치 DUO (2채널) | `socket` | `SONOFF` / `MINI-ZB2GS` |
-| <img src="docs/icons/MINI-ZB2GS-L.svg" width="48"> | `MINI-ZB2GS-L` | 스위치 DUO-L (2채널, 중성선 없음) | `socket` | `SONOFF` / `MINI-ZB2GS-L` |
-| <img src="docs/icons/MINI-ZBRBS.svg" width="48"> | `MINI-ZBRBS` | 롤러 셔터 MINI-ZBRBS | `windowcoverings` | `SONOFF` / `MINI-ZBRBS` |
-| <img src="docs/icons/RF.svg" width="48"> | `RF` | RF 버튼 | `button` | — / — |
-| <img src="docs/icons/S60ZBTPF.svg" width="48"> | `S60ZBTPF` | 벽면 플러그 S60ZBTPF | `socket` | `SONOFF` / `S60ZBTPF`, `S60ZBTPG` |
-| <img src="docs/icons/SNZB-01.svg" width="48"> | `SNZB-01` | 버튼 SNZB-01 | `button` | `eWeLink` / `WB01` |
-| <img src="docs/icons/SNZB-01M.svg" width="48"> | `SNZB-01M` | 버튼 SNZB-01M | `button` | `SONOFF` / `SNZB-01M` |
-| <img src="docs/icons/SNZB-01P.svg" width="48"> | `SNZB-01P` | 버튼 SNZB-01P | `button` | `eWeLink` / `SNZB-01P` |
-| <img src="docs/icons/SNZB-02.svg" width="48"> | `SNZB-02` | 온도계 SNZB-02 | `sensor` | `eWeLink` / `TH01` |
-| <img src="docs/icons/SNZB-02D.svg" width="48"> | `SNZB-02D` | 온도계 SNZB-02D | `sensor` | `SONOFF` / `SNZB-02D` |
-| <img src="docs/icons/SNZB-02DR2.svg" width="48"> | `SNZB-02DR2` | 온도계 SNZB-02DR2 | `sensor` | `SONOFF` / `SNZB-02DR2` |
-| <img src="docs/icons/SNZB-02LD.svg" width="48"> | `SNZB-02LD` | 온도계 SNZB-02LD | `sensor` | `SONOFF` / `SNZB-02LD` |
-| <img src="docs/icons/SNZB-02P.svg" width="48"> | `SNZB-02P` | 온도계 SNZB-02P | `sensor` | `eWeLink` / `SNZB-02P` |
-| <img src="docs/icons/SNZB-02WD.svg" width="48"> | `SNZB-02WD` | 온도계 SNZB-02WD | `sensor` | `SONOFF` / `SNZB-02WD` |
-| <img src="docs/icons/SNZB-03.svg" width="48"> | `SNZB-03` | 모션 센서 SNZB-03 | `sensor` | `eWeLink` / `MS01` |
-| <img src="docs/icons/SNZB-03P.svg" width="48"> | `SNZB-03P` | 모션 센서 SNZB-03P | `sensor` | `eWeLink` / `SNZB-03P` |
-| <img src="docs/icons/SNZB-04.svg" width="48"> | `SNZB-04` | 문/창문 센서 SNZB-04 | `sensor` | `eWeLink` / `DS01` |
-| <img src="docs/icons/SNZB-04P.svg" width="48"> | `SNZB-04P` | 문/창문 센서 SNZB-04P | `sensor` | `eWeLink` / `SNZB-04P` |
-| <img src="docs/icons/SNZB-05P.svg" width="48"> | `SNZB-05P` | 홍수/비 센서 SNZB-05P | `sensor` | `SONOFF` / `SNZB-05P` |
-| <img src="docs/icons/SNZB-06P.svg" width="48"> | `SNZB-06P` | 존재 센서 SNZB-06P | `sensor` | `SONOFF` / `SNZB-06P` |
-| <img src="docs/icons/SWV.svg" width="48"> | `SWV` | 워터 밸브 SWV | `other` | `SONOFF` / `SWV` |
-| <img src="docs/icons/TRVZB.svg" width="48"> | `TRVZB` | TRVZB 온도 조절기 | `thermostat` | `SONOFF` / `TRVZB` |
-| <img src="docs/icons/ZBCurtain.svg" width="48"> | `ZBCurtain` | 커튼 ZBCurtain | `curtain` | `SONOFF` / `ZBCurtain` |
-| <img src="docs/icons/ZBM5.svg" width="48"> | `ZBM5` | 벽 스위치 ZBM5 | `socket` | `SONOFF` / `ZBM5-1C-120`, `ZBM5-1C-80/86`, `ZBM5-2C-120`, `ZBM5-2C-80/86`, `ZBM5-3C-120`, `ZBM5-3C-80/86` |
-| <img src="docs/icons/ZBMicro.svg" width="48"> | `ZBMicro` | ZBMicro 전환 | `socket` | `SONOFF` / `ZBMicro` |
-| <img src="docs/icons/ZBMINIL.svg" width="48"> | `ZBMINIL` | ZBMINI-L 스위치 | `socket` | `SONOFF` / `ZBMINI-L` |
-| <img src="docs/icons/ZBMINIL2.svg" width="48"> | `ZBMINIL2` | 스위치 ZBMINI-L2 | `socket` | `SONOFF` / `ZBMINIL2` |
-| <img src="docs/icons/ZBMINIR2.svg" width="48"> | `ZBMINIR2` | 스위치 ZBMINI-R2 | `socket` | `SONOFF` / `ZBMINIR2` |
+| 아이콘 | 드라이버 | 이름 | 클래스 | 제조사 / productId | 상태 |
+|---|---|---|---|---|---|
+| <img src="docs/icons/BASICZBR3.svg" width="48"> | `BASICZBR3` | 스위치 BASICZBR3 | `socket` | `SONOFF` / `BASICZBR3` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/MINI-ZB2GS.svg" width="48"> | `MINI-ZB2GS` | 스위치 DUO (2채널) | `socket` | `SONOFF` / `MINI-ZB2GS` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/MINI-ZB2GS-L.svg" width="48"> | `MINI-ZB2GS-L` | 스위치 DUO-L (2채널, 중성선 없음) | `socket` | `SONOFF` / `MINI-ZB2GS-L` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/MINI-ZBRBS.svg" width="48"> | `MINI-ZBRBS` | 롤러 셔터 MINI-ZBRBS | `windowcoverings` | `SONOFF` / `MINI-ZBRBS` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/RF.svg" width="48"> | `RF` | RF 버튼 | `button` | — / — | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/S60ZBTPF.svg" width="48"> | `S60ZBTPF` | 벽면 플러그 S60ZBTPF | `socket` | `SONOFF` / `S60ZBTPF`, `S60ZBTPG` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-01.svg" width="48"> | `SNZB-01` | 버튼 SNZB-01 | `button` | `eWeLink` / `WB01` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-01M.svg" width="48"> | `SNZB-01M` | 버튼 SNZB-01M | `button` | `SONOFF` / `SNZB-01M` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/SNZB-01P.svg" width="48"> | `SNZB-01P` | 버튼 SNZB-01P | `button` | `eWeLink` / `SNZB-01P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02.svg" width="48"> | `SNZB-02` | 온도계 SNZB-02 | `sensor` | `eWeLink` / `TH01` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02D.svg" width="48"> | `SNZB-02D` | 온도계 SNZB-02D | `sensor` | `SONOFF` / `SNZB-02D` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02DR2.svg" width="48"> | `SNZB-02DR2` | 온도계 SNZB-02DR2 | `sensor` | `SONOFF` / `SNZB-02DR2` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02LD.svg" width="48"> | `SNZB-02LD` | 온도계 SNZB-02LD | `sensor` | `SONOFF` / `SNZB-02LD` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02P.svg" width="48"> | `SNZB-02P` | 온도계 SNZB-02P | `sensor` | `eWeLink` / `SNZB-02P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-02WD.svg" width="48"> | `SNZB-02WD` | 온도계 SNZB-02WD | `sensor` | `SONOFF` / `SNZB-02WD` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-03.svg" width="48"> | `SNZB-03` | 모션 센서 SNZB-03 | `sensor` | `eWeLink` / `MS01` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-03P.svg" width="48"> | `SNZB-03P` | 모션 센서 SNZB-03P | `sensor` | `eWeLink` / `SNZB-03P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-04.svg" width="48"> | `SNZB-04` | 문/창문 센서 SNZB-04 | `sensor` | `eWeLink` / `DS01` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-04P.svg" width="48"> | `SNZB-04P` | 문/창문 센서 SNZB-04P | `sensor` | `eWeLink` / `SNZB-04P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-05P.svg" width="48"> | `SNZB-05P` | 홍수/비 센서 SNZB-05P | `sensor` | `SONOFF` / `SNZB-05P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SNZB-06P.svg" width="48"> | `SNZB-06P` | 존재 센서 SNZB-06P | `sensor` | `SONOFF` / `SNZB-06P` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/SWV.svg" width="48"> | `SWV` | 워터 밸브 SWV | `other` | `SONOFF` / `SWV` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/TRVZB.svg" width="48"> | `TRVZB` | TRVZB 온도 조절기 | `thermostat` | `SONOFF` / `TRVZB` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/ZBCurtain.svg" width="48"> | `ZBCurtain` | 커튼 ZBCurtain | `curtain` | `SONOFF` / `ZBCurtain` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/ZBM5.svg" width="48"> | `ZBM5` | 벽 스위치 ZBM5 | `socket` | `SONOFF` / `ZBM5-1C-120`, `ZBM5-1C-80/86`, `ZBM5-2C-120`, `ZBM5-2C-80/86`, `ZBM5-3C-120`, `ZBM5-3C-80/86` | ![테스트](https://img.shields.io/badge/-테스트-yellow) |
+| <img src="docs/icons/ZBMicro.svg" width="48"> | `ZBMicro` | ZBMicro 전환 | `socket` | `SONOFF` / `ZBMicro` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/ZBMINIL.svg" width="48"> | `ZBMINIL` | ZBMINI-L 스위치 | `socket` | `SONOFF` / `ZBMINI-L` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/ZBMINIL2.svg" width="48"> | `ZBMINIL2` | 스위치 ZBMINI-L2 | `socket` | `SONOFF` / `ZBMINIL2` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| <img src="docs/icons/ZBMINIR2.svg" width="48"> | `ZBMINIR2` | 스위치 ZBMINI-R2 | `socket` | `SONOFF` / `ZBMINIR2` | ![출시됨](https://img.shields.io/badge/-출시됨-brightgreen) |
+| —  | `MINI-ZBDIM` | 스마트 미니 디머 | `light` | `SONOFF` / `MINI-ZBDIM` | ![곧 출시](https://img.shields.io/badge/-곧%20출시-orange) |
 
-_29 드라이버 · `driver.compose.json` 메타데이터에서 생성됨._
+_30 드라이버 · `driver.compose.json` 메타데이터에서 생성됨._
