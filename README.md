@@ -6,6 +6,8 @@ Homey app that adds support for Sonoff Zigbee devices.
 - **Test version:** https://homey.app/en-us/app/se.styrahem.sonoff.zigbee/Sonoff/test/
 - **Interactive driver overview:** https://styrahem.github.io/Homey.Sonoff.Zigbee/
 
+**Languages:** [English](README.md) · [DA](README.da.md) · [DE](README.de.md) · [ES](README.es.md) · [FR](README.fr.md) · [IT](README.it.md) · [KO](README.ko.md) · [NL](README.nl.md) · [NO](README.no.md) · [PL](README.pl.md) · [RU](README.ru.md) · [SV](README.sv.md)
+
 This repository is kept for issues and documentation. Active development happens in an internal repo; we monitor issues here and pull approved changes upstream. PRs are not accepted directly — please open an issue first.
 
 If this app saves you time, you can support development here:
